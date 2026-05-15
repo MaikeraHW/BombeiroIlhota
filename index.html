@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" type="image/png" href="./src/brasaoCBVI.png">
+    <title>Bombeiros de Ilhota</title>
+</head>
+<body>
+    <header class="header">
+        <div class="topBarContainer">
+            <div class="topBar">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="./src/brasaoCBVI.png" alt="Brasao do corpo de bombeiros voluntários de Ilhota">
+                        </a>
+                    </div>
+                    <div class="topBarContent">
+                        <div class="topBarText">
+                            <ion-icon name="call-outline" class="iconTel"></ion-icon>
+                            <p class="emergencyText">
+                                Emergências<br>199
+                            </p>
+                        </div>
+                        <div class="topBarButton">
+                        <a class="donateButton">
+                            <p>Faça sua doação</p>
+                            <ion-icon name="heart-outline" class="icon"></ion-icon>
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <nav class="headerNav">
+            <ul class="headerNavList">
+                <li><a class="navListLink" href="/">Sobre Nós</a></li>
+                <li><a class="navListLink" href="/">Seja um Voluntário</a></li>
+                <li><a class="navListLink" href="/">Transparência</a></li>
+                <li><a class="navListLink" href="/">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hero class="herobanner">
+        <div class="hero-slider">
+        <div class="slides">
+
+            <div class="slide active">
+            <img src="./src/pic01.jpg" alt="Slide 1">
+            </div>
+
+            <div class="slide">
+            <img src="./src/pic02.jpg" alt="Slide 2">
+            </div>
+
+            <div class="slide">
+            <img src="./src/pic03.jpg" alt="Slide 3">
+            </div>
+
+            <div class="slide">
+            <img src="./src/pic04.jpg" alt="Slide 4">
+            </div>
+
+        </div>
+
+  <div class="dots">
+    <button class="dot active" onclick="goToSlide(0)"></button>
+    <button class="dot" onclick="goToSlide(1)"></button>
+    <button class="dot" onclick="goToSlide(2)"></button>
+    <button class="dot" onclick="goToSlide(3)"></button>
+  </div>
+  </div>
+
+</hero>
+    <main>
+        <h1>TEXT</h1>
+    </main>
+    
+    <script src="scripts/scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
