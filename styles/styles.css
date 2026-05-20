@@ -156,7 +156,7 @@
 .slide {
   min-width: 100%;
   height: 100%;
-  position: relative; /* ESSENCIAL */
+  position: relative;
 }
 
 .slide img {
@@ -186,4 +186,44 @@
 
 .dot.active {
   background: white;
+}
+
+.statisticSection{
+    background-image: linear-gradient( var(--hoverRed), var(--mainRed));
+}
+
+.statisticArticle{
+    padding: 1rem 0 3rem 0;
+    width: 50%;
+    min-width: 800px;
+    margin: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.425), black);
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.statisticArticle h2{
+    font-size: 2rem;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.statisticArticle h3{
+    margin: 0 0 1rem 0;
+}
+
+.statisticsList{
+    list-style: none;
+}
+
+.statisticItem{
+    background-color: #81120c;
+    padding: 0.3rem 3rem;
+    margin: 0.5rem;
+    border-radius: 8px;
 }
