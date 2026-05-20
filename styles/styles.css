@@ -226,4 +226,38 @@
     padding: 0.3rem 3rem;
     margin: 0.5rem;
     border-radius: 8px;
+    
+}
+
+.newsSection{
+    border: 1px solid red;
+}
+
+.newsSection h2{
+    font-size: 2rem;
+    width: 50%;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.newsHolder{
+    border: 1px solid green;
+    width: 70%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.leftNewsHolder{
+    border: 1px solid blue;
+}
+
+.mainNew{
+    border: 1px solid green;
+    width: 500px;
+    height: 300px;
 }
