@@ -137,6 +137,17 @@
     transition-duration: 0.3s;
 }
 
+.adjust{
+    object-position: left center;
+}
+
+.adjust2 {
+    object-position: 0% 70%;
+}
+
+.adjust3 {
+    object-position: 0% 70%;
+}
 
 /*Hero banner*/
 
