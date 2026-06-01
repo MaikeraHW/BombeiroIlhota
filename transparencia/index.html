@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="./../styles/styles.css">
+    <link rel="icon" type="image/png" href="./src/brasaoCBVI.png">
+    <title>Bombeiros de Ilhota</title>
+</head>
+<body class="transparenciaBody">
+    <header class="header">
+        <div class="topBarContainer">
+            <div class="topBar">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="./../src/brasaoCBVI.png" alt="Brasao do corpo de bombeiros voluntários de Ilhota">
+                        </a>
+                    </div>
+                    <div class="topBarContent">
+                        <div class="topBarText">
+                            <ion-icon name="call-outline" class="iconTel"></ion-icon>
+                            <p class="emergencyText">
+                                 Site em atualização<!-- Emergências<br>199 -->
+                            </p>
+                        </div>
+                        <div class="topBarButton">
+                        <a class="donateButton">
+                            <p>Faça sua doação</p>
+                            <ion-icon name="heart-outline" class="icon"></ion-icon>
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <nav class="headerNav">
+            <ul class="headerNavList">
+                <li><a class="navListLink" href="/">Sobre Nós</a></li>
+                <li><a class="navListLink" href="#">Seja um Voluntário</a></li>
+                <li><a class="navListLink" href="/transparencia/">Transparência</a></li>
+                <li><a class="navListLink" href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contentSection">
+    <h2 class="transparenciaTitle">Nossos Comunicados</h2>
+
+    <div class="menu">
+    <h2>Convocação para Assembléia</h2>
+
+    <div id="menuContent" class="menu-content">
+
+        <div class="pdf-container">
+            <div class="pdfContainerHead">
+            <h3>Comunicado - 02/03/2026</h3>
+            <button class="toggleButton" onclick="togglePDF('pdf1')">
+                Exibir
+            </button>
+            </div>
+            <div id="pdf1" class="hidden">
+                <div class="showing">
+                <img class="imgHidden" src="../src/26marco02.jpg" />
+                </div>
+            </div>
+        </div>
+
+        <div class="pdf-container">
+            <div class="pdfContainerHead">
+            <h3>Comunicado - 30/04/2026</h3>
+            <button class="toggleButton" onclick="togglePDF('pdf2')">Exibir</button>
+            </div>
+            <div id="pdf2" class="hidden">
+                <div class="showing">
+                <img class="imgHidden" src="../src/26abril30.jpg" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<script src="scripts/scripts.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+
+    function togglePDF(id) {
+        document.getElementById(id).classList.toggle("hidden");
+    }
+</script>
+</body>
