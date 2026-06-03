@@ -2,11 +2,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
     font-family: 'Poppins', sans-serif;
-
-    --mainRed: #Ce2029;
-    --hoverRed: #81120c;
+    --mainRed: #7d1201;
+    --hoverRed: #680e00;
     --textColor: white;
     --detailYellow: #dbb405;
 }
@@ -447,7 +445,7 @@
 }
 
 .navListLink:hover{
-    background-color: #81120c;
+    background-color: var(--hoverRed);
 }
 
 .navListLink {
@@ -477,8 +475,7 @@
     margin: auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0.425), black);
     color: white;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -603,7 +600,7 @@
 }
 
 .navListLink:hover{
-    background-color: #81120c;
+    background-color: var(--hoverRed);
 }
 
 .navListLink {
@@ -636,8 +633,7 @@
     margin: auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0.425), black);
     color: white;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
