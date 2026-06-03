@@ -351,21 +351,19 @@
     flex-direction: row;
     justify-content: space-between;
     align-items:flex-start;
-    border: 1px solid green;
 }
 
 .logo img{
     position: absolute;
     top: 8px;
-    left: 16px;
-    width: 150%;
+    left: 30px;
+    width: 80%;
     max-width: 120px;
-    min-width: 80px;
+    min-width: 60px;
 }
 
 /*--------------------- EDITAR A PARTIR DAQUI --------------------*/
 .topBarText{
-    border: 1px solid green;
 }
 
 .icon{
@@ -445,7 +443,7 @@
 }
 
 .navListLink:hover{
-    background-color: var(--hoverRed);
+    border-bottom: 2px solid var(--detailYellow);
 }
 
 .navListLink {
@@ -522,7 +520,7 @@
 
 .topBar{
     padding: 0rem 2rem;
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -534,9 +532,9 @@
 .logo img{
     position: absolute;
     top: 8px;
-    width: 150%;
+    width: 80%;
     max-width: 120px;
-    min-width: 80px;
+    min-width: 40px;
 }
 
 .topBarText{
@@ -600,16 +598,14 @@
 }
 
 .navListLink:hover{
-    background-color: var(--hoverRed);
+    border-bottom: 2px solid var(--detailYellow);
 }
 
 .navListLink {
     white-space: nowrap;
-    border-radius: 8px;
-    padding: 0.4rem 1rem;
-    color: var(--textColor);
     text-decoration: none;
-    transition-duration: 0.3s;
+    padding: 0.4rem 0.3rem 0.1rem;
+    color: var(--textColor);
 }
 
 /*Hero banner*/
