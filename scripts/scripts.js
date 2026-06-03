@@ -28,3 +28,10 @@ function resetAutoSlide() {
   clearInterval(interval);
   interval = setInterval(nextSlide, 4000);
 }
+
+const hamburger = document.getElementById("hamburger");
+const nav = document.querySelector(".headerNav");
+
+hamburger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
