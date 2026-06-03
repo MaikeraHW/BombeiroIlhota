@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="icon" type="image/png" href="./src/brasaoCBVI.png">
     <title>Bombeiros de Ilhota</title>
@@ -78,15 +78,54 @@
     <main>
        <section class=statisticSection>
             <article class="statisticArticle">
-                <h2>Estastísticas</h2>
-                <h3>Maio de 2026</h3>
-                <ul class="statisticsList">
-                    <li class="statisticItem">143 Atendimentos Pré-hospitalares</li>
-                    <li class="statisticItem">6 Combates a incêndio</li>
-                    <li class="statisticItem">28 Resgates Veiculares</li>
-                    <li class="statisticItem">19 Resgates Diversos</li>
-                    <li class="statisticItem">485 Horas de Trabalho Voluntário</li>
-                </ul>
+                <h2 class="statisticTitle">Relatório de Atendimentos</h2>
+                <h3 class="statisticSubTitle">Maio de 2026</h3>
+                <div class="statisticsHolder">
+                    <div class="statisticsInside">
+                        <div class="statisticItem topLeft">
+                            <div class="iconHolder">
+                            <img src="./src/paramedic.png" alt="">
+                            </div>
+                            <div class="itemContent">
+                            <h3 class="itemTitle">APH</h3>
+                            <p class="">143</p>
+                            </div>
+                        </div>
+                        <div class="statisticItem topRight">
+                            <div class="iconHolder">
+                            <img src="./src/traffic.png" alt="">
+                            </div>
+                            <div class="itemContent">
+                            <h3 class="itemTitle">Sinistros de Trânsito</h3>
+                            <p class="">28</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statisticsInside">
+                        <div class="statisticItem bottomLeft">
+                            <div class="iconHolder">
+                            <img src="./src/firefighter.png" alt="">
+                            </div>
+                            <div class="itemContent">
+                            <h3 class="itemTitle">Resgates Diversos</h3>
+                            <p class="">19</p>
+                            </div>
+                        </div>
+                        <div class="statisticItem">
+                            <div class="iconHolder">
+                            <img src="./src/fire-brigade.png" alt="">
+                            </div>
+                            <div class="itemContent">
+                            <h3 class="itemTitle">Incêndios</h3>
+                            <p class="">6</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statisticsResume">
+                        <h2 class="statisticResumeText">Total : </h2>
+                        <p class="statisticResumeNum"> 196</p>
+                    </div>
+                </div>
             </article>
        </section>
        <section class="newsSection">
