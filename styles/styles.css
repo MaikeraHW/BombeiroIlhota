@@ -9,6 +9,10 @@
     --detailYellow: #dbb405;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .header{
     position: sticky;
     top: 0;
@@ -265,12 +269,11 @@
 }
 
 .transparenciaBody{
-    background-color: #81120c;
+    background-color: var(--mainRed);
 }
 
 .contentSection{
-    width: 80%;
-    margin: 2rem auto;
+    background-color: var(--hoverRed);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -281,15 +284,18 @@
     margin: 1rem;
     font-size: 2.4rem;
     color: white;
+    text-align: center;
 }
 
 .menu {
     color: var(--textColor);
-    width: 70%;
+    width: 90%;
+    max-width: 800px;
     padding: 1rem;
     background-color: rgba(19, 18, 18, 0.911);
     border: 2px solid var(--detailYellow);
     border-radius: 8px;
+    text-align: center;
 }
 
 .menu h2{
@@ -343,7 +349,7 @@
 
 /*<----- MOBILE -------> */
 
-@media (max-width: 999px){
+@media (max-width: 768px){
 
 .topBar{
     width: 100%;
@@ -362,10 +368,6 @@
     min-width: 60px;
 }
 
-/*--------------------- EDITAR A PARTIR DAQUI --------------------*/
-.topBarText{
-}
-
 .icon{
     display: inline-block;
     font-size: 1.4rem;
@@ -377,6 +379,7 @@
 }
 
 .topBarButton{
+    display: none;
     background-color: var(--mainRed);
     width: fit-content;
     white-space: nowrap;
@@ -398,17 +401,13 @@
     align-items: center;
     gap: 2%;
 }
-/*--------------------- EDITAR ATÉ AQUI --------------------*/
 
- /* mostra hamburger */
 .hamburger {
     display: flex;
     position: absolute;
     right: 20px;
     top: 30px;
 }
-
-/* NAV escondida por padrão */
 .headerNav {
     display: none;
     position: absolute;
@@ -419,27 +418,33 @@
     z-index: 10;
 }
 
-/* quando abrir menu via JS */
 .headerNav.active {
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 
-/* lista vira coluna */
 .headerNavList {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    padding: 0;
+    list-style-type: none;
 }
 
-/*--------------------- COMEÇAR EDITAR AQUI --------------------*/
 .headerNavList li {
-    text-align: center;
+    width: 40%;
+    max-width: 300px;
     margin: 0.5rem 0;
+    text-align: center;
 }
 
 .navListLink {
     display: block;
     width: 100%;
     padding: 1rem;
+    box-sizing: border-box;
+    border: 2px solid transparent;
 }
 
 .navListLink:hover{
@@ -447,15 +452,14 @@
 }
 
 .navListLink {
+    text-transform: uppercase;
     white-space: nowrap;
-    border-radius: 8px;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem;
     color: var(--textColor);
     text-decoration: none;
-    transition-duration: 0.3s;
+    transition-duration: 0.1s;
 }
 
-/*--------------------- EDITAR ATÉ AQUI --------------------*/
 .hero-slider {
   position: relative;
   width: 100%;
@@ -516,7 +520,7 @@
 
 /*<---------------- Desktop ----------> */
 
-@media (min-width: 1000px) {
+@media (min-width: 769px) {
 
 .topBar{
     padding: 0rem 2rem;
@@ -534,7 +538,7 @@
     top: 8px;
     width: 80%;
     max-width: 120px;
-    min-width: 40px;
+    min-width: 60px;
 }
 
 .topBarText{
@@ -590,11 +594,13 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center; 
+    border: 1px solid green;
 }
 
 .headerNavList li {
     flex-shrink: 1;
     margin: 1rem;
+    border: 1px solid green;
 }
 
 .navListLink:hover{
@@ -602,10 +608,15 @@
 }
 
 .navListLink {
+    text-transform: uppercase;
     white-space: nowrap;
     text-decoration: none;
     padding: 0.4rem 0.3rem 0.1rem;
     color: var(--textColor);
+}
+
+.donateLink{
+    display: none;
 }
 
 /*Hero banner*/
@@ -625,7 +636,7 @@
 .statisticArticle{
     padding: 1rem 0 1rem 0;
     width: 50%;
-    min-width: 800px;
+    min-width: fit-content;
     margin: auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0.425), black);
     color: white;

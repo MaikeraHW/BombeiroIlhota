@@ -29,6 +29,8 @@ function resetAutoSlide() {
   interval = setInterval(nextSlide, 4000);
 }
 
+//hamburger menu
+
 const hamburger = document.getElementById("hamburger");
 const nav = document.querySelector(".headerNav");
 

@@ -6,24 +6,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">   
-    <link rel="stylesheet" href="./../styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
     <link rel="icon" type="image/png" href="./src/brasaoCBVI.png">
-    <title>Bombeiros de Ilhota</title>
+    <title>Bombeiros Voluntários de Ilhota</title>
 </head>
-<body class="transparenciaBody">
+<body class="body">
     <header class="header">
         <div class="topBarContainer">
             <div class="topBar">
                     <div class="logo">
                         <a href="/">
-                            <img src="./../src/brasaoCBVI.png" alt="Brasao do corpo de bombeiros voluntários de Ilhota">
+                            <img src="../src/brasaoCBVI.png" alt="Brasao do corpo de bombeiros voluntários de Ilhota">
                         </a>
                     </div>
                     <div class="topBarContent">
                         <div class="topBarText">
                             <ion-icon name="call-outline" class="iconTel"></ion-icon>
                             <p class="emergencyText">
-                                 Site em atualização<!-- Emergências<br>199 -->
+                                Site em atualização<!-- Emergências<br>199 -->
                             </p>
                         </div>
                         <div class="topBarButton">
@@ -33,14 +33,21 @@
                         </a>
                         </div>
                     </div>
+                    <button class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
             </div>
         </div>
         <nav class="headerNav">
             <ul class="headerNavList">
+                <li><a class="navListLink" href="/">Home</a></li>
                 <li><a class="navListLink" href="/sobre">Sobre Nós</a></li>
                 <li><a class="navListLink" href="#">Seja um Voluntário</a></li>
                 <li><a class="navListLink" href="/transparencia/">Transparência</a></li>
                 <li><a class="navListLink" href="#">Contato</a></li>
+                <li><a class="navListLink donateLink" href="#">Faça sua doação</a></li>
             </ul>
         </nav>
     </header>
@@ -60,11 +67,10 @@
 </section>
 
 
-<script src="scripts/scripts.js"></script>
+<script src="../scripts/scripts.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script>
-
     function togglePDF(id) {
         document.getElementById(id).classList.toggle("hidden");
     }
