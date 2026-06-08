@@ -27,7 +27,7 @@
                             </p>
                         </div>
                         <div class="topBarButton">
-                        <a class="donateButton" href="../doacao/">
+                        <a class="donateButton" href="#">
                             <p>Faça sua doação</p>
                             <ion-icon name="heart-outline" class="icon"></ion-icon>
                         </a>
@@ -47,44 +47,32 @@
                 <li><a class="navListLink" href="#">Seja um Voluntário</a></li>
                 <li><a class="navListLink" href="/transparencia/">Transparência</a></li>
                 <li><a class="navListLink" href="#">Contato</a></li>
-                <li><a class="navListLink donateLink" href="../doacao/">Faça sua doação</a></li>
+                <li><a class="navListLink donateLink" href="#">Faça sua doação</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="contentSection">
-    <h2 class="transparenciaTitle">Nossos Comunicados</h2>
-
+    <h2 class="transparenciaTitle">Motivos para doar:</h2>
     <div class="menu">
-    <h2>Convocação para Assembléia</h2>
-
     <div id="menuContent" class="menu-content">
-
-        <div class="pdf-container">
-            <div class="pdfContainerHead">
-            <h3>Comunicado - 02/03/2026</h3>
-            <button class="toggleButton" onclick="togglePDF('pdf1')">
-                Exibir
-            </button>
-            </div>
-            <div id="pdf1" class="hidden">
-                <div class="showing">
-                <img class="imgHidden" src="../src/26marco02.jpg" />
-                </div>
-            </div>
-        </div>
-
-        <div class="pdf-container">
-            <div class="pdfContainerHead">
-            <h3>Comunicado - 30/04/2026</h3>
-            <button class="toggleButton" onclick="togglePDF('pdf2')">Exibir</button>
-            </div>
-            <div id="pdf2" class="hidden">
-                <div class="showing">
-                <img class="imgHidden" src="../src/26abril30.jpg" />
-                </div>
-            </div>
-        </div>
+        <section class="donateSection">
+            <article class="donateSectionArticle">
+                    <ul class="donateSectionList">
+                        <li class="donateSectionItem"> <div class="donateIconHolder"><img class="donateLiIcon" src="../src/truck.png" alt=""></div> <p>Abastecer ambulâncias e caminhões de resgate</p></li>
+                        <li class="donateSectionItem"> <div class="donateIconHolder"><img class="donateLiIcon" src="../src/helmeth.png" alt=""></div> <p>Compra e manutenção de equipamentos</p></li>
+                        <li class="donateSectionItem"> <div class="donateIconHolder"><img class="donateLiIcon" src="../src/study.png" alt=""></div> <p>Capacitação técnica dos bombeiros</p></li>
+                        <li class="donateSectionItem"> <div class="donateIconHolder"><img class="donateLiIcon" src="../src/fire-brigade.png" alt=""></div> <p>Manutenção e amplicação da estrutura física da corporação</p></li>
+                        <li class="donateSectionItem"> <div class="donateIconHolder"><img class="donateLiIcon" src="../src/fire-extinguisher.png" alt=""></div> <p>Criação e ampliação de ações preventivas para a comunidade</p></li>
+                        <li class="donateSectionItem"> <div class="donateIconHolder"><img class="donateLiIcon" src="../src/healthy.png" alt=""></div> <p>Sua doação é garantia de vidas sendo salvas</p></li>
+                    </ul>
+            </article>
+        </section>
+        <section class="donateSection">
+            <article class="donateMethods">
+                <h2>Como Doar:</h2>
+            </article>
+        </section>
 
     </div>
 
@@ -96,7 +84,6 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script>
-
     function togglePDF(id) {
         document.getElementById(id).classList.toggle("hidden");
     }
