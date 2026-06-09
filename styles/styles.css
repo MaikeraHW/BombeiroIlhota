@@ -120,6 +120,7 @@ html{
   background: white;
 }
 
+
 .statisticSubTitle{
     border-bottom: 1px solid var(--detailYellow);
 }
@@ -195,6 +196,10 @@ html{
 
 .transparenciaTitle{
     text-transform: uppercase;
+}
+
+.newsSection{
+    padding-bottom: 2rem;
 }
 
 .newsSection h2{
@@ -382,6 +387,97 @@ html{
 .donateLiIcon{
     width: 80%;
 }
+
+.footer{
+    background-color: var(--mainRed);
+    padding-bottom: 2rem;
+}
+
+.footerContainer{
+    padding: 1rem;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(black, rgba(0, 0, 0, 0.425));
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.footerLogo{
+    width: 8rem;
+}
+
+.footerLogo img{
+    width: 100%;
+}
+
+.footerContent{
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 15%;
+}
+
+.footerLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerLeftTitle{
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.footerContact{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footerEmergencyNumber{
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footerDonateButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    text-decoration: none;
+    background-color: var(--mainRed);
+    color: white;
+    width: fit-content;
+    white-space: nowrap;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.footerDonateButton:hover{
+    background-color: var(--hoverRed);
+}
+
+.footerDonateButton .icon{
+    font-size: 2rem;
+}
+
 
 
 /*<----- MOBILE -------> */
