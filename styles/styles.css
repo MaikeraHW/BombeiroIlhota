@@ -282,18 +282,23 @@ html{
 }
 
 .contentSection{
-    background-color: var(--hoverRed);
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 2rem;
 }
 
-.contentSection h2{
+.transparenciaTitle{
     margin: 1rem;
     font-size: 2.4rem;
-    color: white;
+    color: var(--hoverRed);
     text-align: center;
+}
+
+.contentTitle{
+    color: white;
 }
 
 .menu {
