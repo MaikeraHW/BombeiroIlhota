@@ -397,35 +397,12 @@ html{
     background-color: var(--mainRed);
 }
 
-.footerContainer{
-    padding: 1rem;
-    width: 60%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(black, rgba(0, 0, 0, 0.425));
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
 .footerLogo{
     width: 6rem;
 }
 
 .footerLogo img{
     width: 100%;
-}
-
-.footerContent{
-    color: white;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: start;
-    gap: 15%;
 }
 
 .footerLeft{
@@ -436,17 +413,10 @@ html{
 }
 
 .footerLeftTitle{
+    text-align: center;
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: -1px;
-}
-
-.footerContact{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 1rem;
 }
 
 .footerEmergencyNumber{
@@ -485,18 +455,6 @@ html{
 .brandHolder{
     background-color: rgb(0, 0, 0);
     opacity: 20%;
-}
-
-.brand{
-    width: 30%;
-    margin: 1rem auto 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 1rem;
-    color: white;
-    padding: 0.5rem;
 }
 
 .brandLogo{
@@ -677,6 +635,64 @@ html{
     border-bottom: 2px solid var(--detailYellow);
 }
 
+.footerContainer{
+    padding: 1rem;
+    width: 96%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(black, rgba(0, 0, 0, 0.425));
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.footerContent{
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapHolder{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContact{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand{
+    width: 100%;
+    margin: 1rem auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    color: white;
+    padding: 0.5rem;
+}
+
 }
 
 /*<---------------- Desktop ----------> */
@@ -851,5 +867,49 @@ html{
 
 .bottomLeft{
     border-right: 2px solid var(--detailYellow);
+}
+
+.footerContainer{
+    padding: 1rem;
+    width: 90%;
+    max-width: 768px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(black, rgba(0, 0, 0, 0.425));
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.footerContent{
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 15%;
+}
+
+.footerContact{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.brand{
+    width: 60%;
+    margin: 1rem auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    color: white;
+    padding: 0.5rem;
 }
 }
