@@ -832,6 +832,7 @@ html{
 }
 
 .statisticsHolder{
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
