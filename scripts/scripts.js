@@ -1,39 +1,68 @@
-let currentIndex = 0;
-const slides = document.querySelector('.slides');
-const dots = document.querySelectorAll('.dot');
-const totalSlides = document.querySelectorAll('.slide').length;
+//fetch dos componentes
 
-function updateSlider() {
-  slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+document.addEventListener("DOMContentLoaded", async () => {
+    const components = document.querySelectorAll("[data-component]");
 
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[currentIndex].classList.add('active');
-}
+    for (const component of components) {
+        const componentName = component.dataset.component;
 
-function goToSlide(index) {
-  currentIndex = index;
-  updateSlider();
-  resetAutoSlide();
-}
+        try {
+            const response = await fetch(
+                `/componentes/${componentName}/index.html`
+            );
 
-// Auto slide
-let interval = setInterval(nextSlide, 5000);
+            if (!response.ok) {
+                throw new Error(
+                    `Componente "${componentName}" não encontrado`
+                );
+            }
 
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % totalSlides;
-  updateSlider();
-}
+            component.innerHTML = await response.text();
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
-function resetAutoSlide() {
-  clearInterval(interval);
-  interval = setInterval(nextSlide, 4000);
-}
+    iniciarmenu()
+});
 
 //hamburger menu
 
+function iniciarmenu(){
 const hamburger = document.getElementById("hamburger");
 const nav = document.querySelector(".headerNav");
 
 hamburger.addEventListener("click", () => {
     nav.classList.toggle("active");
-});
+})}
+
+//slides banner 
+
+function initSlider() {
+
+    const slides = document.querySelector('.slides');
+
+    if (!slides) return;
+
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    let currentIndex = 0;
+
+    function updateSlider() {
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        if (dots[currentIndex]) {
+            dots[currentIndex].classList.add('active');
+        }
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+    }
+
+    setInterval(nextSlide, 1000);
+}
