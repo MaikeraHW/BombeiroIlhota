@@ -512,6 +512,115 @@ html{
     z-index: 1;
 }
 
+.aboutUsHistory{
+    position: relative;
+    border: 3px solid green;
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.aboutUsHistoryContent{
+    width: 45%;
+}
+
+.aboutUsHistoryTextTitle{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: var(--mainRed);
+    margin-bottom: 1.2rem;
+}
+
+.aboutUsHistorySubtitle{
+    font-size: 1.6rem;
+    font-weight: 700;
+    max-width: 80%;
+    margin-bottom: 1.2rem;
+}
+
+.aboutUsMark{
+    border: 3px solid var(--detailYellow);
+    width: 6rem;
+    margin-bottom: 1.2rem;
+}
+
+.aboutUsHistoryText{
+    margin-bottom: 1.2rem;
+}
+
+.aboutUsHistoryMarks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.aboutUsHistoryMarkCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.markCardLogo{
+    position: relative;
+    flex-shrink: 0;
+    padding: 0.8rem;
+    background-color: var(--hoverRed);
+    width: 5rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.lineTest{
+    border: 3px solid rgb(228, 228, 228);
+    position: absolute;
+    top: 100%;
+    left: 48%;
+    height: 200%;
+    z-index: -1;
+}
+
+.markCardTitle{
+    color: var(--hoverRed);
+}
+
+.markCardSubtitle{
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+}
+
+.markCardText{
+    font-size: 0.9rem;
+}
+
+.markCardLogo img{
+    display: block;
+    width: 100%;
+}
+
+
+.markCardBanner{
+    flex: 0 0 auto;
+    width: 16rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.markCardBanner img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 /*<----- MOBILE -------> */
 
