@@ -121,7 +121,7 @@ html{
 }
 
 
-.statisticSubTitle{
+.homeStatisticSubTitle{
     border-bottom: 1px solid var(--detailYellow);
 }
 
@@ -169,7 +169,7 @@ html{
     font-weight: 600;
 }
 
-.statisticsResume{
+.homeStatisticsResume{
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
@@ -178,14 +178,14 @@ html{
     gap: 1rem
 }
 
-.statisticResumeText{
+.homeStatisticResumeText{
     font-weight: 700;
     font-size: 2rem;
     color: var(--detailYellow);
     text-transform: uppercase;
 }
 
-.statisticResumeNum{
+.homeStatisticResumeNum{
     font-weight: 600;
     background-color: rgba(0, 0, 0, 0.589);
     font-size: 2rem;
@@ -198,11 +198,11 @@ html{
     text-transform: uppercase;
 }
 
-.newsSection{
+.homeNewsSection{
     padding-bottom: 2rem;
 }
 
-.newsSection h2{
+.homeNewsSection h2{
     font-size: 2rem;
     width: 50%;
     margin: auto;
@@ -210,7 +210,7 @@ html{
     text-align: center;
 }
 
-.newsHolder{
+.homeNewsHolder{
     width: 70%;
     margin: auto;
     display: flex;
@@ -463,6 +463,55 @@ html{
     margin-bottom: 0.15rem;
 }
 
+/*<--------------- About Us Page ----------------->*/
+
+.aboutUsHeroBanner{
+    position: relative;
+    height: 35rem;
+    overflow: hidden;
+}
+
+.aboutUsHeroBannerTitle{
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 0.95;
+    margin-bottom: 2rem;
+}
+
+.aboutUsHeroBannerMarker{
+    border: 3px solid var(--detailYellow);
+    width: 5rem;
+    margin-bottom: 2rem;
+}
+
+.heroBannerImg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroBannerImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.aboutUsHeroBannerPelicula{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* preto com 50% de transparência */
+    z-index: 1;
+}
+
 
 /*<----- MOBILE -------> */
 
@@ -586,12 +635,12 @@ html{
   overflow: hidden;
 }
 
-.statisticSection{
+.homeStatisticSection{
     padding: 1rem 0.2rem;
     background-image: linear-gradient( var(--hoverRed), var(--mainRed));
 }
 
-.statisticArticle{
+.homeStatisticArticle{
     width: 96%;
     margin: auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0.425), black);
@@ -603,7 +652,7 @@ html{
     align-items: center;
 }
 
-.statisticTitle{
+.homeStatisticTitle{
     width: 90%;
     text-align: center;
     margin-top: 0.5rem;
@@ -611,7 +660,7 @@ html{
     color: var(--detailYellow);
 }
 
-.statisticsHolder{
+.homeStatisticsHolder{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -619,14 +668,14 @@ html{
     margin: 0.5rem 0;
 }
 
-.statisticsInside{
+.homeStatisticsInside{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.statisticItem{
+.homeStatisticItem{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -691,6 +740,21 @@ html{
     gap: 1rem;
     color: white;
     padding: 0.5rem;
+}
+
+/*<--------------- About Us Page ----------------->*/
+
+.aboutUsHeroBanner{
+    height: 30rem;
+}
+
+.aboutUsHeroBannerContent{
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 90%;
+    z-index: 5;
 }
 
 }
@@ -805,12 +869,12 @@ html{
   overflow: hidden;
 }
 
-.statisticSection{
+.homeStatisticSection{
     padding: 1rem;
     background-image: linear-gradient( var(--hoverRed), var(--mainRed));
 }
 
-.statisticArticle{
+.homeStatisticArticle{
     padding: 1rem 0 1rem 0;
     width: 50%;
     min-width: fit-content;
@@ -825,13 +889,13 @@ html{
 }
 
 
-.statisticTitle{
+.homeStatisticTitle{
     text-align: center;
     text-transform: uppercase;
     color: var(--detailYellow);
 }
 
-.statisticsHolder{
+.homeStatisticsHolder{
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -840,14 +904,14 @@ html{
     margin: 2rem 0;
 }
 
-.statisticsInside{
+.homeStatisticsInside{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.statisticItem{
+.homeStatisticItem{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -912,5 +976,17 @@ html{
     gap: 1rem;
     color: white;
     padding: 0.5rem;
+}
+
+/*<--------------- About Us Page ----------------->*/
+
+.aboutUsHeroBannerContent{
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 40%;
+    min-width: 32rem;
+    z-index: 5;
 }
 }
