@@ -472,7 +472,7 @@ html{
 }
 
 .aboutUsHeroBannerTitle{
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     letter-spacing: -2px;
     line-height: 0.95;
@@ -865,7 +865,7 @@ html{
 
 .aboutUsHeroBannerTitle{
     width: 96%;
-    font-size: clamp(1rem, 10dvw, 5rem);
+    font-size: clamp(1rem, 10dvw, 3.5rem);
 }
 
 .aboutUsHistory{
