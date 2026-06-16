@@ -618,6 +618,38 @@ html{
     width: 100%;
 }
 
+.aboutUsStatistics{
+    background-color: var(--mainRed);
+    padding: 2rem 0;
+}
+
+.aboutUsStatisticsList{
+    list-style: none;
+    width: 80%;
+    margin: auto;
+}
+
+.aboutUsStatisticsItemText{
+    color: rgb(201, 201, 201);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.aboutUsStatisticsItemLogo{
+    width: 30%;
+    max-width: 8rem;
+}
+
+.aboutUsStatisticsItemIcon{
+    width: 100%;
+}
+
+.aboutUsStatisticsItemTitle{
+    color: white;
+    font-size: clamp(2rem, 10dvw, 3rem);
+    line-height: 80%;
+    text-transform: uppercase;
+}
 
 /*<----- MOBILE -------> */
 
@@ -902,6 +934,37 @@ html{
 .markCardBanner{
     display: none;
 }
+
+.aboutUsStatisticsList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.aboutUsStatisticsItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.aboutUsItensSeparator{
+    border-bottom: 2px solid var(--detailYellow);
+    width: 70%;
+    margin: auto;
+    margin: 1rem 0;
+}
+
+.aboutUsStatisticsItemTitle{
+    color: white;
+    font-size: clamp(2rem, 10dvw, 4rem);
+    line-height: 80%;
+    text-transform: uppercase;
+}
+
 }
 
 /* ----------- About Us Intermediate --------------*/
@@ -950,6 +1013,51 @@ html{
     display: block;
     width: 100%;
     height: 100%;
+}
+
+.aboutUsStatisticsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.aboutUsStatisticsItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    width: calc(50% - 1rem);
+}
+
+.aboutUsItensSeparator{
+    display: none;
+}
+}
+
+@media (min-width: 1081px) {
+
+.aboutUsStatisticsList {
+    margin: 1rem auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.aboutUsStatisticsItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: calc(25% - 1rem);
+}
+
+.aboutUsItensSeparator{
+    display: none;
 }
 }
 
