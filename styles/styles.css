@@ -512,20 +512,6 @@ html{
     z-index: 1;
 }
 
-.aboutUsHistory{
-    position: relative;
-    padding: 3rem 5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 3rem;
-}
-
-.aboutUsHistoryContent{
-    width: 45%;
-}
-
 .aboutUsHistoryTextTitle{
     text-transform: uppercase;
     font-weight: 700;
@@ -559,12 +545,48 @@ html{
     gap: 2rem;
 }
 
+.aboutUsHistory{
+    position: relative;
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.aboutUsHistoryContent{
+    width: 45%;
+}
+
 .aboutUsHistoryMarkCard{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
     gap: 1.5rem;
+}
+
+.lineTest{
+    border: 3px solid rgb(228, 228, 228);
+    position: absolute;
+    top: 100%;
+    left: 48%;
+    height: 200%;
+    z-index: -1;
+}
+
+.markCardBanner{
+    flex: 0 0 auto;
+    width: 16rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.markCardBanner img{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .markCardLogo{
@@ -575,15 +597,6 @@ html{
     width: 5rem;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-}
-
-.lineTest{
-    border: 3px solid rgb(228, 228, 228);
-    position: absolute;
-    top: 100%;
-    left: 48%;
-    height: 200%;
-    z-index: -1;
 }
 
 .markCardTitle{
@@ -604,21 +617,6 @@ html{
     display: block;
     width: 100%;
 }
-
-
-.markCardBanner{
-    flex: 0 0 auto;
-    width: 16rem;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.markCardBanner img{
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
 
 
 /*<----- MOBILE -------> */
@@ -865,6 +863,94 @@ html{
     z-index: 5;
 }
 
+.aboutUsHeroBannerTitle{
+    width: 96%;
+    font-size: clamp(1rem, 10dvw, 5rem);
+}
+
+.aboutUsHistory{
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.aboutUsHistoryContent{
+    width: 90%;
+}
+
+.aboutUsHistoryMarkCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.lineTest{
+    border: 3px solid var(--hoverRed);
+    position: absolute;
+    top: 100%;
+    left: 48%;
+    height: calc(100% + 2rem);
+    z-index: -1;
+}
+
+.markCardBanner{
+    display: none;
+}
+}
+
+/* ----------- About Us Intermediate --------------*/
+
+@media (min-width: 769px) and (max-width: 1080px){
+
+.aboutUsHistory{
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.aboutUsHistoryContent{
+    width: 90%;
+}
+
+.aboutUsHistoryMarkCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.lineTest{
+    border: 3px solid var(--hoverRed);
+    position: absolute;
+    top: 100%;
+    left: 48%;
+    height: 200%;
+    z-index: -1;
+}
+
+.markCardBanner{
+    flex: 0 0 auto;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.markCardBanner img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 }
 
 /*<---------------- Desktop ----------> */
@@ -1097,4 +1183,5 @@ html{
     min-width: 32rem;
     z-index: 5;
 }
+
 }
