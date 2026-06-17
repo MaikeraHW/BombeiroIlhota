@@ -713,7 +713,7 @@ html{
 
 .donationsReasonsItem{
     max-width: 32rem;
-    margin: 3rem auto;
+    margin: 4rem auto;
 }
 
 .itemRight{
@@ -758,6 +758,13 @@ html{
 .itemLeft p{
     font-size: 1.2rem;
     text-align: start;
+}
+
+.donationsMarker{
+    border: 3px solid var(--detailYellow);
+    width: 10rem;
+    margin: auto;
+    margin-bottom: 2rem;
 }
 
 /*<----- MOBILE -------> */
