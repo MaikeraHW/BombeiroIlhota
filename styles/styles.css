@@ -465,6 +465,7 @@ html{
 
 /*<--------------- About Us Page ----------------->*/
 
+
 .aboutUsHeroBanner{
     position: relative;
     height: 35rem;
@@ -918,7 +919,7 @@ html{
     top: 10%;
     left: 10%;
     width: 90%;
-    z-index: 5;
+    z-index: 1;
 }
 
 .aboutUsHeroBannerTitle{
@@ -1461,7 +1462,7 @@ html{
     left: 10%;
     width: 40%;
     min-width: 32rem;
-    z-index: 5;
+    z-index: 1;
 }
 
 }
