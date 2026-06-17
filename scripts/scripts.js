@@ -60,6 +60,13 @@ function initSlider() {
         }
     }
 
+    function goToSlide(index) {
+    currentIndex = index;
+    updateSlider();
+}
+
+    window.goToSlide = goToSlide;
+
     function nextSlide() {
         currentIndex = (currentIndex + 1) % totalSlides;
         updateSlider();
@@ -67,3 +74,4 @@ function initSlider() {
 
     setInterval(nextSlide, 5000);
 }
+
