@@ -648,53 +648,6 @@ html{
 
 /*------------------- Donations Page ----------------------*/
 
-.donationsHeroBanner{
-    position: relative;
-    height: 35rem;
-    overflow: hidden;
-}
-
-.donationsHeroBannerTitle{
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: -2px;
-    line-height: 0.95;
-    margin-bottom: 2rem;
-}
-
-.donationsHeroBannerMarker{
-    border: 3px solid var(--detailYellow);
-    width: 5rem;
-    margin-bottom: 2rem;
-}
-
-.heroBannerImg{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.heroBannerImg img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.donationsHeroBannerPelicula{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 1;
-}
-
 .donationsContent{
     padding: 2rem;
 }
@@ -709,11 +662,6 @@ html{
 
 .donationsReasonsList{
     list-style: none;
-}
-
-.donationsReasonsItem{
-    max-width: 32rem;
-    margin: 4rem auto;
 }
 
 .itemRight{
@@ -1117,27 +1065,16 @@ html{
 
 /*------------------- Donations Page ----------------------*/
 
-.donationsHeroBanner{
-    height: 30rem;
-}
-
-.donationsHeroBannerContent{
-    color: white;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 90%;
-    z-index: 1;
-}
-
-.donationsBannerTitle{
-    width: 96%;
-    font-size: clamp(1rem, 10dvw, 3.5rem);
+.donationsReasonsItem{
+    max-width: 32rem;
+    margin: 4rem auto;
 }
 
 }
 
-/* ----------- About Us Intermediate --------------*/
+/* -----------  Intermediate --------------*/
+
+/* ------------ About Us ------------------*/
 
 @media (min-width: 769px) and (max-width: 1080px){
 
@@ -1258,7 +1195,17 @@ html{
     flex-grow: 1;
 }
 
+/* ------------ Donate Page ------------------*/
+
+.donationsReasonsItem{
+    max-width: 50rem;
+    margin: 4rem auto;
 }
+
+}
+
+
+/* ---------- Bigger Pages ---------------*/
 
 @media (min-width: 1081px) {
 
@@ -1340,6 +1287,66 @@ html{
 
 .ourValuesItemText{
     flex-grow: 1;
+}
+
+.donationsReasons{
+    margin-bottom: 3rem;
+}
+
+.donationsReasonsList{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.donationsContentTitle{
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: var(--mainRed);
+    margin-bottom: 2rem;
+}
+
+.donationsReasonsItem{
+    width: calc(100% / 6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.donationsReasonsItem p{
+    text-align: center;
+}
+
+.donateIconHolder{
+    background-color: var(--mainRed);
+    padding: 1rem;
+    border-radius: 24px;
+    width: 8rem;
+    height: 8rem;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.donateLiIcon{
+    display: block;
+    width: 80%;
+
+}
+
+
+.donationsMarker{
+    border: 3px solid var(--detailYellow);
+    width: 10rem;
+    margin: auto;
+    margin-bottom: 2rem;
 }
 
 }
