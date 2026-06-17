@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     iniciarmenu()
+    initSlider()
 });
 
 //hamburger menu
@@ -64,5 +65,5 @@ function initSlider() {
         updateSlider();
     }
 
-    setInterval(nextSlide, 1000);
+    setInterval(nextSlide, 5000);
 }

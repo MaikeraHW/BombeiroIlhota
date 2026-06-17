@@ -25,7 +25,7 @@ html{
 }
 
 .logo{
-    width: 8%;
+    width: calc(10dvw);
     flex-shrink: 1;
     position: relative;
     overflow: visible;
@@ -1105,8 +1105,7 @@ html{
 @media (min-width: 769px) {
 
 .topBar{
-    padding: 0rem 2rem;
-    width: 90%;
+    width: 96%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -1119,6 +1118,7 @@ html{
     position: absolute;
     top: 8px;
     width: 80%;
+    left: 10px;
     max-width: 120px;
     min-width: 60px;
 }
@@ -1171,8 +1171,7 @@ html{
 
 .headerNavList{
     list-style: none;
-    width: 60%;
-    min-width: fit-content;
+    width: fit-content;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -1182,7 +1181,7 @@ html{
 
 .headerNavList li {
     flex-shrink: 1;
-    margin: 1rem;
+    margin: 1rem calc(1dvw * 2);
 }
 
 .navListLink:hover{
