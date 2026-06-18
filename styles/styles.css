@@ -5,7 +5,7 @@
     font-family: 'Poppins', sans-serif;
     --mainRed: #7d1201;
     --hoverRed: #680e00;
-    --textColor: white;
+    --patternWhite: white;
     --detailYellow: #dbb405;
 }
 
@@ -21,7 +21,7 @@ html{
 
 .topBarContainer{
     background-image: linear-gradient(rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.699)) , url('../src/texturebanner.png');
-    color: var(--textColor);
+    color: var(--patternWhite);
 }
 
 .logo{
@@ -63,7 +63,7 @@ html{
 .hamburger span {
     width: 100%;
     height: 3px;
-    background: var(--textColor);
+    background: var(--patternWhite);
     border-radius: 2px;
 }
 
@@ -303,7 +303,7 @@ html{
 }
 
 .menu {
-    color: var(--textColor);
+    color: var(--patternWhite);
     width: 90%;
     max-width: 800px;
     padding: 1rem;
@@ -826,7 +826,7 @@ html{
     text-transform: uppercase;
     white-space: nowrap;
     padding: 0.4rem;
-    color: var(--textColor);
+    color: var(--patternWhite);
     text-decoration: none;
     transition-duration: 0.1s;
 }
@@ -1560,11 +1560,7 @@ html{
     white-space: nowrap;
     text-decoration: none;
     padding: 0.4rem 0.3rem 0.1rem;
-    color: var(--textColor);
-}
-
-.donateLink{
-    display: none;
+    color: var(--patternWhite);
 }
 
 /*Hero banner*/
