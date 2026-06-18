@@ -10,7 +10,6 @@
     top: 20%;
     left: 10%;
     width: 40%;
-    min-width: 32rem;
     z-index: 1;
 }
 
@@ -26,6 +25,10 @@
     border: 3px solid var(--detailYellow);
     width: 5rem;
     margin-bottom: 2rem;
+}
+
+.donationsHeroBannerText{
+    margin-right: 0.5rem;
 }
 
 .heroBannerImg{
@@ -122,55 +125,12 @@
     margin-bottom: 2rem;
 }
 
-/*<----- MOBILE -------> */
-
-@media (max-width: 768px){
-
-.donationsHeroBanner{
-    height: 30rem;
-}
-
-.donationsHeroBannerContent{
-    color: var(--patternWhite);
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 90%;
-    z-index: 1;
-}
-
-.donationsHeroBannerTitle{
-    width: 96%;
-    font-size: clamp(1rem, 10dvw, 3.5rem);
-}
-
-.donationMethods{
-    margin: 0 0 2rem 0;
-}
-
-.donationsReasonsItem{
-    max-width: 32rem;
-    margin: 4rem auto;
-}
-
-.donationMethodsTitle{
-    text-align: center;
-    font-size: 2rem;
-}
-
-.donationMethodsSubtitle{
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 3rem;
-    color: var(--mainRed)
-}
-
 .donationMethodCard{
     border: 1px solid rgb(209, 209, 209);
     border-radius: 16px;
     width: 90%;
     max-width: 30rem;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .donationCardTitle{
@@ -195,6 +155,7 @@
 }
 
 .donationCardImg{
+    max-width: 20rem;
     width: 90%;
     padding: 0.7rem;
     margin: 1rem auto;
@@ -263,18 +224,92 @@
 }
 
 .donationCardItem{
-    margin: 1rem auto;
+    margin: 0.5rem auto;
 }
+
+.donationMethodsTitle{
+    display: inline;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.donationMethodsSubtitle{
+    display: inline;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--mainRed)
+}
+
+/*<----- MOBILE -------> */
+
+@media (max-width: 768px){
+
+.donationsHeroBanner{
+    height: 30rem;
+}
+
+.donationsHeroBannerContent{
+    color: var(--patternWhite);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 90%;
+    z-index: 1;
+}
+
+.donationsHeroBannerTitle{
+    width: 96%;
+    font-size: clamp(1rem, 10dvw, 3.5rem);
+}
+
+.donationMethods{
+    margin: 0 0 2rem 0;
+}
+
+.donationsReasonsItem{
+    max-width: 32rem;
+    margin: 4rem auto;
+}
+
+.donationTitlesHolder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}  
+
+.donationMethodsTitle{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.donationMethodsSubtitle{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--mainRed)
+}
+
 }
 
 /* -----------  Intermediate --------------*/
 
 @media (min-width: 769px) and (max-width: 1080px){
 
+.donationTitlesHolder{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+    margin-bottom: 2rem;
+}    
+
 .donationsReasonsItem{
     max-width: 50rem;
     margin: 4rem auto;
 }
+
 
 }
 
@@ -333,12 +368,36 @@
     width: 80%;
 
 }
-
 .donationsMarker{
     border: 3px solid var(--detailYellow);
     width: 10rem;
     margin: auto;
     margin-bottom: 2rem;
+}
+
+.donationTitlesHolder{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+    margin-bottom: 2rem;
+} 
+
+.donationMethodCards{
+    max-width: 80rem;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.donationCardSeparator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 }
