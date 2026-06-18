@@ -81,7 +81,7 @@
 
 .transparencyBlock{
     width: 96%;
-    max-width: 75rem;
+    max-width: 70rem;
     margin: auto;
     background: var(--patternWhite);
     border-radius: 1rem;
