@@ -33,10 +33,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         btn.addEventListener("click", async () => {
             try {
                 await navigator.clipboard.writeText(codigoPix);
-                alert("Código PIX copiado!");
             } catch (err) {
                 console.error("Erro ao copiar:", err);
-                alert("Erro ao copiar o código PIX");
             }
         });
     }
