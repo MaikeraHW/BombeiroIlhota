@@ -13,6 +13,11 @@ html{
     scroll-behavior: smooth;
 }
 
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
 
 @media (min-width: 769px){
     

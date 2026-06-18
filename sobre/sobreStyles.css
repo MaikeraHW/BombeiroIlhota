@@ -1,0 +1,563 @@
+.aboutUsHeroBanner{
+    position: relative;
+    height: 35rem;
+    overflow: hidden;
+}
+
+.aboutUsHeroBannerTitle{
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 0.95;
+    margin-bottom: 2rem;
+}
+
+.aboutUsHeroBannerMarker{
+    border: 3px solid var(--detailYellow);
+    width: 5rem;
+    margin-bottom: 2rem;
+}
+
+.heroBannerImg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroBannerImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.aboutUsHeroBannerPelicula{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.aboutUsHistoryTextTitle{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: var(--mainRed);
+    margin-bottom: 1.2rem;
+}
+
+.aboutUsHistorySubtitle{
+    font-size: 1.6rem;
+    font-weight: 700;
+    max-width: 80%;
+    margin-bottom: 1.2rem;
+}
+
+.aboutUsMark{
+    border: 3px solid var(--detailYellow);
+    width: 6rem;
+    margin-bottom: 1.2rem;
+}
+
+.aboutUsHistoryText{
+    max-width: 50rem;
+    margin-bottom: 1.2rem;
+}
+
+.aboutUsHistoryMarks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.aboutUsHistory{
+    position: relative;
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.aboutUsHistoryContent{
+    width: 45%;
+}
+
+.aboutUsHistoryMarkCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.lineTest{
+    border: 3px solid rgb(228, 228, 228);
+    position: absolute;
+    top: 100%;
+    left: 48%;
+    height: 200%;
+    z-index: -1;
+}
+
+.markCardBanner{
+    flex: 0 0 auto;
+    width: 16rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.markCardBanner img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.markCardLogo{
+    position: relative;
+    flex-shrink: 0;
+    padding: 0.8rem;
+    background-color: var(--hoverRed);
+    width: 5rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.markCardTitle{
+    color: var(--hoverRed);
+}
+
+.markCardSubtitle{
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+}
+
+.markCardText{
+    font-size: 0.9rem;
+}
+
+.markCardLogo img{
+    display: block;
+    width: 100%;
+}
+
+.aboutUsStatistics{
+    background-color: var(--mainRed);
+    padding: 2rem 0;
+}
+
+.aboutUsStatisticsList{
+    list-style: none;
+    width: 80%;
+    margin: auto;
+}
+
+.aboutUsStatisticsItemText{
+    color: rgb(201, 201, 201);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.aboutUsStatisticsItemLogo{
+    width: 30%;
+    max-width: 8rem;
+}
+
+.aboutUsStatisticsItemIcon{
+    width: 100%;
+}
+
+.aboutUsStatisticsItemTitle{
+    color: var(--patternwhite);
+    font-size: clamp(2rem, 10dvw, 3rem);
+    line-height: 80%;
+    text-transform: uppercase;
+}
+
+.ourValuesTitle{
+    text-align: end;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: var(--mainRed);
+    margin-bottom: 0.5rem;
+}
+
+.ourValuesSubtitle{
+    text-align: end;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.ourValuesItemTitle{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ourValuesItemText{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+/*<----- MOBILE -------> */
+
+@media (max-width: 768px){
+
+.aboutUsHeroBanner{
+    height: 30rem;
+}
+
+.aboutUsHeroBannerContent{
+    color: var(--patternwhite);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 90%;
+    z-index: 1;
+}
+
+.aboutUsHeroBannerTitle{
+    width: 96%;
+    font-size: clamp(1rem, 10dvw, 3.5rem);
+}
+
+.aboutUsHistory{
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.aboutUsHistoryContent{
+    width: 90%;
+}
+
+.aboutUsHistoryMarkCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.lineTest{
+    border: 3px solid var(--hoverRed);
+    position: absolute;
+    top: 100%;
+    left: 48%;
+    height: calc(100% + 2rem);
+    z-index: -1;
+}
+
+.markCardBanner{
+    display: none;
+}
+
+.aboutUsStatisticsList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.aboutUsStatisticsItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.aboutUsItensSeparator{
+    border-bottom: 2px solid var(--detailYellow);
+    width: 70%;
+    margin: auto;
+    margin: 1rem 0;
+}
+
+.aboutUsStatisticsItemTitle{
+    color: var(--patternwhite);
+    font-size: clamp(2rem, 10dvw, 4rem);
+    line-height: 80%;
+    text-transform: uppercase;
+}
+
+.ourValue{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourValues{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.ourValuesList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.ourValuesItem{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 2px solid rgb(216, 216, 216);
+}
+}
+/* -----------  Intermediate --------------*/
+
+/* ------------ About Us ------------------*/
+
+@media (min-width: 769px) and (max-width: 1080px){
+
+.aboutUsHistory{
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.aboutUsHistoryContent{
+    width: 90%;
+}
+
+.aboutUsHistoryMarkCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.lineTest{
+    border: 3px solid var(--hoverRed);
+    position: absolute;
+    top: 100%;
+    left: 48%;
+    height: 200%;
+    z-index: -1;
+}
+
+.markCardBanner{
+    flex: 0 0 auto;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.markCardBanner img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutUsStatisticsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.aboutUsStatisticsItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    width: calc(50% - 1rem);
+}
+
+.aboutUsItensSeparator{
+    display: none;
+}
+
+
+.ourValue{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourValueContent{
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.ourValues{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.ourValuesList{
+    width: 85%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.ourValuesItem{
+    width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.ourValuesItemIcon{
+    flex-shrink: 0;
+    width: 8rem;
+    height: 8rem;
+}
+
+.ourValuesItemText{
+    flex-grow: 1;
+}
+
+}
+
+/* ---------- Bigger Pages ---------------*/
+
+@media (min-width: 1081px) {
+
+.aboutUsStatisticsList {
+    margin: 1rem auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.aboutUsStatisticsItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: calc(25% - 1rem);
+}
+
+.aboutUsItensSeparator{
+    display: none;
+}
+
+.ourValue{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourValueContent{
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+.ourValues{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+
+.ourValuesList{
+    width: 100%;
+    overflow: hidden;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 10%;
+}
+
+.ourValuesItem{
+    width: calc(100% / 4);
+    max-width: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ourValuesItemIcon{
+    flex-shrink: 0;
+    width: 8rem;
+    height: 8rem;
+}
+
+.ourValuesItemText{
+    flex-grow: 1;
+}
+
+}
+
+/*<---------------- Desktop ----------> */
+
+@media (min-width: 769px) {
+
+/*<--------------- About Us Page ----------------->*/
+
+.aboutUsHeroBannerContent{
+    color: var(--patternwhite);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 40%;
+    min-width: 32rem;
+    z-index: 1;
+}
+
+}

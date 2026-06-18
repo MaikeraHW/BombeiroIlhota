@@ -5,7 +5,7 @@
 }
 
 .donationsHeroBannerContent{
-    color: white;
+    color: var(--patternwhite);
     position: absolute;
     top: 20%;
     left: 10%;
@@ -131,7 +131,7 @@
 }
 
 .donationsHeroBannerContent{
-    color: white;
+    color: var(--patternwhite);
     position: absolute;
     top: 10%;
     left: 10%;
@@ -175,7 +175,7 @@
 
 .donationCardTitle{
     font-weight: 500;
-    color: white;
+    color: var(--patternwhite);
     font-size: 1rem;
     text-transform: uppercase;
     text-align: center;
@@ -214,7 +214,7 @@
     display: block;
     margin: auto;
     background-color: var(--mainRed);
-    color: white;
+    color: var(--patternwhite);
     padding: 0.4rem 2.5rem;
     outline: none;
     border: none;
@@ -226,7 +226,7 @@
 .donationCardSeparator p{
     text-transform: uppercase;
     background-color: var(--mainRed);
-    color: white;
+    color: var(--patternwhite);
     font-weight: 500;
     width: fit-content;
     margin: 2rem auto;
