@@ -179,7 +179,7 @@
 }
 
 .aboutUsStatisticsItemTitle{
-    color: var(--patternwhite);
+    color: var(--patternWhite);
     font-size: clamp(2rem, 10dvw, 3rem);
     line-height: 80%;
     text-transform: uppercase;
@@ -221,7 +221,7 @@
 }
 
 .aboutUsHeroBannerContent{
-    color: var(--patternwhite);
+    color: var(--patternWhite);
     position: absolute;
     top: 10%;
     left: 10%;
@@ -293,7 +293,7 @@
 }
 
 .aboutUsStatisticsItemTitle{
-    color: var(--patternwhite);
+    color: var(--patternWhite);
     font-size: clamp(2rem, 10dvw, 4rem);
     line-height: 80%;
     text-transform: uppercase;
@@ -551,7 +551,7 @@
 /*<--------------- About Us Page ----------------->*/
 
 .aboutUsHeroBannerContent{
-    color: var(--patternwhite);
+    color: var(--patternWhite);
     position: absolute;
     top: 20%;
     left: 10%;

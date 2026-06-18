@@ -100,7 +100,7 @@
 }
 
 .donateButton{
-    color: var(--patternwhite);
+    color: var(--patternWhite);
     text-decoration: none;
     display: flex;
     flex-direction: row;
@@ -222,7 +222,7 @@
 }
 
 .donateButton{
-    color: var(--patternwhite);
+    color: var(--patternWhite);
     text-decoration: none;
     display: flex;
     flex-direction: row;
