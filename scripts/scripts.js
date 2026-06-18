@@ -93,3 +93,35 @@ function initSlider() {
 // CÓDIGO PIX
 
 const codigoPix = `00020101021126980014br.gov.bcb.pix01362be2e93c-ba13-4801-a20e-7ae2a13fa1c30236A sua doacao salva vidas. Obrigado! 5204000053039865802BR5925BOMBEIROS VOLUNTARIOS DE 6009SAO PAULO62290525XvQjTo5C0we4kt9ayaxqhVQtN63043994`;
+
+
+// Abrir e fechar categoria principal
+
+document.querySelectorAll(".transparencyListHead").forEach(header => {
+
+    header.addEventListener("click", () => {
+
+        const block = header.closest(".transparencyBlock");
+
+        block.classList.toggle("active");
+
+    });
+
+});
+
+
+// Abrir e fechar subcategorias
+
+document.querySelectorAll(".transparencySubList").forEach(subList => {
+
+    subList.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+
+        const parentItem = subList.closest(".transparencyListItem");
+
+        parentItem.classList.toggle("active");
+
+    });
+
+});

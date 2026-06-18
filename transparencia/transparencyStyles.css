@@ -1,0 +1,244 @@
+.transparencyHeroBanner{
+    position: relative;
+    height: 35rem;
+    overflow: hidden;
+}
+
+.transparencyHeroBannerContent{
+    color: var(--patternWhite);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 40%;
+    z-index: 1;
+}
+
+.transparencyHeroBannerTitle{
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 0.95;
+    margin-bottom: 2rem;
+}
+
+.transparencyHeroBannerMarker{
+    border: 3px solid var(--detailYellow);
+    width: 5rem;
+    margin-bottom: 2rem;
+}
+
+.transparencyHeroBannerText{
+    margin-right: 0.5rem;
+}
+
+.heroBannerImg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroBannerImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.transparencyHeroBannerPelicula{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.transparencyTitle{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}
+
+.transparencySubtitle{
+    width: 90%;
+    max-width: 25rem;
+    margin: 1.2rem auto;
+    line-height: 0.95;
+    text-align: center;
+}
+
+.transparencyMarker{
+    width: 20%;
+    max-width: 6rem;
+    margin: 2rem auto;
+    border: 2px solid var(--detailYellow)
+}
+
+.transparencyBlock{
+    width: 96%;
+    max-width: 75rem;
+    margin: auto;
+    background: var(--patternWhite);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+}
+
+.transparencyListHead{
+    background-color: var(--mainRed);
+    color: var(--patternWhite);
+    padding: 1.2rem 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.transparencyListTitle{
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.transparencyListItem img{
+    width: 100%;
+}
+
+.transparencyListIcon{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--patternWhite);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.transparencyListIcon:hover{
+    background: rgba(255,255,255,.15);
+}
+
+.transparencyList{
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease;
+    background: white;
+}
+
+.transparencyBlock.active .transparencyList{
+    max-height: 5000px;
+}
+
+.transparencyListItem{
+    list-style: none;
+}
+
+.transparencySubList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border-bottom: 1px solid #ececec;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.transparencySubList:hover{
+    background: #fafafa;
+}
+
+.transparencyListItem > div{
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease;
+    background: #f8f8f8;
+}
+
+.transparencyListItem.active > div{
+    max-height: fit-content;
+}
+
+.transparencyImgHolder{
+    padding: 1rem 2.5rem;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: .95rem;
+    transition: .3s;
+    background-color: rgb(224, 224, 224);
+}
+
+.transparencyImgHolder:last-child{
+    border-bottom: none;
+}
+
+.transparencyImgHolder:hover{
+    background: rgba(125,18,1,.05);
+    color: var(--mainRed);
+}
+
+.transparencyListHead .transparencyListIcon{
+    transition: transform .3s ease;
+}
+
+.transparencyBlock.active
+.transparencyListHead
+.transparencyListIcon{
+    transform: rotate(90deg);
+}
+
+.transparencySubList .transparencyListIcon{
+    width: 2rem;
+    height: 2rem;
+    border-color: rgba(125,18,1,.15);
+    color: var(--mainRed);
+    transition: transform .3s ease;
+}
+
+.transparencySubList .transparencyListIcon:hover{
+    background: rgba(223, 196, 192, 0.08);
+}
+
+.transparencyListItem.active
+.transparencySubList
+.transparencyListIcon{
+    transform: rotate(90deg);
+}
+
+/*<-------------------- Mobile ---------------------> */
+
+@media (max-width: 768px){
+
+.transparencyHeroBanner{
+    height: 30rem;
+}
+
+.transparencyHeroBannerContent{
+    color: var(--patternWhite);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 90%;
+    z-index: 1;
+}
+
+.transparencyHeroBannerText{
+    width: 90%;
+}
+
+.transparencyHeroBannerTitle{
+    width: 96%;
+    font-size: clamp(1rem, 10dvw, 3.5rem);
+}
+
+}
