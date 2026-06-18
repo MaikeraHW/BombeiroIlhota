@@ -75,3 +75,17 @@ function initSlider() {
     setInterval(nextSlide, 5000);
 }
 
+
+const codigoPix = `00020101021126980014br.gov.bcb.pix01362be2e93c-ba13-4801-a20e-7ae2a13fa1c30236A sua doacao salva vidas. Obrigado! 5204000053039865802BR5925BOMBEIROS VOLUNTARIOS DE 6009SAO PAULO62290525XvQjTo5C0we4kt9ayaxqhVQtN63043994`;
+
+document.getElementById("copyBtn").addEventListener("click", async () => {
+    try {
+        await navigator.clipboard.writeText(codigoPix);
+        alert("Código PIX copiado!");
+    } catch (err) {
+        console.error("Erro ao copiar:", err);
+    }
+});
+
+
+

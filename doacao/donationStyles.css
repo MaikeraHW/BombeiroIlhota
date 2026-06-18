@@ -184,6 +184,10 @@
     margin-bottom: 2rem;
 }
 
+.donationCardCopyButton:hover{
+    background-color: var(--hoverRed);
+}
+
 .donationCardSeparator p{
     text-transform: uppercase;
     background-color: var(--mainRed);
@@ -225,6 +229,10 @@
 
 .donationCardItem{
     margin: 0.5rem auto;
+}
+
+.cardItemTitle, .cardItemText{
+    text-transform: uppercase;
 }
 
 .donationMethodsTitle{
