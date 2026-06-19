@@ -1,3 +1,85 @@
+.peliculaHolder{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.peliculaHolder::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner1Text{
+    width: 96%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(2rem, 6dvw, 7rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: white;
+    text-shadow: -3px 3px 6px rgba(0, 0, 0, 1);
+    text-align: center;
+    z-index: 1;
+    font-family: "League Spartan", sans-serif;
+}
+
+.banner2Text{
+    width: 96%;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(2rem, 6dvw, 7rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    color: white;
+    text-shadow: -3px 3px 6px rgba(0, 0, 0, 1);
+    text-align: center;
+    z-index: 1;
+    font-family: "League Spartan", sans-serif;
+}
+
+.banner3Text{
+    width: 96%;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(3.5rem, 8dvw, 7rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+    color: rgb(230, 230, 230);
+    text-shadow: -3px 3px 6px rgba(0, 0, 0, 1);
+    text-align: center;
+    z-index: 1;
+    font-family: "League Spartan", sans-serif;
+}
+
+.banner4Text{
+    width: fit-content;
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(5rem, 8dvw, 7rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: rgb(230, 230, 230);
+    text-shadow: -6px 6px 12px rgba(0, 0, 0, 1);
+    text-align: center;
+    z-index: 1;
+    font-family: "League Spartan", sans-serif;
+}
+
 .slides {
   display: flex;
   height: 100%;
@@ -18,11 +100,11 @@
 }
 
 .adjust{
-    object-position: left center;
+    object-position: 30% 20%;
 }
 
 .adjust2 {
-    object-position: 50% 70%;
+    object-position: 50% bottom;
 }
 
 .adjust3 {
@@ -213,6 +295,19 @@
   width: 100%;
   height: 300px;
   overflow: hidden;
+}
+
+.banner2Text{
+    top: 20%;
+    left: 40%;
+}
+
+.banner3Text{
+    font-size: clamp(2rem, 8dvw, 7rem);
+}
+
+.banner4Text{
+    font-size: clamp(2rem, 8dvw, 7rem);
 }
 
 .homeStatisticSection{
