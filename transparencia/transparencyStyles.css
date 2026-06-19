@@ -97,7 +97,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
 }
 
 .transparencyListTitle{
@@ -110,7 +109,7 @@
     width: 100%;
 }
 
-.transparencyListIcon{
+.transparencyListIcon, .transparencyListIcon2{
     width: 2.5rem;
     height: 2.5rem;
     border: 1px solid rgba(255,255,255,.4);
@@ -150,7 +149,6 @@
     font-size: 1.05rem;
     font-weight: 500;
     border-bottom: 1px solid #ececec;
-    cursor: pointer;
     transition: .3s;
 }
 
@@ -197,7 +195,7 @@
     transform: rotate(90deg);
 }
 
-.transparencySubList .transparencyListIcon{
+.transparencyListIcon2{
     width: 2rem;
     height: 2rem;
     border-color: rgba(125,18,1,.15);
@@ -205,14 +203,17 @@
     transition: transform .3s ease;
 }
 
-.transparencySubList .transparencyListIcon:hover{
+.transparencyListIcon2:hover{
     background: rgba(223, 196, 192, 0.08);
 }
 
 .transparencyListItem.active
-.transparencySubList
-.transparencyListIcon{
+.transparencyListIcon2{
     transform: rotate(90deg);
+}
+
+.openPdfBtn{
+    display: none;
 }
 
 /*<-------------------- Mobile ---------------------> */
@@ -241,4 +242,17 @@
     font-size: clamp(1rem, 10dvw, 3.5rem);
 }
 
+.transparencyList button{
+    display: none;
+}
+
+.openPdfBtn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.6rem;
+    padding: 0 0.5rem;
+}
 }

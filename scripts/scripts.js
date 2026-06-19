@@ -98,7 +98,7 @@ const codigoPix = `00020101021126980014br.gov.bcb.pix01362be2e93c-ba13-4801-a20e
 
 // Abrir e fechar categoria principal
 
-document.querySelectorAll(".transparencyListHead").forEach(header => {
+document.querySelectorAll(".transparencyListIcon").forEach(header => {
 
     header.addEventListener("click", () => {
 
@@ -113,7 +113,7 @@ document.querySelectorAll(".transparencyListHead").forEach(header => {
 
 // Abrir e fechar subcategorias
 
-document.querySelectorAll(".transparencySubList").forEach(subList => {
+document.querySelectorAll(".transparencyListIcon2").forEach(subList => {
 
     subList.addEventListener("click", (event) => {
 
