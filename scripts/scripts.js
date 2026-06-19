@@ -27,17 +27,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     initSlider();
 
     // BOTÃO COPIAR PIX
-    const btn = document.getElementById("copyBtn");
+    const copyBtn = document.getElementById("copyBtn");
 
-    if (btn) {
-        btn.addEventListener("click", async () => {
-            try {
-                await navigator.clipboard.writeText(codigoPix);
-            } catch (err) {
-                console.error("Erro ao copiar:", err);
-            }
-        });
-    }
+    if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
+        try {
+            await navigator.clipboard.writeText(codigoPix);
+            alert("Código PIX copiado!");
+        } catch (err) {
+            console.error("Erro ao copiar:", err);
+        }
+    });
+}
 });
 
 //hamburger menu
