@@ -140,7 +140,7 @@
 }
 
 .headerNavList li {
-    width: 40%;
+    width: fit-content;
     max-width: 300px;
     margin: 0.5rem 0;
     text-align: center;
