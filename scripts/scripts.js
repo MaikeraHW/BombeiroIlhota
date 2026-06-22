@@ -135,3 +135,39 @@ const submitBtn = document.getElementById("formButton");
 checkbox.addEventListener("change", () => {
     submitBtn.disabled = !checkbox.checked;
 });
+
+
+//modal de sucesso do form
+
+const form = document.getElementById("volunteerForm");
+const modal = document.getElementById("successModal");
+const modalMessage = document.getElementById("modalMessage");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch("setinfo.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+
+        modal.classList.remove("hidden");
+        modalMessage.innerText = data.message;
+
+        if (data.status === "success") {
+            form.reset();
+        }
+    })
+    .catch(() => {
+        modal.classList.remove("hidden");
+        modalMessage.innerText = "Erro inesperado.";
+    });
+});
+
+function closeModal() {
+    modal.classList.add("hidden");
+}

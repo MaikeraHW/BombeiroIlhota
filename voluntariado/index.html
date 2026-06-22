@@ -35,7 +35,7 @@
         <p class="volunteerSubtitle">Preencha o formulário abaixo e assim que as inscrições forem abertas você será imediatamente avisado.</p>
         <div class="volunteerMarker"></div>
 
-        <form class="volunteerForm" action="/phparchives/setinfos.php" method="POST">
+        <form class="volunteerForm" id="volunteerForm" action="/phparchives/setinfos.php" method="POST">
             <div class="volunteerFormBlock">
                 <div class="volunteerFormCard">
                     <div class="formIcon">
@@ -114,6 +114,13 @@
             </div>
         </form>
     </main>
+    <div id="successModal" class="modal hidden">
+    <div class="modalContent">
+        <h2>✔ Sucesso!</h2>
+        <p id="modalMessage">Envio realizado com sucesso.</p>
+        <button onclick="closeModal()">OK</button>
+    </div>
+    </div>
     
     <!----Header insert ----->
     <div data-component="footer"></div> 
