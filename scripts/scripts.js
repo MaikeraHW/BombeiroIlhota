@@ -148,7 +148,7 @@ form.addEventListener("submit", function(e) {
 
     const formData = new FormData(form);
 
-    fetch("setinfo.php", {
+    fetch("/phparchives/setinfos.php", {
         method: "POST",
         body: formData
     })
