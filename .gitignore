@@ -1,6 +1,6 @@
 # arquivos sensíveis
 .env
-
+.php
 # dependências (se usar libs)
 vendor/
 

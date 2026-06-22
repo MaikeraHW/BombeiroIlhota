@@ -1,6 +1,6 @@
-$env = parse_ini_file(__DIR__ . '/.env');
-
-$host = $env['DB_HOST'];
-$dbname = $env['DB_NAME'];
-$user = $env['DB_USER'];
-$pass = $env['DB_PASS'];
+<?php
+$host = "127.0.0.1:3306";
+$dbname = "u408471695_cursoformacao";
+$username = "u408471695_bombeiroilhota";
+$password = "BombeiroIlhota39$$";
+?>
