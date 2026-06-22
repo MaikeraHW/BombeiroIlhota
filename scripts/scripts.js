@@ -142,6 +142,7 @@ checkbox.addEventListener("change", () => {
 const form = document.getElementById("volunteerForm");
 const modal = document.getElementById("successModal");
 const modalMessage = document.getElementById("modalMessage");
+const modalTitle = document.getElementById("modalTitle");
 
 form.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -156,15 +157,23 @@ form.addEventListener("submit", function(e) {
     .then(data => {
 
         modal.classList.remove("hidden");
-        modalMessage.innerText = data.message;
 
         if (data.status === "success") {
+
+            modalTilte.classList.add("success")
+            modalTitle.innerHTML = "✔ Sucesso!"
+            modalMessage.innerHTML = "Inscrição realizada"
             form.reset();
+        } else {
+            modalTilte.classList.add("error")
+            modalTitle.innerHTML = "X Falha! "
+            modalMessage.innerHTML = "Inscrição não realizada <br> Entre em contato"
         }
     })
     .catch(() => {
         modal.classList.remove("hidden");
-        modalMessage.innerText = "Erro inesperado.";
+        modalTitle.innerHTML = "❌ Falha!";
+        modalMessage.innerHTML = "Erro inesperado.<br>Tente novamente mais tarde.";
     });
 });
 

@@ -284,8 +284,12 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-.modalContent h2{
+.success{
     color: green;
+}
+
+.error{
+    color: red;
 }
 
 /*<-------------------- Mobile ---------------------> */
