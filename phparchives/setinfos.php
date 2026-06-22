@@ -15,23 +15,24 @@ try {
     $birth = $_POST['birth'] ?? '';
     $accept = isset($_POST['accept']) ? 1 : 0;
 
+
     // Validação simples
     if (!$name || !$cpf || !$email || !$tel || !$city || !$birth) {
-        die("Preencha todos os campos obrigatórios.");
+    die("Preencha todos os campos obrigatórios.");
     }
 
     // SQL seguro (prepared statement)
-    $sql = "INSERT INTO volunteers 
-            (name, cpf, email, phone, city, birth, accept)
+    $sql = "INSERT INTO inscritos 
+            (name, cpf, email, tel, city, birth, accept)
             VALUES
-            (:name, :cpf, :email, :phone, :city, :birth, :accept)";
+            (:name, :cpf, :email, :tel, :city, :birth, :accept)";
 
     $stmt = $pdo->prepare($sql);
 
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':cpf', $cpf);
     $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':phone', $tel);
+    $stmt->bindParam(':tel', $tel);
     $stmt->bindParam(':city', $city);
     $stmt->bindParam(':birth', $birth);
     $stmt->bindParam(':accept', $accept);
