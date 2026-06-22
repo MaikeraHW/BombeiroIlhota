@@ -274,6 +274,19 @@ input[type="checkbox"] {
     display: none;
 }
 
+.modalButton{
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--mainRed);
+    color: var(--patternWhite);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modalContent h2{
+    color: green;
+}
 
 /*<-------------------- Mobile ---------------------> */
 
