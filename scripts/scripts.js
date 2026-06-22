@@ -39,6 +39,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 }
+
+    //habilitar btn form
+
+    const checkbox = document.getElementById("accept");
+    const submitBtn = document.getElementById("formButton");
+
+    checkbox.addEventListener("change", () => {
+        submitBtn.disabled = !checkbox.checked;
+});
 });
 
 //hamburger menu
@@ -127,14 +136,6 @@ document.querySelectorAll(".transparencyListIcon2").forEach(subList => {
 
 });
 
-//habilitar btn form
-
-const checkbox = document.getElementById("accept");
-const submitBtn = document.getElementById("formButton");
-
-checkbox.addEventListener("change", () => {
-    submitBtn.disabled = !checkbox.checked;
-});
 
 
 //modal de sucesso do form
