@@ -4,3 +4,5 @@ $dbname = "u408471695_cursoformacao";
 $username = "u408471695_bombeiroilhota";
 $password = "BombeiroIlhota39$$";
 ?>
+
+//teste
