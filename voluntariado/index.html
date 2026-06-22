@@ -35,7 +35,7 @@
         <p class="volunteerSubtitle">Preencha o formulário abaixo e assim que as inscrições forem abertas você será imediatamente avisado.</p>
         <div class="volunteerMarker"></div>
 
-        <form class="volunteerForm" action="">
+        <form class="volunteerForm" action="/phparchives/setinfos.php" method="POST">
             <div class="volunteerFormBlock">
                 <div class="volunteerFormCard">
                     <div class="formIcon">
@@ -43,7 +43,7 @@
                     </div>
                     <div class="formFields">
                         <label for="name" class="formLabel">Nome Completo<span> *</span></label>
-                        <input type="text" class="formInput" id="name" placeholder="Digite seu nome completo" autocomplete="none" required>
+                        <input name="name" type="text" class="formInput" id="name" placeholder="Digite seu nome completo" autocomplete="none" required>
                     </div>
                 </div>
                 <div class="volunteerFormCard">
@@ -52,7 +52,7 @@
                     </div>
                     <div class="formFields">
                         <label for="cpf" class="formLabel"> CPF<span> *</span> </label>
-                        <input type="tel" class="formInput" id="cpf" placeholder="Digite seu CPF" autocomplete="none" required>
+                        <input name="cpf" type="tel" class="formInput" id="cpf" placeholder="Digite seu CPF" autocomplete="none" required>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="formFields">
                         <label for="email" class="formLabel">E-mail<span> *</span></label>
-                        <input type="email" class="formInput" id="email" placeholder="seuemail@email.com" autocomplete="none" required>
+                        <input name="email" type="email" class="formInput" id="email" placeholder="seuemail@email.com" autocomplete="none" required>
                     </div>
                 </div>
                 <div class="volunteerFormCard">
@@ -72,7 +72,7 @@
                     </div>
                     <div class="formFields">
                         <label for="tel" class="formLabel"> Telefone/Whatsapp<span> *</span> </label>
-                        <input type="tel" class="formInput" id="tel" placeholder="(00) 00000-0000" autocomplete="none" required>
+                        <input name="tel" type="tel" class="formInput" id="tel" placeholder="(00) 00000-0000" autocomplete="none" required>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                     </div>
                     <div class="formFields">
                         <label for="city" class="formLabel">Cidade / UF<span> *</span> </label>
-                        <input type="text" class="formInput" id="city" placeholder="Digite sua cidade / estado" autocomplete="none" required>
+                        <input name="city "type="text" class="formInput" id="city" placeholder="Digite sua cidade / estado" autocomplete="none" required>
                     </div>
                 </div>
                 <div class="volunteerFormCard">
@@ -92,7 +92,7 @@
                     </div>
                     <div class="formFields">
                         <label for="birth" class="formLabel"> Data de nascimento<span> *</span> </label>
-                        <input type="tel" class="formInput" id="birth" placeholder="dd/mm/aaaa" autocomplete="none" required>
+                        <input name="birth" type="tel" class="formInput" id="birth" placeholder="dd/mm/aaaa" autocomplete="none" required>
                     </div>
                 </div>
             </div>

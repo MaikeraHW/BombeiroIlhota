@@ -1,0 +1,8 @@
+# arquivos sensíveis
+.env
+
+# dependências (se usar libs)
+vendor/
+
+# sistema
+.DS_Store
