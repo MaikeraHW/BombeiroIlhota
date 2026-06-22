@@ -160,12 +160,12 @@ form.addEventListener("submit", function(e) {
 
         if (data.status === "success") {
 
-            modalTilte.classList.add("success")
+            modalTitle.classList.add("success")
             modalTitle.innerHTML = "✔ Sucesso!"
             modalMessage.innerHTML = "Inscrição realizada"
             form.reset();
         } else {
-            modalTilte.classList.add("error")
+            modalTitle.classList.add("error")
             modalTitle.innerHTML = "X Falha! "
             modalMessage.innerHTML = "Inscrição não realizada <br> Entre em contato"
         }
