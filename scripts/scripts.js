@@ -47,7 +47,48 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     checkbox.addEventListener("change", () => {
         submitBtn.disabled = !checkbox.checked;
+    });
+
+    //mascaras para os inputs
+
+    const cpf = document.getElementById("cpf");
+    cpf.addEventListener("input", (e) => {
+        let value = e.target.value;
+
+        value = value.replace(/\D/g, ""); // remove tudo que não é número
+        value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+
+        e.target.value = value;
+    });
+
+
+
+    const tel = document.getElementById("tel");
+    tel.addEventListener("input", (e) => {
+        let value = e.target.value;
+
+        value = value.replace(/\D/g, "");
+        value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
+        value = value.replace(/(\d{5})(\d)/, "$1-$2");
+
+        e.target.value = value;
 });
+
+
+
+const birth = document.getElementById("birth");
+birth.addEventListener("input", (e) => {
+    let value = e.target.value;
+
+    value = value.replace(/\D/g, "");
+    value = value.replace(/(\d{2})(\d)/, "$1/$2");
+    value = value.replace(/(\d{2})(\d)/, "$1/$2");
+
+    e.target.value = value;
+});
+
 });
 
 //hamburger menu

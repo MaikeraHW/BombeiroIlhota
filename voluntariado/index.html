@@ -43,7 +43,7 @@
                     </div>
                     <div class="formFields">
                         <label for="name" class="formLabel">Nome Completo<span> *</span></label>
-                        <input name="name" type="text" class="formInput" id="name" placeholder="Digite seu nome completo" autocomplete="none" required>
+                        <input name="name" type="text" class="formInput" id="name" placeholder="Digite seu nome completo" autocomplete="none" minlength="3" required>
                     </div>
                 </div>
                 <div class="volunteerFormCard">
@@ -52,7 +52,7 @@
                     </div>
                     <div class="formFields">
                         <label for="cpf" class="formLabel"> CPF<span> *</span> </label>
-                        <input name="cpf" type="tel" class="formInput" id="cpf" placeholder="Digite seu CPF" autocomplete="none" required>
+                        <input name="cpf" type="tel" class="formInput" id="cpf" placeholder="Digite seu CPF" autocomplete="none" maxlength="14" minlength="14" required>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="formFields">
                         <label for="tel" class="formLabel"> Telefone/Whatsapp<span> *</span> </label>
-                        <input name="tel" type="tel" class="formInput" id="tel" placeholder="(00) 00000-0000" autocomplete="none" required>
+                        <input name="tel" type="tel" class="formInput" id="tel" placeholder="(00) 00000-0000" autocomplete="none" maxlength="15" minlength="14" required>
                     </div>
                 </div>
             </div>
@@ -114,9 +114,9 @@
             </div>
         </form>
     </main>
-    <div id="successModal" class="modal ">
+    <div id="successModal" class="modal hidden">
     <div class="modalContent">
-        <h2 id="modalTitle">aaaaaa</h2>
+        <h2 id="modalTitle"></h2>
         <p id="modalMessage"></p>
         <button onclick="closeModal()" class="modalButton">OK</button>
     </div>
