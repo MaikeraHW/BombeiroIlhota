@@ -1,0 +1,275 @@
+.volunteerHeroBanner{
+    position: relative;
+    height: 35rem;
+    overflow: hidden;
+}
+
+.volunteerHeroBannerContent{
+    color: var(--patternWhite);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 40%;
+    z-index: 1;
+}
+
+.volunteerHeroBannerTitle{
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 0.95;
+    margin-bottom: 2rem;
+}
+
+.volunteerHeroBannerMarker{
+    border: 3px solid var(--detailYellow);
+    width: 5rem;
+    margin-bottom: 2rem;
+}
+
+.volunteerHeroBannerText{
+    margin-right: 0.5rem;
+}
+
+.heroBannerImg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroBannerImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.volunteerHeroBannerPelicula{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.volunteerTitle{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}
+
+.volunteerSubtitle{
+    width: 90%;
+    max-width: 60rem;
+    margin: 0.4rem auto;
+    line-height: 0.95;
+    text-align: center;
+}
+
+.volunteerMarker{
+    width: 20%;
+    max-width: 6rem;
+    margin: 2rem auto;
+    border: 2px solid var(--detailYellow);
+}
+
+.volunteerForm{
+    width: 96%;
+    margin: auto;
+    max-width: 80rem;
+    border-radius: 24px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #F3F3F5;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10), 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.volunteerFormBlock{
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 0.5rem;
+}
+
+.volunteerFormCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 16px;
+    border: 1px solid var(--hoverRed);
+    padding: 1rem;
+}
+
+.formIcon{
+    background-color: var(--mainRed);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 4px;
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formIcon img{
+    display: block;
+    width: 70%;
+}
+
+.formFields{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.formLabel{
+    font-size: clamp(0.3rem, 3.5dvw, 1.2rem);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.formLabel span{
+    color: var(--mainRed)
+}
+
+.formInput{
+    outline: none;
+    padding: 0.2rem 0.6rem;
+    width: 100%;
+    border: 2px solid #E4E4E7;
+    border-radius: 8px;
+}
+
+.formInput:focus{
+    border: 2px solid var(--hoverRed);
+}
+
+.formInput::placeholder{
+    color: #9CA3AF;
+}
+
+.formCheckbox{
+    width: 96%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--mainRed);
+}
+
+.formButtonHolder{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.formButton{
+    margin: 1rem auto 0;
+    width: 100%;
+    max-width: 30rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--mainRed);
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    color: var(--patternWhite);
+    font-size: clamp(1rem, 5dvw, 1.5rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.formButton:disabled{
+    background-color: #9CA3AF;
+}
+
+.formButton:disabled:hover{
+    background-color: #9CA3AF;
+    cursor: default;
+}
+
+.formButton:hover{
+    background-color: var(--hoverRed);
+}
+
+.buttonIcon{
+    width: 15%;
+}
+
+.buttonIcon img{
+    display: block;
+    width: 100%;
+}
+
+.formFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.formFooterICon{
+    width: 3%;
+    min-width: 1.5rem;
+}
+
+.formFooterICon img{
+    display: block;
+    width: 100%;
+}
+
+.formFooterText{
+    font-size: 0.8rem;
+}
+
+
+/*<-------------------- Mobile ---------------------> */
+
+@media (max-width: 768px){
+
+.volunteerHeroBanner{
+    height: 30rem;
+}
+
+.volunteerHeroBannerContent{
+    color: var(--patternWhite);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 90%;
+    z-index: 1;
+}
+
+.volunteerHeroBannerText{
+    width: 90%;
+}
+
+.volunteerHeroBannerTitle{
+    width: 96%;
+    font-size: clamp(1rem, 10dvw, 3.5rem);
+}
+}

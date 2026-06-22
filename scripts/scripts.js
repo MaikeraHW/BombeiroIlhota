@@ -126,3 +126,12 @@ document.querySelectorAll(".transparencyListIcon2").forEach(subList => {
     });
 
 });
+
+//habilitar btn form
+
+const checkbox = document.getElementById("accept");
+const submitBtn = document.getElementById("formButton");
+
+checkbox.addEventListener("change", () => {
+    submitBtn.disabled = !checkbox.checked;
+});
