@@ -81,7 +81,7 @@
 
 .volunteerForm{
     width: 96%;
-    margin: auto;
+    margin: 0 auto 2rem;
     max-width: 80rem;
     border-radius: 24px;
     padding: 0.5rem;
@@ -232,6 +232,7 @@ input[type="checkbox"] {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 0 auto 2rem;
 }
 
 .formFooterICon{
