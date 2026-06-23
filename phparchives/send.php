@@ -2,19 +2,23 @@
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $mensagem = $_POST["mensagem"];
+    $nome = $_POST["name"] ?? '';
+    $email = $_POST["email"] ?? '';
+    $titulo = $_POST["subject"] ?? '';
+    $mensagem = $_POST["message"] ?? '';
 
     $destino = "wagner.maiconhenrique@gmail.com";
 
-    $assunto = "Novo contato do site";
+    $assunto = "Novo contato do site: " . $titulo;
 
     $corpo = "
-    Nome: $nome\n
-    Email: $email\n
-    Mensagem:\n$mensagem
-    ";
+            Nome: $nome
+            Email: $email
+            Assunto: $titulo
+
+            Mensagem:
+            $mensagem
+            ";
 
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
@@ -25,5 +29,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "Erro ao enviar mensagem.";
     }
 }
-
 ?>
