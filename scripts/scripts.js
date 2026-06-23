@@ -177,8 +177,6 @@ document.querySelectorAll(".transparencyListIcon2").forEach(subList => {
 
 });
 
-
-
 //modal de sucesso do form
 
 const form = document.getElementById("volunteerForm");
@@ -204,12 +202,12 @@ form.addEventListener("submit", function(e) {
 
             modalTitle.classList.add("success")
             modalTitle.innerHTML = "✔ Sucesso!"
-            modalMessage.innerHTML = "Inscrição realizada"
+            modalMessage.innerHTML = "Envio realizado"
             form.reset();
         } else {
             modalTitle.classList.add("error")
             modalTitle.innerHTML = "X Falha! "
-            modalMessage.innerHTML = "Inscrição não realizada <br> Entre em contato"
+            modalMessage.innerHTML = "Falha ao enviar <br> Entre em contato"
         }
     })
     .catch(() => {

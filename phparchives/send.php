@@ -24,9 +24,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $headers .= "Reply-To: $email\r\n";
 
     if (mail($destino, $assunto, $corpo, $headers)) {
-        echo "Mensagem enviada com sucesso!";
+        echo json_encode([
+        "status" => "success",
+        "message" => "Inscrição enviada com sucesso!"
+    ]);
     } else {
-        echo "Erro ao enviar mensagem.";
+        echo json_encode([
+        "status" => "error",
+        "message" => "Erro ao salvar"
+    ]);
     }
 }
 ?>
