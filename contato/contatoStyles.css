@@ -1,0 +1,209 @@
+.contactHeroBanner{
+    position: relative;
+    height: 30rem;
+    overflow: hidden;
+}
+
+.contactHeroBannerContent{
+    color: var(--patternWhite);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    z-index: 1;
+}
+
+.contactHeroBannerTitle{
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 0.95;
+    margin-bottom: 2rem;
+}
+
+.contactHeroBannerMarker{
+    border: 3px solid var(--detailYellow);
+    width: 5rem;
+    margin-bottom: 2rem;
+}
+
+.contactHeroBannerText{
+    margin-right: 0.5rem;
+}
+
+.heroBannerImg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroBannerImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contactHeroBannerPelicula{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.contactTitle{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}
+
+.contactTitle span{
+    color: var(--mainRed)
+}
+
+.contactMainMarker{
+    width: 30%;
+    max-width: 5rem;
+    margin: 2rem auto;
+    border: 3px solid var(--detailYellow)
+}
+
+.contactCards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.contactCard{
+    flex: 1 0 auto;
+    width: calc(100% / 8);
+    max-width: 18rem;
+    border: 1px solid #E5E7EB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.cardIconHolder{
+    width: 50%;
+    padding: 1.3rem;
+    background-color: #F3F4F6;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+
+.cardIcon{
+    width: 100%;
+    display: block;
+}
+
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardTitle{
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: var(--mainRed);
+}
+
+.cardText{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.cardFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.cardFooterText{
+    font-size: 0.9rem;
+    text-align: center;
+    color:#6B7280;
+    line-height: 16px;
+}
+
+.cardMidiasHolder{
+    margin: 0.7rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cardMidiasHolder a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    aspect-ratio: 1 / 1;
+    border: 2px solid var(--mainRed);
+    border-radius: 50%;
+    padding: 0.4rem;
+}
+
+.cardMidiasHolder a img{
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: 1086px) {
+
+.contactCards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.contactCard{
+    width: 100%;
+    max-width: 26rem;
+    min-height: 27rem;
+    justify-self: center;
+}
+
+.cardMidiasHolder a img{
+    display: block;
+    width: 80%;
+}
+
+}
+
+@media (max-width: 768px) {
+
+.contactCards{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+.contactCard{
+    width: 100%;
+    justify-self: center;
+}
+
+}

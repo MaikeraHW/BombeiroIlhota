@@ -1,8 +1,6 @@
 # arquivos sensíveis
 .env
 config.php
-setinfos.php
-phparchives/
 # dependências (se usar libs)
 vendor/
 
