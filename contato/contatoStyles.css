@@ -58,9 +58,13 @@
     z-index: 1;
 }
 
+.contactContent{
+    background-color: #F5F5F5;
+    padding: 2rem 0;
+}
+
 .contactTitle{
     text-align: center;
-    margin-top: 2rem;
     font-size: 1.8rem;
 }
 
@@ -171,6 +175,97 @@
     width: 100%;
 }
 
+.contactFormSection{
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formMarker{
+    width: 8rem;
+    margin: 2rem auto;
+    border: 3px solid var(--detailYellow);
+}
+
+.formTitle, .formSubtitle{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 100%;
+}
+
+.formSubtitle{
+    color: var(--mainRed);
+}
+
+.contactForm{
+    background-color: #e8e9eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    border-radius: 12px;
+    width: 96%;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.formLabel{
+    font-weight: 600;
+}
+
+.formLabel span{
+    color: var(--mainRed);
+}
+
+.formInput{
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.formInput:focus, .formTextArea:focus{
+    outline: 2px solid var(--hoverRed);
+}
+
+.formTextArea{
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    height: 10rem;
+}
+
+.formButton{
+    background-color: var(--mainRed);
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    color: var(--patternWhite);
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem;
+}
+
+.formButtonIcon{
+    width: 4%;
+    min-width: 1.5rem;
+}
+
+.formButtonIcon img{
+    display: block;
+    width: 100%;
+}
+
+/* ----------------- Medium Screens ---------------------- */
+
 @media (max-width: 1086px) {
 
 .contactCards{
@@ -193,6 +288,10 @@
 
 }
 
+
+/* ----------------- Small Screens ---------------------- */
+
+
 @media (max-width: 768px) {
 
 .contactCards{
@@ -204,6 +303,10 @@
 .contactCard{
     width: 100%;
     justify-self: center;
+}
+
+.formTitle, .formSubtitle{
+    font-size: clamp(1rem, 8dvw, 2rem);
 }
 
 }
