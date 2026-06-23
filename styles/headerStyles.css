@@ -5,7 +5,7 @@
 }
 
 .topBarContainer{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.699)) , url('../src/texturebanner.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.699)) , url('/src/icons/texturebanner.png');
     color: var(--patternWhite);
 }
 

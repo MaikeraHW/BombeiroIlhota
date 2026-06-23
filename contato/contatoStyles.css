@@ -252,6 +252,11 @@
     align-items: center;
     gap: 1rem;
     padding: 0.6rem;
+    cursor: pointer;
+}
+
+.formButton:hover{
+    background-color: var(--hoverRed);
 }
 
 .formButtonIcon{
