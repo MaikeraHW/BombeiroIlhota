@@ -177,46 +177,119 @@ document.querySelectorAll(".transparencyListIcon2").forEach(subList => {
 
 });
 
-//modal de sucesso do form
+// Modal
 
-const form = document.getElementById("volunteerForm");
 const modal = document.getElementById("successModal");
 const modalMessage = document.getElementById("modalMessage");
 const modalTitle = document.getElementById("modalTitle");
 
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-
-    fetch("/phparchives/setinfos.php", {
-        method: "POST",
-        body: formData
-    })
-    .then(res => res.json())
-    .then(data => {
-
-        modal.classList.remove("hidden");
-
-        if (data.status === "success") {
-
-            modalTitle.classList.add("success")
-            modalTitle.innerHTML = "✔ Sucesso!"
-            modalMessage.innerHTML = "Envio realizado"
-            form.reset();
-        } else {
-            modalTitle.classList.add("error")
-            modalTitle.innerHTML = "X Falha! "
-            modalMessage.innerHTML = "Falha ao enviar <br> Entre em contato"
-        }
-    })
-    .catch(() => {
-        modal.classList.remove("hidden");
-        modalTitle.innerHTML = "❌ Falha!";
-        modalMessage.innerHTML = "Erro inesperado.<br>Tente novamente mais tarde.";
-    });
-});
-
 function closeModal() {
     modal.classList.add("hidden");
+}
+
+// Formulário de voluntários
+
+const volunteerForm = document.getElementById("volunteerForm");
+
+if (volunteerForm) {
+
+    volunteerForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const formData = new FormData(volunteerForm);
+
+        fetch("/phparchives/setinfos.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+
+            modal.classList.remove("hidden");
+
+            modalTitle.classList.remove("success", "error");
+
+            if (data.status === "success") {
+
+                modalTitle.classList.add("success");
+                modalTitle.innerHTML = "✔ Sucesso!";
+                modalMessage.innerHTML = data.message || "Inscrição realizada!";
+
+                volunteerForm.reset();
+
+            } else {
+
+                modalTitle.classList.add("error");
+                modalTitle.innerHTML = "❌ Falha!";
+                modalMessage.innerHTML = data.message || "Falha ao enviar.<br>Entre em contato.";
+
+            }
+        })
+        .catch(() => {
+
+            modal.classList.remove("hidden");
+
+            modalTitle.classList.remove("success", "error");
+            modalTitle.classList.add("error");
+
+            modalTitle.innerHTML = "❌ Falha!";
+            modalMessage.innerHTML = "Erro inesperado.<br>Tente novamente mais tarde.";
+        });
+
+    });
+
+}
+
+// Formulário de contato
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        fetch("/phparchives/send.php", {
+            method: "POST",
+            body: new FormData(contactForm)
+        })
+        .then(res => res.json())
+        .then(data => {
+
+            modal.classList.remove("hidden");
+
+            modalTitle.classList.remove("success", "error");
+
+            if (data.status === "success") {
+
+                modalTitle.classList.add("success");
+                modalTitle.innerHTML = "✔ Sucesso!";
+                modalMessage.innerHTML = data.message || "Envio realizado.";
+
+                contactForm.reset();
+
+            } else {
+
+                modalTitle.classList.add("error");
+                modalTitle.innerHTML = "❌ Falha!";
+                modalMessage.innerHTML = data.message || "Falha ao enviar.<br>Entre em contato.";
+
+            }
+        })
+        .catch(() => {
+
+            modal.classList.remove("hidden");
+
+            modalTitle.classList.remove("success", "error");
+            modalTitle.classList.add("error");
+
+            modalTitle.innerHTML = "❌ Falha!";
+            modalMessage.innerHTML = "Erro inesperado.<br>Tente novamente mais tarde.";
+
+        });
+
+    });
+
 }
