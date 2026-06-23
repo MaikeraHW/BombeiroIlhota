@@ -214,7 +214,7 @@ if (volunteerForm) {
 
                 modalTitle.classList.add("success");
                 modalTitle.innerHTML = "✔ Sucesso!";
-                modalMessage.innerHTML = data.message || "Inscrição realizada!";
+                modalMessage.innerHTML = "Inscrição realizada!";
 
                 volunteerForm.reset();
 
@@ -222,7 +222,7 @@ if (volunteerForm) {
 
                 modalTitle.classList.add("error");
                 modalTitle.innerHTML = "❌ Falha!";
-                modalMessage.innerHTML = data.message || "Falha ao enviar.<br>Entre em contato.";
+                modalMessage.innerHTML = "Falha ao enviar.<br>Entre em contato.";
 
             }
         })
@@ -266,7 +266,7 @@ if (contactForm) {
 
                 modalTitle.classList.add("success");
                 modalTitle.innerHTML = "✔ Sucesso!";
-                modalMessage.innerHTML = data.message || "Envio realizado.";
+                modalMessage.innerHTML = "Envio realizado.";
 
                 contactForm.reset();
 
@@ -274,7 +274,7 @@ if (contactForm) {
 
                 modalTitle.classList.add("error");
                 modalTitle.innerHTML = "❌ Falha!";
-                modalMessage.innerHTML = data.message || "Falha ao enviar.<br>Entre em contato.";
+                modalMessage.innerHTML = "Falha ao enviar. <br> Entre em contato.";
 
             }
         })
