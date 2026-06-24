@@ -201,8 +201,6 @@ saveSignatureBtn.addEventListener("click", async () => {
         saveSignatureBtn.textContent = "Enviando...";
 
         const formData = new FormData(form);
-
-        // assinatura em base64
         const signatureBase64 = canvas.toDataURL("image/png");
         formData.append("signature", signatureBase64);
 
@@ -211,19 +209,32 @@ saveSignatureBtn.addEventListener("click", async () => {
             body: formData
         });
 
-        const result = await response.json();
+        console.log("STATUS HTTP:", response.status);
+        console.log("OK?:", response.ok);
 
-        if (!result.success) {
-            throw new Error(result.message || "Erro ao salvar o registro.");
+        const rawText = await response.text();
+        console.log("RESPOSTA BRUTA DO PHP:", rawText);
+
+        const data = JSON.parse(rawText);
+
+        if (data.success) {
+
+            // esconde form e assinatura
+            form.style.display = "none";
+            signatureScreen.classList.remove("active");
+
+            // mostra sucesso
+            successScreen.classList.add("show");
+
+            // opcional: resetar progresso
+            progressBar.style.width = "100%";
+        } else {
+            alert(data.message || "Erro ao salvar");
         }
 
-        signatureScreen.classList.remove("active");
-        form.style.display = "none";
-        successScreen.classList.add("show");
-
     } catch (error) {
-        console.error(error);
-        alert(error.message || "Erro ao enviar os dados.");
+        console.error("ERRO NO ENVIO:", error);
+        alert(error.message);
     } finally {
         saveSignatureBtn.disabled = false;
         saveSignatureBtn.textContent = "Confirmar assinatura";
