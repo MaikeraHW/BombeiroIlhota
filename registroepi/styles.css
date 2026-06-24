@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-red: #7d1201;
+    --hover-red: #680e00;
+    --detail-yellow: #dbb405;
+    --bg: #f4f4f4;
+    --white: #ffffff;
+    --text: #222222;
+    --text-soft: #666666;
+    --border: #d9d9d9;
+    --success: #1f8f4d;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.header {
+    background: var(--main-red);
+    color: var(--white);
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+}
+
+.logo img {
+    width: 72px;
+    height: auto;
+    display: block;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #e9e9e9;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 14.28%;
+    background: var(--detail-yellow);
+    transition: width 0.3s ease;
+}
+
+form {
+    padding: 1.25rem;
+}
+
+.step {
+    display: none;
+    min-height: 340px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.step.active {
+    display: flex;
+}
+
+.step h2 {
+    font-size: 1.35rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.step input,
+.step select,
+.step textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    background: #fff;
+}
+
+.step input:focus,
+.step select:focus,
+.step textarea:focus {
+    border-color: var(--main-red);
+    box-shadow: 0 0 0 3px rgba(125, 18, 1, 0.12);
+}
+
+.step textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.step-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    padding: 0.95rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.next,
+.primary-btn {
+    background: var(--main-red);
+    color: #fff;
+}
+
+.next:hover,
+.primary-btn:hover {
+    background: var(--hover-red);
+}
+
+.prev,
+.secondary-btn {
+    background: #efefef;
+    color: var(--text);
+    flex: 1;
+}
+
+.prev:hover,
+.secondary-btn:hover {
+    background: #e2e2e2;
+}
+
+/* Tela de assinatura */
+.signature-screen {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    z-index: 9999;
+    display: none;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.signature-screen.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signature-box {
+    width: 100%;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.signature-box h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.signature-box p {
+    text-align: center;
+    color: var(--text-soft);
+}
+
+.signature-canvas-wrap {
+    width: 100%;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+#signatureCanvas {
+    width: 100%;
+    height: 340px;
+    display: block;
+    background: #fff;
+    touch-action: none;
+}
+
+.signature-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+/* Tela de sucesso */
+.success {
+    display: none;
+    padding: 2rem 1.25rem 2.5rem;
+    text-align: center;
+}
+
+.success.show {
+    display: block;
+}
+
+.success-icon {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+}
+
+.success h2 {
+    margin-bottom: 0.5rem;
+}
+
+.success p {
+    color: var(--text-soft);
+    margin-bottom: 1.25rem;
+}
+
+#newRecordBtn {
+    background: var(--main-red);
+    color: #fff;
+    width: 100%;
+}
+
+#newRecordBtn:hover {
+    background: var(--hover-red);
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 1.25rem;
+    }
+
+    .step {
+        min-height: 300px;
+    }
+
+    .step h2 {
+        font-size: 1.2rem;
+    }
+
+    #signatureCanvas {
+        height: 280px;
+    }
+
+    .step-actions button,
+    .signature-actions button {
+        width: 100%;
+        flex: unset;
+    }
+}

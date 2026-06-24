@@ -59,7 +59,7 @@
 }
 
 .donationsContent{
-    padding: 2rem;
+    padding: 0.5rem;
 }
 
 .donationsContentTitle{
@@ -67,7 +67,7 @@
     font-weight: 700;
     letter-spacing: -1px;
     color: var(--mainRed);
-    margin-bottom: 1.2rem;
+    margin: 1.5rem 0 1.2rem 1.5rem;
 }
 
 .donationsReasonsList{
@@ -275,8 +275,24 @@
 }
 
 .donationsReasonsItem{
-    max-width: 32rem;
     margin: 4rem auto;
+}
+
+.donateIconHolder{
+    width: 25dvw;
+    height: 25dvw;
+    max-width: 8rem;
+    max-height: 8rem;
+    border-radius: 15%;
+}
+
+.donateIconHolder img{
+    display: block;
+    width: 100%;
+}
+
+.donationsReasonsItem p{
+    font-size: clamp(0.8rem, 4dvw, 1.2rem);
 }
 
 .donationTitlesHolder{
@@ -316,6 +332,12 @@
 .donationsReasonsItem{
     max-width: 50rem;
     margin: 4rem auto;
+}
+
+.donationsContentTitle{
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 1rem auto;
 }
 
 

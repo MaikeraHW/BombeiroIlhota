@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de EPI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <div class="logo">
+            <img src="/src/icons/brasaoCBVI.png" alt="Brasão CBVI">
+        </div>
+        <h1>Registro de EPI's</h1>
+    </header>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <form id="epiForm">
+
+        <!-- Etapa 1 -->
+        <section class="step active">
+            <h2>Digite o seu nome</h2>
+            <input type="text" name="name" placeholder="Ex: João da Silva" required>
+            <button type="button" class="next">Próximo</button>
+        </section>
+
+        <!-- Etapa 2 -->
+        <section class="step">
+            <h2>Horário de início do plantão</h2>
+            <input type="time" name="start_time" required>
+            <div class="step-actions">
+                <button type="button" class="prev">Voltar</button>
+                <button type="button" class="next">Próximo</button>
+            </div>
+        </section>
+
+        <!-- Etapa 3 -->
+        <section class="step">
+            <h2>Horário de término do plantão</h2>
+            <input type="time" name="end_time" required>
+            <div class="step-actions">
+                <button type="button" class="prev">Voltar</button>
+                <button type="button" class="next">Próximo</button>
+            </div>
+        </section>
+
+        <!-- Etapa 4 -->
+        <section class="step">
+            <h2>Número da Jaqueta</h2>
+            <input type="text" name="jaqueta" placeholder="Ex: 01" required>
+            <div class="step-actions">
+                <button type="button" class="prev">Voltar</button>
+                <button type="button" class="next">Próximo</button>
+            </div>
+        </section>
+
+        <!-- Etapa 5 -->
+        <section class="step">
+            <h2>Número da Calça</h2>
+            <input type="text" name="calca" placeholder="Ex: 01" required>
+            <div class="step-actions">
+                <button type="button" class="prev">Voltar</button>
+                <button type="button" class="next">Próximo</button>
+            </div>
+        </section>
+
+        <!-- Etapa 6 -->
+        <section class="step">
+            <h2>Número da Bota</h2>
+            <input type="text" name="bota" placeholder="Ex: 01" required>
+            <div class="step-actions">
+                <button type="button" class="prev">Voltar</button>
+                <button type="button" class="next">Próximo</button>
+            </div>
+        </section>
+
+        <!-- Etapa 7 -->
+        <section class="step">
+            <h2>Os EPI's estão em condições de uso?</h2>
+
+            <select name="condition_ok" id="conditionSelect" required>
+                <option value="">Selecione</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <textarea
+                name="observacao"
+                id="observacaoField"
+                placeholder="Caso os EPI's não estejam em condições de uso, descreva aqui o problema encontrado."
+            ></textarea>
+
+            <div class="step-actions">
+                <button type="button" class="prev">Voltar</button>
+                <button type="button" class="next" id="openSignature">Finalizar</button>
+            </div>
+        </section>
+
+    </form>
+
+    <!-- Tela de assinatura -->
+    <div class="signature-screen" id="signatureScreen">
+        <div class="signature-box">
+            <h2>Assinatura do bombeiro</h2>
+            <p>Assine com o dedo ou mouse no campo abaixo</p>
+
+            <div class="signature-canvas-wrap">
+                <canvas id="signatureCanvas"></canvas>
+            </div>
+
+            <div class="signature-actions">
+                <button type="button" id="clearSignature" class="secondary-btn">Limpar</button>
+                <button type="button" id="cancelSignature" class="secondary-btn">Voltar</button>
+                <button type="button" id="saveSignature" class="primary-btn">Confirmar assinatura</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela de sucesso -->
+    <div class="success" id="successScreen">
+        <div class="success-icon">✅</div>
+        <h2>Equipamentos Registrados</h2>
+        <p>O checklist foi enviado com sucesso.</p>
+        <button type="button" id="newRecordBtn">Novo registro</button>
+    </div>
+
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
