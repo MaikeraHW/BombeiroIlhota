@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --primary: #7d1201;
+    --primary-hover: #680e00;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --ok-bg: #ecfdf3;
+    --ok-text: #027a48;
+    --warn-bg: #fff4e5;
+    --warn-text: #b54708;
+    --neutral-bg: #f3f4f6;
+    --neutral-text: #6b7280;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.page {
+    min-height: 100vh;
+    padding: 32px 16px;
+}
+
+.container {
+    width: min(1400px, 100%);
+    margin: 0 auto;
+}
+
+.header {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    margin-bottom: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.header p {
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-form input {
+    min-width: 280px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    font-size: 0.95rem;
+    background: #fff;
+}
+
+.search-form input:focus {
+    border-color: var(--primary);
+}
+
+.search-form button,
+.clear-btn {
+    height: 44px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+}
+
+.search-form button {
+    background: var(--primary);
+    color: #fff;
+}
+
+.search-form button:hover {
+    background: var(--primary-hover);
+}
+
+.clear-btn {
+    background: #eef2f7;
+    color: var(--text);
+}
+
+.clear-btn:hover {
+    background: #e5e7eb;
+}
+
+.table-wrapper {
+    background: var(--card);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.epi-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1100px;
+}
+
+.epi-table thead {
+    background: var(--primary);
+}
+
+.epi-table thead th {
+    color: #fff;
+    text-align: left;
+    padding: 16px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.epi-table tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s ease;
+}
+
+.epi-table tbody tr:hover {
+    background: #fafafa;
+}
+
+.epi-table tbody td {
+    padding: 16px;
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+.signature-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.signature-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.no-signature {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.status-ok,
+.status-warning,
+.status-neutral {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-ok {
+    background: var(--ok-bg);
+    color: var(--ok-text);
+}
+
+.status-warning {
+    background: var(--warn-bg);
+    color: var(--warn-text);
+}
+
+.status-neutral {
+    background: var(--neutral-bg);
+    color: var(--neutral-text);
+}
+
+.empty-message {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+    .page {
+        padding: 20px 12px;
+    }
+
+    .header {
+        padding: 18px;
+        align-items: stretch;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+
+    .search-form input {
+        min-width: unset;
+        width: 100%;
+    }
+}
