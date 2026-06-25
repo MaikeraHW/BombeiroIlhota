@@ -15,6 +15,7 @@ try {
     $jaqueta = $_POST['jaqueta'] ?? '';
     $calca = $_POST['calca'] ?? '';
     $bota = $_POST['bota'] ?? '';
+    $capacete = $_POST['capacete'] ?? '';
     $question = $_POST['condition_ok'] ?? '';
     $signature = $_POST['signature'] ?? '';
 
@@ -60,9 +61,9 @@ try {
     // ==========================================
 
     $sql = "INSERT INTO registros_epi 
-            (nome, horario_inicio, horario_fim, jaqueta, calca, bota, condicao_uso, assinatura_path)
+            (nome, horario_inicio, horario_fim, jaqueta, calca, bota, capacete, condicao_uso, assinatura_path)
             VALUES
-            (:nome, :inicio, :fim, :jaqueta, :calca, :bota, :condicao, :assinatura_path)";
+            (:nome, :inicio, :fim, :jaqueta, :calca, :bota, :capacete, :condicao, :assinatura_path)";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
@@ -72,6 +73,7 @@ try {
         ':jaqueta' => $jaqueta,
         ':calca' => $calca,
         ':bota' => $bota,
+        ':capacete' => $capacete,
         ':condicao' => $question,
         ':assinatura_path' => $signaturePath
     ]);
