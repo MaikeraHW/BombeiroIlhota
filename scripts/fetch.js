@@ -1,6 +1,7 @@
 //fetch dos componentes
 
 document.addEventListener("DOMContentLoaded", async () => {
+    
     const components = document.querySelectorAll("[data-component]");
 
     for (const component of components) {
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     iniciarmenu();
     initSlider();
+    initDropdown();
 })
 
 //hamburger menu
@@ -75,4 +77,16 @@ function initSlider() {
     }
 
     setInterval(nextSlide, 5000);
+}
+
+function initDropdown() {
+    const contactItem = document.querySelector(".navItemDropdown");
+    const contactToggle = document.getElementById("contactToggle");
+
+    if (!contactItem || !contactToggle) return;
+
+    contactToggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        contactItem.classList.toggle("open");
+    });
 }
