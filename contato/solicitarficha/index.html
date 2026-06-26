@@ -22,7 +22,7 @@
     <h1 class="title">Solicitar ficha de ocorrência</h1>
     <p class="subtitle">Preencha as informações abaixo com atenção<br>Você receberá a ficha assinada em até 5 dias úteis</p>
 
-    <form class="form" enctype="multipart/form-data">
+    <form class="form" enctype="multipart/form-data" action="/phparchives/enviar_ocorrencia.php">
 
     <div class="formBlock">
 
@@ -63,13 +63,7 @@
             Anexe uma foto ou documento (RG, CNH, CPF ou outro documento de identificação).
         </p>
 
-        <input
-            type="file"
-            id="documento"
-            name="documento"
-            class="fileInput"
-            accept=".jpg,.jpeg,.png,.pdf,.webp"
-        >
+        <input type="file" id="documento" name="documento" class="fileInput" accept=".jpg,.jpeg,.png,.pdf,.webp">
     </div>
 
     </div>
