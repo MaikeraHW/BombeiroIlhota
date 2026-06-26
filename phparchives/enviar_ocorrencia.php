@@ -16,6 +16,7 @@ $data        = $_POST['data_ocorrencia'] ?? '';
 $hora        = $_POST['hora_ocorrencia'] ?? '';
 $local       = $_POST['local_ocorrencia'] ?? '';
 $informacoes = $_POST['informacoes'] ?? '';
+$ocorrenciaId = "OC-" . date("Ymd-His") . "-" . rand(100, 999);
 
 if (
     empty($solicitante) ||
@@ -98,7 +99,7 @@ $payload = [
     "to" => [
         "wagner.maiconhenrique@gmail.com"
     ],
-    "subject" => "Nova ocorrência registrada",
+    "subject" => "[$ocorrenciaId] Nova ficha solicitada",
     "html" => $html
 ];
 
@@ -135,7 +136,7 @@ curl_close($ch);
 echo json_encode([
     "success"=>$httpCode >=200 && $httpCode <300,
     "message"=>$httpCode >=200 && $httpCode <300
-        ? "Ocorrência enviada com sucesso!"
-        : "Erro ao enviar ocorrência.",
+        ? "Solicitação enviada com sucesso!"
+        : "Erro ao enviar Solicitação.",
     "resposta"=>json_decode($response,true)
 ]);
