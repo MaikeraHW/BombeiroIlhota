@@ -62,7 +62,7 @@ if(isset($_FILES['documento']) && $_FILES['documento']['error'] === UPLOAD_ERR_O
 }
 
 $html = "
-<h2>Nova ocorrência registrada</h2>
+<h2>Nova solicitação de ficha</h2>
 
 <table style='border-collapse:collapse' cellpadding='8'>
 
