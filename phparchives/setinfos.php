@@ -1,15 +1,14 @@
 <?php
 // Configuração do banco (Hostinger)
+
 require_once __DIR__ . '/../../config/config.php';
 
 header('Content-Type: application/json');
 
 try {
-    $pdo = new PDO(
-    "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
-    DB_USER,
-    DB_PASS
-);
+    $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
 
     // Captura dados do form
     $name  = $_POST['name'] ?? '';
@@ -23,8 +22,12 @@ try {
 
     // Validação simples
     if (!$name || !$cpf || !$email || !$tel || !$city || !$birth) {
-    die("Preencha todos os campos obrigatórios.");
-    }
+    echo json_encode([
+        "status" => "error",
+        "message" => "Preencha todos os campos obrigatórios."
+    ]);
+    exit;
+}
 
     // SQL seguro (prepared statement)
     $sql = "INSERT INTO inscritos 
@@ -52,7 +55,8 @@ try {
 } catch (PDOException $e) {
     echo json_encode([
         "status" => "error",
-        "message" => "Erro ao salvar"
+        "message" => $e->getMessage()
     ]);
+    exit;
 }
 ?>
