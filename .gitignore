@@ -1,6 +1,7 @@
 # arquivos sensíveis
 .env
 config.php
+secrets.php
 # dependências (se usar libs)
 vendor/
 
