@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Ocorrência</title>
+
+  <link rel="stylesheet" href="/styles/globalStyles.css" />
+  <link rel="stylesheet" href="/styles/footerStyles.css" />
+  <link rel="stylesheet" href="/styles/headerStyles.css" />
+  <link rel="stylesheet" href="fichaStyles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!----Header insert ----->
+    <div data-component="header" class="header"></div>
+
+<main class="container">
+
+    <h1 class="title">Solicitar ficha de ocorrência</h1>
+    <p class="subtitle">Preencha as informações abaixo com atenção<br>Você receberá a ficha assinada em até 5 dias úteis</p>
+
+    <form class="form" enctype="multipart/form-data">
+
+    <div class="formBlock">
+
+      <div class="formCard">
+        <label>Nome do solicitante *</label>
+        <input type="text" name="solicitante" placeholder="Digite o nome completo" required>
+      </div>
+
+      <div class="formCard">
+        <label>Data da ocorrência *</label>
+        <input type="date" name="data_ocorrencia" required>
+      </div>
+
+    </div>
+
+    <div class="formBlock">
+
+      <div class="formCard">
+        <label>Horário da ocorrência *</label>
+        <input type="time" name="hora_ocorrencia" required>
+      </div>
+
+      <div class="formCard">
+        <label>Local da ocorrência *</label>
+        <input type="text" name="local_ocorrencia" placeholder="Endereço ou referência" required>
+      </div>
+
+    </div>
+
+    <div class="formBlock full">
+
+    <div class="formCard full">
+        <label for="documento">
+            Documento da pessoa envolvida
+        </label>
+
+        <p class="uploadDescription">
+            Anexe uma foto ou documento (RG, CNH, CPF ou outro documento de identificação).
+        </p>
+
+        <input
+            type="file"
+            id="documento"
+            name="documento"
+            class="fileInput"
+            accept=".jpg,.jpeg,.png,.pdf,.webp"
+        >
+    </div>
+
+    </div>
+
+    <button type="submit" class="btn">Enviar solicitação</button>
+
+    </form>
+
+    </main>
+    <!----Header insert ----->
+    <div data-component="footer"></div> 
+    
+<script src="/scripts/fetch.js"></script>
+</body>
+</html>
