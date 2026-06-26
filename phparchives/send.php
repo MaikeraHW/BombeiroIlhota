@@ -11,7 +11,7 @@ if (!$name || !$email || !$message) {
 }
 
 $payload = [
-    "from" => "Contato Site <contato@bombeiroilhota.com>",
+    "from" => "contato@bombeiroilhota.com",
     "to" => ["wagner.maiconhenrique@gmail.com"],
     "subject" => "Novo contato do site",
     "html" => "
@@ -22,6 +22,8 @@ $payload = [
     "
 ];
 
+$json = json_encode($payload);
+
 $ch = curl_init("https://api.resend.com/emails");
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -30,15 +32,17 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
     "Authorization: Bearer $apiKey",
     "Content-Type: application/json"
 ]);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
+curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
 
 $response = curl_exec($ch);
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
+if (curl_errno($ch)) {
+    echo "Erro cURL: " . curl_error($ch);
+    exit;
+}
+
 curl_close($ch);
 
-if ($httpCode == 200) {
-    echo "Mensagem enviada com sucesso!";
-} else {
-    echo "Erro ao enviar: " . $response;
-}
+echo "HTTP: $httpCode\n";
+echo "Resposta: $response";
