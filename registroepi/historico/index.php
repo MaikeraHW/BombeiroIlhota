@@ -1,11 +1,15 @@
 <?php
-require_once 'config.php';
+    
+require_once __DIR__ . '/../../../config/config.php';
 
 $busca = trim($_GET['busca'] ?? '');
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO(
+    "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
+    DB_USER,
+    DB_PASS
+);
 
     if ($busca !== '') {
         $sql = "SELECT id, nome, jaqueta, calca, bota, capacete, condicao_uso, assinatura_path, criado_em

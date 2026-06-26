@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../../config/secrets.php';
 
-$apiKey = 'RESEND_API_KEY';
+$apiKey = trim('RESEND_API_KEY');
 
 header('Content-Type: application/json');
 

@@ -1,12 +1,15 @@
 <?php
+
+require_once __DIR__ . '/../../config/config.php';
+
 header('Content-Type: application/json');
 
 try {
-    // conexão com banco
-    require_once 'config.php';
-
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO(
+    "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
+    DB_USER,
+    DB_PASS
+);
 
     // dados do formulário
     $name = $_POST['name'] ?? '';
