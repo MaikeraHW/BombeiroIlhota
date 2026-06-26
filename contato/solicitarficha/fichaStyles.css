@@ -146,6 +146,10 @@ body{
   .formBlock{
     flex-direction: column;
   }
+
+  .fileInput {
+    color: transparent;
+}
 }
 
 .uploadDescription{
