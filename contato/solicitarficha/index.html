@@ -22,7 +22,7 @@
     <h1 class="title">Solicitar ficha de ocorrência</h1>
     <p class="subtitle">Preencha as informações abaixo com atenção<br>Você receberá a ficha assinada em até 5 dias úteis</p>
 
-    <form class="form" enctype="multipart/form-data" action="/phparchives/enviar_ocorrencia.php">
+    <form class="form" enctype="multipart/form-data" action="/phparchives/enviar_ocorrencia.php" method="POST">
 
     <div class="formBlock">
 
@@ -48,6 +48,11 @@
       <div class="formCard">
         <label>Local da ocorrência *</label>
         <input type="text" name="local_ocorrencia" placeholder="Endereço ou referência" required>
+      </div>
+
+      <div class="formCard">
+        <label>Informações sobre a ocorrência *</label>
+        <input type="text" name="informacoes" placeholder="Informe informações relevantes sobre a ocorrência" required>
       </div>
 
     </div>
