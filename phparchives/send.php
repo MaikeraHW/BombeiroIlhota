@@ -1,38 +1,44 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+$apiKey = "re_Y95nMbqN_JzsQQNmrs3v3Y3tVv76RQL5b";
 
-    $nome = $_POST["name"] ?? '';
-    $email = $_POST["email"] ?? '';
-    $titulo = $_POST["subject"] ?? '';
-    $mensagem = $_POST["message"] ?? '';
+$name    = $_POST['name'] ?? '';
+$email   = $_POST['email'] ?? '';
+$message = $_POST['message'] ?? '';
 
-    $destino = "wagner.maiconhenrique@gmail.com";
-
-    $assunto = "Novo contato do site: " . $titulo;
-
-    $corpo = "
-            Nome: $nome
-            Email: $email
-            Assunto: $titulo
-
-            Mensagem:
-            $mensagem
-            ";
-
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-
-    if (mail($destino, $assunto, $corpo, $headers)) {
-        echo json_encode([
-        "status" => "success",
-        "message" => "Inscrição enviada com sucesso!"
-    ]);
-    } else {
-        echo json_encode([
-        "status" => "error",
-        "message" => "Erro ao salvar"
-    ]);
-    }
+if (!$name || !$email || !$message) {
+    die("Preencha todos os campos.");
 }
-?>
+
+$payload = [
+    "from" => "Contato Site <contato@bombeiroilhota.com>",
+    "to" => ["wagner.maiconhenrique@gmail.com"],
+    "subject" => "Novo contato do site",
+    "html" => "
+        <h2>Novo contato recebido</h2>
+        <p><strong>Nome:</strong> {$name}</p>
+        <p><strong>Email:</strong> {$email}</p>
+        <p><strong>Mensagem:</strong><br>{$message}</p>
+    "
+];
+
+$ch = curl_init("https://api.resend.com/emails");
+
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    "Authorization: Bearer $apiKey",
+    "Content-Type: application/json"
+]);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
+
+$response = curl_exec($ch);
+$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+curl_close($ch);
+
+if ($httpCode == 200) {
+    echo "Mensagem enviada com sucesso!";
+} else {
+    echo "Erro ao enviar: " . $response;
+}
