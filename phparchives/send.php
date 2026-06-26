@@ -1,6 +1,37 @@
 <?php
 
-$apiKey = "re_Y95nMbqN_JzsQQNmrs3v3Y3tVv76RQL5b";
+unction loadEnv($path)
+{
+    if (!file_exists($path)) return;
+
+    $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+    foreach ($lines as $line) {
+        if (strpos(trim($line), '#') === 0) continue;
+
+        list($key, $value) = explode('=', $line, 2);
+
+        $key = trim($key);
+        $value = trim($value);
+
+        $_ENV[$key] = $value;
+        putenv("$key=$value");
+    }
+}
+
+loadEnv(__DIR__ . '/.env');
+
+$apiKey = getenv('RESEND_API_KEY');
+
+header('Content-Type: application/json');
+
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    echo json_encode([
+        "success" => false,
+        "message" => "Método inválido"
+    ]);
+    exit;
+}
 
 $name    = $_POST['name'] ?? '';
 $email   = $_POST['email'] ?? '';
@@ -44,5 +75,10 @@ if (curl_errno($ch)) {
 
 curl_close($ch);
 
-echo "HTTP: $httpCode\n";
-echo "Resposta: $response";
+echo json_encode([
+    "success" => $httpCode >= 200 && $httpCode < 300,
+    "message" => $httpCode >= 200 && $httpCode < 300
+        ? "Mensagem enviada com sucesso!"
+        : "Erro ao enviar mensagem",
+    "resend" => json_decode($response, true)
+]);
