@@ -53,9 +53,15 @@
     <div class="formBlock">
       <div class="formCard">
         <label>Informações sobre a ocorrência *</label>
-        <input type="text" name="informacoes" placeholder="Informações relevantes" required>
+        <input type="text" name="informacoes" placeholder="Ex: Carro x Moto" required>
       </div>
 
+    </div>
+    <div class="formBlock">
+      <div class="formCard">
+        <label> E-mail para recebimento da ficha *</label>
+        <input type="email" name="email" placeholder="digiteseu@email.com" required>
+      </div>
     </div>
 
     <div class="formBlock full">
@@ -70,6 +76,8 @@
         </p>
 
         <input type="file" id="documento" name="documento" class="fileInput" accept=".jpg,.jpeg,.png,.pdf,.webp" placeholder="" required>
+        <label for="documento" class="uploadButton" id="uploadButton"> 📄 Selecionar documento <span id="uploadStatus"></span>
+</label>
     </div>
 
     </div>

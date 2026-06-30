@@ -141,15 +141,53 @@ body{
     color: red;
 }
 
+.fileInput{
+    display: none;
+}
+
+.uploadButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .7rem;
+
+    width: 100%;
+    padding: 1rem;
+
+    border: 2px dashed #d1d5db;
+    border-radius: 12px;
+
+    background: #fafafa;
+
+    cursor: pointer;
+
+    font-size: .95rem;
+    font-weight: 600;
+
+    transition: .25s;
+}
+
+.uploadButton:hover{
+    border-color: #7d1201;
+    background: white;
+}
+
+.uploadButton.success{
+    border-color: #1d9c48;
+    background: #eefaf2;
+    color: #1d9c48;
+}
+
+#uploadStatus{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 /* Responsivo */
 @media (max-width: 768px){
   .formBlock{
     flex-direction: column;
   }
-
-  .fileInput {
-    color: transparent;
-}
 }
 
 .uploadDescription{

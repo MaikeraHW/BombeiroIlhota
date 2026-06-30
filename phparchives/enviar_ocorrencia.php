@@ -16,6 +16,7 @@ $data        = $_POST['data_ocorrencia'] ?? '';
 $hora        = $_POST['hora_ocorrencia'] ?? '';
 $local       = $_POST['local_ocorrencia'] ?? '';
 $informacoes = $_POST['informacoes'] ?? '';
+$email = $_POST['email'] ?? '';
 $ocorrenciaId = "OC-" . date("Ymd-His") . "-" . rand(100, 999);
 
 if (
@@ -23,6 +24,7 @@ if (
     empty($data) ||
     empty($hora) ||
     empty($local) ||
+    empty($email) ||
     empty($informacoes)
 ) {
     exit(json_encode([
@@ -70,6 +72,11 @@ $html = "
 <tr>
 <td><strong>Solicitante</strong></td>
 <td>{$solicitante}</td>
+</tr>
+
+<tr>
+<td><strong>Solicitante</strong></td>
+<td>{$email}</td>
 </tr>
 
 <tr>
