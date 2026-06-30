@@ -1,15 +1,15 @@
 <?php
-    
+
 require_once __DIR__ . '/../../../config/config.php';
 
 $busca = trim($_GET['busca'] ?? '');
 
 try {
     $pdo = new PDO(
-    "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
-    DB_USER,
-    DB_PASS
-);
+        "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
+        DB_USER,
+        DB_PASS
+    );
 
     if ($busca !== '') {
         $sql = "SELECT id, nome, jaqueta, calca, bota, capacete, condicao_uso, assinatura_path, criado_em
@@ -92,11 +92,12 @@ try {
                     <?php if (!empty($registros)): ?>
                         <?php foreach ($registros as $registro): ?>
                             <tr>
+
                                 <td>
                                     <?php
-                                        echo !empty($registro['criado_em'])
-                                            ? date('d/m/Y', strtotime($registro['criado_em']))
-                                            : '-';
+                                    echo !empty($registro['criado_em'])
+                                        ? date('d/m/Y', strtotime($registro['criado_em']))
+                                        : '-';
                                     ?>
                                 </td>
 
@@ -105,41 +106,65 @@ try {
                                 <td><?php echo htmlspecialchars($registro['calca']); ?></td>
                                 <td><?php echo htmlspecialchars($registro['bota']); ?></td>
                                 <td><?php echo htmlspecialchars($registro['capacete']); ?></td>
+
                                 <td>
                                     <?php
-                                        $condicao = trim($registro['condicao_uso'] ?? '');
+                                    $condicao = trim($registro['condicao_uso'] ?? '');
 
-                                        if ($condicao === '') {
-                                            echo '<span class="status-neutral">Não informado</span>';
-                                        } elseif (
-                                            strtolower($condicao) === 'sim' ||
-                                            strtolower($condicao) === 'ok' ||
-                                            strtolower($condicao) === 'bom'
-                                        ) {
-                                            echo '<span class="status-ok">' . htmlspecialchars($registro['condicao_uso']) . '</span>';
-                                        } else {
-                                            echo '<span class="status-warning">' . htmlspecialchars($registro['condicao_uso']) . '</span>';
-                                        }
+                                    if ($condicao === '') {
+                                        echo '<span class="status-neutral">Não informado</span>';
+                                    } elseif (
+                                        strtolower($condicao) === 'sim' ||
+                                        strtolower($condicao) === 'ok' ||
+                                        strtolower($condicao) === 'bom'
+                                    ) {
+                                        echo '<span class="status-ok">' . htmlspecialchars($registro['condicao_uso']) . '</span>';
+                                    } else {
+                                        echo '<span class="status-warning">' . htmlspecialchars($registro['condicao_uso']) . '</span>';
+                                    }
                                     ?>
                                 </td>
 
                                 <td>
                                     <?php if (!empty($registro['assinatura_path'])): ?>
+
+                                        <?php
+                                        $assinatura = trim($registro['assinatura_path']);
+
+                                        // Se já for uma URL completa
+                                        if (preg_match('/^https?:\/\//i', $assinatura)) {
+                                            $urlAssinatura = $assinatura;
+                                        } else {
+                                            // Remove barra inicial, se existir
+                                            $assinatura = ltrim($assinatura, '/');
+
+                                            // Como esta página está em /registroepi/historico/,
+                                            // sobe um nível para chegar em /registroepi/
+                                            $urlAssinatura = '../' . $assinatura;
+                                        }
+                                        ?>
+
                                         <a
                                             class="signature-btn"
-                                            href="<?php echo htmlspecialchars($registro['assinatura_path']); ?>"
+                                            href="<?php echo htmlspecialchars($urlAssinatura); ?>"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
                                             Ver assinatura
                                         </a>
+
                                     <?php else: ?>
+
                                         <span class="no-signature">Sem assinatura</span>
+
                                     <?php endif; ?>
                                 </td>
+
                             </tr>
                         <?php endforeach; ?>
+
                     <?php else: ?>
+
                         <tr>
                             <td colspan="8" class="empty-message">
                                 <?php if ($busca !== ''): ?>
@@ -149,6 +174,7 @@ try {
                                 <?php endif; ?>
                             </td>
                         </tr>
+
                     <?php endif; ?>
                 </tbody>
             </table>
