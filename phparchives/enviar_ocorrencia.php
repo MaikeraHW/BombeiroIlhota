@@ -17,6 +17,7 @@ $hora        = $_POST['hora_ocorrencia'] ?? '';
 $local       = $_POST['local_ocorrencia'] ?? '';
 $informacoes = $_POST['informacoes'] ?? '';
 $email = $_POST['email'] ?? '';
+$terms = (($_POST['termsCheckbox'] ?? '') === "on") ? "Sim" : "Não";
 $ocorrenciaId = "OC-" . date("Ymd-His") . "-" . rand(100, 999);
 
 if (
@@ -92,6 +93,11 @@ $html = "
 <tr>
 <td><strong>Local</strong></td>
 <td>{$local}</td>
+</tr>
+
+<tr>
+<td><strong>O termo de ciência foi lido e aceito?</strong></td>
+<td>{$terms}</td>
 </tr>
 
 </table>
