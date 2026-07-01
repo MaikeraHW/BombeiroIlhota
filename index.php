@@ -7,7 +7,7 @@ if (!$conn) {
     die("Erro na conexão: " . mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM noticias ORDER BY data DESC LIMIT 5";
+$sql = "SELECT * FROM noticias ORDER BY data DESC";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -144,36 +144,24 @@ $result = mysqli_query($conn, $sql);
         <section class="homeNewsSection">
 
             <h2>Notícias</h2>
-
             <div class="homeNewsHolder">
-
                 <section class="news-carousel">
-
                     <div class="carousel-track">
-
                         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-
-                            <article class="news-card"
-                                style="background-image: url('<?= $row['imagem_principal'] ?>');">
-
+                            <a href="/noticias/noticia.php?id=<?= (int)$row['id'] ?>" class="news-card">
+                                <img
+                                    src="<?= htmlspecialchars($row['imagem_principal']) ?>"
+                                    alt="<?= htmlspecialchars($row['titulo']) ?>"
+                                    class="news-image">
                                 <div class="news-date">
                                     <?= date('d/m/Y', strtotime($row['data'])) ?>
                                 </div>
-
-                                <h3 class="news-title">
-                                    <?= $row['titulo'] ?>
-                                </h3>
-
-                            </article>
-
+                                <h3 class="news-title"> <?= htmlspecialchars($row['titulo']) ?> </h3>
+                            </a>
                         <?php } ?>
-
                     </div>
-
                 </section>
-
             </div>
-
         </section>
 
     </main>
