@@ -4,22 +4,6 @@ const cards = document.querySelectorAll(".news-card");
 let index = 0;
 let interval;
 
-// imagens (depois pode vir do PHP)
-const images = [
-    "uploads/noticias/incendio1.jpg",
-    "uploads/noticias/viatura.jpg",
-    "uploads/noticias/simulado.jpg",
-    "uploads/noticias/curso.jpg",
-    "uploads/noticias/acidente.jpg"
-];
-
-// aplica imagens
-cards.forEach((card, i) => {
-    if (images[i]) {
-        card.style.backgroundImage = `url('${images[i]}')`;
-    }
-});
-
 function moveCarousel() {
     const isMobile = window.innerWidth <= 600;
 
