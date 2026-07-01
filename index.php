@@ -148,15 +148,12 @@ $result = mysqli_query($conn, $sql);
                 <section class="news-carousel">
                     <div class="carousel-track">
                         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-                            <a href="/noticias/noticia.php?id=<?= (int)$row['id'] ?>" class="news-card">
-                                <img
-                                    src="<?= htmlspecialchars($row['imagem_principal']) ?>"
-                                    alt="<?= htmlspecialchars($row['titulo']) ?>"
-                                    class="news-image">
+                            <a href="/noticias/noticia.php?id=<?= $row['id'] ?>" class="news-card"
+                                style="background-image: url('<?= $row['imagem_principal'] ?>');">
                                 <div class="news-date">
-                                    <?= date('d/m/Y', strtotime($row['data'])) ?>
+                                    <?= date('d/m/Y', strtotime($row['data'])) ?> 
                                 </div>
-                                <h3 class="news-title"> <?= htmlspecialchars($row['titulo']) ?> </h3>
+                                <h3 class="news-title"> <?= $row['titulo'] ?> </h3>
                             </a>
                         <?php } ?>
                     </div>

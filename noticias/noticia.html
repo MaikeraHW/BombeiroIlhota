@@ -1,0 +1,85 @@
+<!-- <?php
+
+require_once __DIR__ . '/../../config/config.php';
+
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+if (!$conn) {
+    die("Erro na conexão: " . mysqli_connect_error());
+}
+
+$id = (int)($_GET['id'] ?? 0);
+
+$sql = "SELECT * FROM noticias WHERE id = $id LIMIT 1";
+$result = mysqli_query($conn, $sql);
+
+if (!$result || mysqli_num_rows($result) == 0) {
+    die("Notícia não encontrada.");
+}
+
+$noticia = mysqli_fetch_assoc($result);
+
+?> -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Título da Notícia</title> <!-- <?= htmlspecialchars($noticia['titulo']) ?> -->
+
+    <link rel="icon" href="/src/icons/brasaoCBVI.png">
+
+    <link rel="stylesheet" href="/styles/globalStyles.css">
+    <link rel="stylesheet" href="/styles/headerStyles.css">
+    <link rel="stylesheet" href="/styles/footerStyles.css">
+    <link rel="stylesheet" href="noticiaStyles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div data-component="header" class="header"></div>
+
+<main class="newsPage">
+
+    <div class="newsListBlock">
+        <ul class="newList"> Leia Também
+            <li class="newListItem">Lorem ipsum dolor sit amet.</li>
+            <li class="newListItem">Lorem ipsum dolor sit ametasda</li>
+            <li class="newListItem">asdasdddq</li>
+            <li class="newListItem">Lorem ipsuasm dolo sads r sit amet</li>
+            <li class="newListItem">Lorem ipsum dolor sit amet asasd</li>
+            <li class="newListItem">Lorem ipsum dolor sit amet  s6s66d</li>
+        </ul>
+    </div>
+    <div class="mainNewBlock">
+        <h2 class="newsTitle"> Título da Notícia - Pode ser um pouco mais longaaaaaaa</h2>
+        <h4 class="newsDate">01/08/2026</h4>
+        <section class="newsHero">
+        <img src="/src/pic4.jpg" alt="" class="bannerNews">
+
+        <!-- <img
+            src="../<?= htmlspecialchars($noticia['imagem_principal']) ?>"
+            alt="<?= htmlspecialchars($noticia['titulo']) ?>"
+        > -->
+
+        <p class="newsText">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae debitis consequuntur, id aliquid quis quia vel tenetur porro illo cupiditate ipsam fuga excepturi dolores voluptates, at vitae ducimus enim. Labore laborum reiciendis impedit, cumque quod ipsam amet veritatis, alias quaerat officia porro earum quam, eaque autem omnis dignissimos fugit? In sed rerum autem animi, sit voluptate illum ratione recusandae atque aliquam tempora, ducimus asperiores, corrupti cupiditate quibusdam. Veritatis molestiae a obcaecati veniam, adipisci autem earum quaerat architecto, impedit quae similique enim laudantium eligendi atque rem? Autem, saepe! Ullam fugiat mollitia fuga, rerum numquam, voluptates excepturi laudantium facilis saepe nobis ab. Molestias, aut dignissimos asperiores voluptates, pariatur quaerat, at impedit possimus quod quis soluta omnis repellat consequuntur? Veritatis repellendus quod enim quas, non incidunt. Exercitationem, praesentium nesciunt delectus reprehenderit voluptates amet quia! Ut similique, repellendus totam nihil, officiis ipsa distinctio consectetur iste omnis eveniet error earum mollitia harum unde? Fugiat voluptas accusamus quo! Accusamus repellat tempore facilis laboriosam molestiae rerum aliquam quibusdam? Itaque consectetur quos adipisci repellat deleniti, exercitationem nobis consequatur nemo similique fuga tempora id delectus nisi numquam, consequuntur nihil. Perferendis, distinctio quisquam culpa voluptas porro sint, necessitatibus perspiciatis dolorum iusto laudantium ea? Molestias aspernatur nisi minima nihil doloribus ut adipisci! Molestiae placeat tempora libero. Natus, sapiente optio et ratione, labore repellendus expedita tenetur similique maiores eaque velit sint, debitis doloremque nesciunt illo asperiores. Exercitationem, quibusdam, molestias, culpa incidunt quas repudiandae et est doloribus veritatis aspernatur beatae quasi debitis adipisci saepe? Porro sed delectus libero officiis sit nam maxime minus est architecto nulla. Sed ducimus consequatur nemo cumque at odio minima deserunt quis magni id esse iusto eveniet accusamus impedit est quibusdam sapiente quisquam nostrum natus, minus provident non tenetur, voluptatibus fugit. Quisquam magnam atque laudantium doloribus perspiciatis fugit laboriosam dignissimos iusto, at assumenda in eum magni excepturi, corrupti nobis labore asperiores fuga dolores reiciendis? Ducimus saepe, laboriosam quibusdam repellendus veritatis obcaecati eligendi unde dolor optio alias, ipsum autem! Vitae, expedita laboriosam aliquam, quia distinctio magnam ad et amet eveniet voluptas facilis eos quod officiis! Maxime, odit odio doloribus iusto cupiditate atque eius ad, nisi quae qui sed asperiores similique.
+        </p>
+    </section>
+    </div>
+</main>
+
+<div data-component="footer"></div>
+
+<script src="/scripts/fetch.js"></script>
+</body>
+</html>
