@@ -71,27 +71,27 @@ $html = "
 <table style='border-collapse:collapse' cellpadding='8'>
 
 <tr>
-<td><strong>Solicitante</strong></td>
+<td><strong>Solicitante:</strong></td>
 <td>{$solicitante}</td>
 </tr>
 
 <tr>
-<td><strong>Solicitante</strong></td>
+<td><strong>Email do solicitante:</strong></td>
 <td>{$email}</td>
 </tr>
 
 <tr>
-<td><strong>Data</strong></td>
+<td><strong>Data da ocorrência:</strong></td>
 <td>{$data}</td>
 </tr>
 
 <tr>
-<td><strong>Horário</strong></td>
+<td><strong>Horário aproximado:</strong></td>
 <td>{$hora}</td>
 </tr>
 
 <tr>
-<td><strong>Local</strong></td>
+<td><strong>Local da ocorrência:</strong></td>
 <td>{$local}</td>
 </tr>
 
