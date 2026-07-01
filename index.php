@@ -1,3 +1,19 @@
+<?php
+require_once __DIR__ . '/../config/config.php';
+
+$sql = "SELECT * FROM noticias ORDER BY data DESC";
+$result = mysqli_query($conn, $sql);
+
+if ($result && mysqli_num_rows($result) > 0):
+
+    while ($row = mysqli_fetch_assoc($result)):
+
+        $titulo = $row['titulo'];
+        $data = date('d/m/Y', strtotime($row['data']));
+        $imagem = $row['imagem_principal'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -121,8 +137,31 @@
             <div class="homeNewsHolder">
                 <section class="news-carousel">
                     <div class="carousel-track">
+
+                        <article class="news-card"
+            style="background-image: url('<?= $imagem ?>');">
+
+            <div class="news-date">
+                <?= $data ?>
+            </div>
+
+            <h3 class="news-title">
+                <?= $titulo ?>
+            </h3>
+
+        </article>
+
+<?php
+    endwhile;
+
+else:
+?>
+
+    <p>Nenhuma notícia encontrada.</p>
+
+<?php endif; ?>
                         <!-- CARD -->
-                        <article class="news-card">
+                        <!-- <article class="news-card">
                             <div class="news-date">05/06/2026</div>
                             <h3 class="news-title">Treinamento de Combate a Incêndio</h3>
                         </article>
@@ -145,7 +184,7 @@
                         <article class="news-card">
                             <div class="news-date">05/06/2026</div>
                             <h3 class="news-title">Atendimento a acidente de trânsito</h3>
-                        </article>
+                        </article> -->
                     </div>
                 </section>
             </div>
