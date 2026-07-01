@@ -220,7 +220,7 @@
 }
 
 .homeNewsHolder{
-    width: 70%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -358,6 +358,19 @@
     padding: 1rem;
 }
 
+.news-card{
+    padding: 0.5rem;
+}
+
+.news-title {
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 1.4rem;
+}
+
 }
 
 /*<---------------- Desktop ----------> */
@@ -432,5 +445,95 @@
 
 .bottomLeft{
     border-right: 2px solid var(--detailYellow);
+}
+}
+
+.news-carousel {
+    width: 96%;
+    max-width: 70rem;
+    margin: auto;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.carousel-track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
+}
+
+.news-card {
+    flex: 0 0 calc((100% - 4rem) / 3);
+    min-width: calc((100% - 4rem) / 3);
+    height: 360px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.news-title {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.news-date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 0.3rem 0.7rem;
+    font-size: 1.2rem;
+    border-radius: 6px;
+}
+
+@media (max-width: 1024px) {
+
+.news-card {
+        flex: 0 0 calc((100% - 2rem) / 2);
+        min-width: calc((100% - 2rem) / 2);
+        height: 300px;
+}
+}
+
+@media (max-width: 768px) {
+
+.carousel-track {
+        flex-direction: column;
+        transform: none !important;
+}
+
+.news-carousel {
+        overflow: visible;
+}
+
+.news-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+        height: auto;
+        display: block;
+}
+.news-title {
+        background: none;
+        color: #000;
+        padding: 1rem 0;
+        font-weight: 600;
+}
+.news-date {
+        position: static;
+        display: inline-block;
+        margin-bottom: 0.5rem;
 }
 }
