@@ -146,7 +146,11 @@ $result = mysqli_query($conn, $sql);
             <h2>Notícias</h2>
             <div class="homeNewsHolder">
                 <section class="news-carousel">
-                    <div class="carousel-track">
+                    <div class="news-carousel-wrapper">
+
+                    <button class="news-btn prev">&#10094;</button>
+                    <section class="news-carousel">
+                        <div class="carousel-track">
                         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                             <a href="/noticias/noticia.php?id=<?= $row['id'] ?>" class="news-card"
                                 style="background-image: url('<?= $row['imagem_principal'] ?>');">
@@ -156,7 +160,9 @@ $result = mysqli_query($conn, $sql);
                                 <h3 class="news-title"> <?= $row['titulo'] ?> </h3>
                             </a>
                         <?php } ?>
-                    </div>
+                     </div>
+                    </section>
+                     <button class="news-btn next">&#10095;</button>
                 </section>
             </div>
         </section>
