@@ -382,6 +382,10 @@
     font-size: 1.4rem;
 }
 
+.news-btn{
+    display: none;
+}
+
 }
 
 /*<---------------- Desktop ----------> */
@@ -467,7 +471,6 @@
     width: 100%;
 }
 
-/* Botões */
 .news-btn {
     position: absolute;
     top: 50%;
