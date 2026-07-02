@@ -68,11 +68,12 @@ $resultLeiaTambem = mysqli_stmt_get_result($stmtLeiaTambem);
     <div class="newsListBlock">
         
     <?php if (mysqli_num_rows($resultLeiaTambem) > 0): ?>
-        <h3>Leia também</h3>
+        
             <ul class="newList">
+                <h3>Leia também</h3>
                 <?php while ($item = mysqli_fetch_assoc($resultLeiaTambem)): ?>
                     <li class="newListItem">
-                        <a href="/news/?id=<?= $item['id'] ?>" class="newsBarLink"> <?= htmlspecialchars($item['titulo']) ?> </a>
+                        <a href="/noticias/noticia.php?id=<?= $item['id'] ?>" class="newsBarLink"> <?= htmlspecialchars($item['titulo']) ?> </a>
                     </li>
                 <?php endwhile; ?>
             </ul>

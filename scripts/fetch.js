@@ -24,10 +24,36 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    iniciarmenu();
-    initSlider();
-    initDropdown();
+        await loadComponents();
+
+        iniciarmenu();
+        initSlider();
+        initDropdown();
 })
+
+async function loadComponents() {
+    const components = document.querySelectorAll("[data-component]");
+
+    for (const component of components) {
+        const componentName = component.dataset.component;
+
+        try {
+            const response = await fetch(
+                `/componentes/${componentName}/index.html`
+            );
+
+            if (!response.ok) {
+                throw new Error(
+                    `Componente "${componentName}" não encontrado`
+                );
+            }
+
+            component.innerHTML = await response.text();
+        } catch (error) {
+            console.error(error);
+        }
+    }
+}
 
 //hamburger menu
 
