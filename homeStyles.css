@@ -288,6 +288,13 @@
 
 .news-card{
     text-decoration: none;
+    border: 2px solid transparent;
+    transition: 0.35s;
+}
+
+.news-card:hover{
+    border: 2px solid var(--hoverRed);
+    transform: translateY(-3%);
 }
 
 /*<----- MOBILE -------> */
