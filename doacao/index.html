@@ -78,6 +78,7 @@
         <h2 class="donationMethodsTitle">Escolha como fazer</h2>
         <h2 class="donationMethodsSubtitle">a sua doação</h2>
         </div>
+        <h3 class="donationsMethodName">Para doações ocasionais:</h3>
         <div class="donationMethodCards">
         <article class="donationMethodCard">
             <h3 class="donationCardTitle">Pix - doação rápida</h3>
@@ -131,6 +132,73 @@
         </article>
         </div>
     </section>
+    <section class="continuousDonation">
+        <h3 class="donationsMethodName">Para doar mensalmente:</h3>
+        <div>
+        <p class="donationExplanation">É possível doar mensalmente atráves da sua fatura de energia elétrica.</p>
+        <p class="donationExplanation">Preencha os dados abaixo que entraremos em contato para finalizar o processo de cadastro.</p>
+        </div>
+        <form action="/phparchives/mensaldonations.php" method="POST" class="contactForm" id="donationForm">
+                <div class="formBlock">
+                    <div class="formPiece">
+                    <label for="name" class="formLabel">Nome do titular da fatura de energia <span> *</span></label>
+                    <input type="text" name="name" id="name" class="formInput" placeholder="Digite seu nome completo" required>
+                    </div>
+                    <div class="formPiece">
+                    <label for="tel" class="formLabel">Telefone/Whatsapp<span> *</span></label>
+                    <input type="tel" name="tel" id="tel" class="formInput" placeholder="(00) 00000-0000" required>
+                    </div>
+                </div>
+                <div class="formBlock">
+                    <div class="formPiece">
+                        <label for="unit" class="formLabel">Nº da Unidade Consumidora<span> *</span></label>
+                         <input type="tel" name="unit" id="unit" class="formInput" placeholder="00000000" required>
+                    </div>
+                    <div class="formPiece">
+                        <label for="cpf" class="formLabel">CPF/CNPJ do Titular da conta<span> *</span></label>
+                        <input type="tel" name="cpf" id="cpf" class="formInput" placeholder="000.000.000-00" required>
+                    </div>
+                </div>
+                <div class="formBlock">
+                    <div class="formPiece">
+                        <label for="adress" class="formLabel">Endereço completo: <span> *</span></label>
+                        <input type="text" name="adress" id="adress" class="formInput" placeholder="Digite seu endereço completo" required>
+                    </div>    
+                </div>
+                <div class="formBlock">
+                    <div class="formPiece radioPiece">
+                    <label class="formLabel">Casa: <span>*</span></label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="casa" value="Propria" required>
+                                Própria
+                            </label>
+                            <label>
+                                <input type="radio" name="casa" value="Alugada">
+                                Alugada
+                            </label>
+                        </div>
+                    </div>
+                    <div class="formPiece valor">
+                        <label for="valor" class="formLabel">Valor que deseja doar mensalmente: <span> *</span></label>
+                        <input type="tel" name="valor" id="valor" class="formInput" placeholder="R$ 0,00" required>
+                    </div>
+                </div>       
+                <button type="submit" class="formButton">
+                    <div class="formButtonIcon">
+                        <img src="/src/icons/send.png" alt="">
+                    </div>
+                    Finalizar Cadastro
+                </button>
+            </form>
+            <div id="successModal" class="modal hidden">
+                <div class="modalContent">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalMessage"></p>
+                    <button onclick="closeModal()" class="modalButton">OK</button>
+                </div>
+            </div>
+    </section>
 
     <!----Footer insert ----->
     <div data-component="footer"></div> 
@@ -138,6 +206,7 @@
     
 <script src="/scripts/fetch.js"></script>
 <script src="/scripts/donation.js"></script>
+<script src="/scripts/mensaldonation.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
