@@ -88,7 +88,7 @@ $payload = [
     "to" => [
         "wagner.maiconhenrique@gmail.com"
     ],
-    "subject" => "[$ocorrenciaId] Nova ficha solicitada",
+    "subject" => "[$ocorrenciaId] Nova contribuição mensal",
     "html" => $html
 ];
 
