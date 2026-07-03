@@ -1,8 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("donationForm");
+
+    const form = document.getElementById("donationForm");
     const modal = document.getElementById("successModal");
     const modalTitle = document.getElementById("modalTitle");
     const modalMessage = document.getElementById("modalMessage");
+
+    if (!form) {
+        console.error("Form donationForm não encontrado.");
+        return;
+    }
 
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -17,14 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const result = await response.json();
 
-            if (result.status === "success") {
-                showModal("success", "Enviado com sucesso!");
+            console.log("Resposta backend:", result);
+
+            if (Boolean(result.success)) {
+                showModal("success", result.message || "Enviado com sucesso!");
                 form.reset();
             } else {
-                showModal("error", "Erro ao enviar.");
+                showModal("error", result.message || "Erro ao enviar.");
             }
 
         } catch (error) {
+            console.error(error);
             showModal("error", "Erro de conexão com o servidor.");
         }
     });
@@ -40,5 +49,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.closeModal = function () {
         modal.classList.add("hidden");
-    }
+    };
 });
