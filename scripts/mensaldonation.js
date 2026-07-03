@@ -51,3 +51,84 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.classList.add("hidden");
     };
 });
+
+//mascaras
+
+const phoneInput = document.getElementById("tel");
+
+phoneInput.addEventListener("input", (e) => {
+    let value = e.target.value;
+
+    // remove tudo que não for número
+    value = value.replace(/\D/g, "");
+
+    // limita tamanho
+    value = value.slice(0, 11);
+
+    // aplica máscara
+    if (value.length > 6) {
+        value = value.replace(/^(\d{2})(\d{5})(\d{0,4}).*/, "($1) $2-$3");
+    } else if (value.length > 2) {
+        value = value.replace(/^(\d{2})(\d{0,5})/, "($1) $2");
+    } else if (value.length > 0) {
+        value = value.replace(/^(\d*)/, "($1");
+    }
+
+    e.target.value = value;
+});
+
+const docInput = document.getElementById("cpf");
+
+docInput.addEventListener("input", (e) => {
+    let value = e.target.value;
+
+    // remove tudo que não for número
+    value = value.replace(/\D/g, "");
+
+    // limita até 14 dígitos
+    value = value.slice(0, 14);
+
+    // CPF (até 11 dígitos)
+    if (value.length <= 11) {
+        value = value
+            .replace(/(\d{3})(\d)/, "$1.$2")
+            .replace(/(\d{3})(\d)/, "$1.$2")
+            .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+    }
+    // CNPJ (12 a 14 dígitos)
+    else {
+        value = value
+            .replace(/^(\d{2})(\d)/, "$1.$2")
+            .replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3")
+            .replace(/\.(\d{3})(\d)/, ".$1/$2")
+            .replace(/(\d{4})(\d{1,2})$/, "$1-$2");
+    }
+
+    e.target.value = value;
+});
+
+const moneyInput = document.getElementById("valor");
+
+moneyInput.addEventListener("input", (e) => {
+    let value = e.target.value;
+
+    // remove tudo que não for número
+    value = value.replace(/\D/g, "");
+
+    // evita vazio quebrado
+    if (!value) {
+        e.target.value = "";
+        return;
+    }
+
+    // transforma em centavos
+    value = (parseInt(value, 10) / 100).toFixed(2);
+
+    // formata BRL
+    value = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    }).format(value);
+
+    e.target.value = value;
+});
