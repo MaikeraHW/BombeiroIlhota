@@ -85,7 +85,7 @@ $resultLeiaTambem = mysqli_stmt_get_result($stmtLeiaTambem);
         <img src="/<?= htmlspecialchars($imagem) ?>" alt="<?= htmlspecialchars($noticia['titulo']) ?>" class="bannerNews">
 
 
-        <p class="newsText"> <?= htmlspecialchars($noticia['texto']) ?> </p>
+        <p class="newsText"> <?= nl2br(htmlspecialchars($noticia['texto'])) ?> </p>
         <a href="/" class="backButton">← Voltar a Home</a>
     </div>
 </main>
