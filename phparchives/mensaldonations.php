@@ -63,7 +63,7 @@ $html = "
 </tr>
 
 <tr>
-<td><strong>endereço completo:</strong></td>
+<td><strong>Endereço completo:</strong></td>
 <td>{$adress}</td>
 </tr>
 
@@ -78,8 +78,6 @@ $html = "
 </tr>
 
 </table>
-
-<h3>Informações pertinentes</h3>
 
 ";
 
