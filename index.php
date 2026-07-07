@@ -53,21 +53,21 @@ $result = mysqli_query($conn, $sql);
 
                 <div class="slide">
                     <div class="peliculaHolder">
-                        <img src="/src/pic3.jpg" alt="">
+                        <img src="/src/pic3.jpg" alt="" class="adjust">
                         <h2 class="banner2Text">24 horas por dia</h2>
                     </div>
                 </div>
 
                 <div class="slide">
                     <div class="peliculaHolder">
-                        <img src="/src/pic2.jpeg" alt="">
+                        <img src="/src/pic2.jpeg" alt="" class="adjust2">
                         <h2 class="banner3Text">365 dias por ano</h2>
                     </div>
                 </div>
 
                 <div class="slide">
                     <div class="peliculaHolder">
-                        <img src="/src/pic4.jpg" alt="">
+                        <img src="/src/pic4.jpg" alt="" class="adjust3">
                         <h2 class="banner4Text">Prontos para salvar vidas</h2>
                     </div>
                 </div>
