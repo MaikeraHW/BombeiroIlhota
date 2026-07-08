@@ -20,6 +20,7 @@ try {
     $bota = $_POST['bota'] ?? '';
     $capacete = $_POST['capacete'] ?? '';
     $question = $_POST['condition_ok'] ?? '';
+    $observacao = $_POST['observacao'] ?? '';
     $signature = $_POST['signature'] ?? '';
 
     if (!$name || !$signature) {
@@ -64,9 +65,9 @@ try {
     // ==========================================
 
     $sql = "INSERT INTO registros_epi 
-            (nome, horario_inicio, horario_fim, jaqueta, calca, bota, capacete, condicao_uso, assinatura_path)
+            (nome, horario_inicio, horario_fim, jaqueta, calca, bota, capacete, condicao_uso, assinatura_path, observacao)
             VALUES
-            (:nome, :inicio, :fim, :jaqueta, :calca, :bota, :capacete, :condicao, :assinatura_path)";
+            (:nome, :inicio, :fim, :jaqueta, :calca, :bota, :capacete, :condicao, :assinatura_path, :observacao)";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
@@ -78,7 +79,8 @@ try {
         ':bota' => $bota,
         ':capacete' => $capacete,
         ':condicao' => $question,
-        ':assinatura_path' => $signaturePath
+        ':assinatura_path' => $signaturePath,
+        ':observacao' => $observacao
     ]);
 
     echo json_encode([
