@@ -83,7 +83,7 @@ $result = mysqli_query($conn, $sql);
         <section class="homeStatisticSection">
             <article class="homeStatisticArticle">
                 <h2 class="homeStatisticTitle">Relatório de Atendimentos</h2>
-                <h3 class="homeStatisticSubTitle">Maio de 2026</h3>
+                <h3 class="homeStatisticSubTitle">Junho de 2026</h3>
 
                 <div class="homeStatisticsHolder">
 
@@ -94,7 +94,7 @@ $result = mysqli_query($conn, $sql);
                             </div>
                             <div class="itemContent">
                                 <h3 class="itemTitle">APH</h3>
-                                <p>143</p>
+                                <p>111</p>
                             </div>
                         </div>
 
@@ -104,7 +104,7 @@ $result = mysqli_query($conn, $sql);
                             </div>
                             <div class="itemContent">
                                 <h3 class="itemTitle">Sinistros de Trânsito</h3>
-                                <p>28</p>
+                                <p>26</p>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ $result = mysqli_query($conn, $sql);
                             </div>
                             <div class="itemContent">
                                 <h3 class="itemTitle">Resgates Diversos</h3>
-                                <p>19</p>
+                                <p>22</p>
                             </div>
                         </div>
 
@@ -126,14 +126,14 @@ $result = mysqli_query($conn, $sql);
                             </div>
                             <div class="itemContent">
                                 <h3 class="itemTitle">Incêndios</h3>
-                                <p>6</p>
+                                <p>9</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="homeStatisticsResume">
                         <h2 class="homeStatisticResumeText">Total:</h2>
-                        <p class="homeStatisticResumeNum">196</p>
+                        <p class="homeStatisticResumeNum">168</p>
                     </div>
 
                 </div>
