@@ -110,7 +110,7 @@ $html = "
 $payload = [
     "from" => "Bombeiros Ilhota <contato@bombeiroilhota.com>",
     "to" => [
-        "wagner.maiconhenrique@gmail.com"
+        "administrativo@cbvilhota.com"
     ],
     "subject" => "[$ocorrenciaId] Nova ficha solicitada",
     "html" => $html

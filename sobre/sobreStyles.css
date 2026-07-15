@@ -106,13 +106,14 @@
     position: absolute;
     top: 100%;
     left: 48%;
-    height: 200%;
+    height: 500%;
     z-index: -1;
 }
 
 .markCardBanner{
     flex: 0 0 auto;
     width: 16rem;
+    max-height: 10rem;
     overflow: hidden;
     border-radius: 8px;
 }
@@ -128,7 +129,7 @@
     flex-shrink: 0;
     padding: 0.8rem;
     background-color: var(--hoverRed);
-    width: 5rem;
+    width: 2rem;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
 }
@@ -261,8 +262,9 @@
     position: absolute;
     top: 100%;
     left: 48%;
-    height: calc(100% + 2rem);
+    height: calc(250% + 2rem);
     z-index: -1;
+    display: none;
 }
 
 .markCardBanner{
@@ -368,6 +370,7 @@
     left: 48%;
     height: 200%;
     z-index: -1;
+    display: none;
 }
 
 .markCardBanner{

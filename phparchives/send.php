@@ -33,7 +33,7 @@ $apiKey = trim(RESEND_API_KEY);
 // payload Resend
 $payload = [
     "from" => "Bombeiros Ilhota <contato@bombeiroilhota.com>",
-    "to" => ["wagner.maiconhenrique@gmail.com"],
+    "to" => ["administrativo@cbvilhota.com"],
     "reply_to" => $email,
     "subject" => "Novo contato do site",
     "html" => "
