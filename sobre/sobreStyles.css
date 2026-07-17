@@ -94,11 +94,16 @@
 }
 
 .aboutUsHistoryMarkCard{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
     gap: 1.5rem;
+}
+
+.markCardContent{
+    flex-grow: 1;
 }
 
 .lineTest{
@@ -146,6 +151,7 @@
 
 .markCardText{
     font-size: 0.9rem;
+    flex-shrink: 0;
 }
 
 .markCardLogo img{
@@ -212,6 +218,66 @@
     margin-bottom: 1rem;
 }
 
+.bulletPoint{
+    display: none;
+}
+
+.imageModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s;
+
+    z-index: 9999;
+}
+
+.imageModal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.imageModal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    object-fit: contain;
+
+    transform: scale(.8);
+    transition: .3s;
+}
+
+.imageModal.active img {
+    transform: scale(1);
+}
+
+.closeModal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.zoomImage {
+    cursor: zoom-in;
+    transition: .3s;
+}
+
+.zoomImage:hover {
+    transform: scale(1.03);
+}
+
 
 /*<----- MOBILE -------> */
 
@@ -268,7 +334,11 @@
 }
 
 .markCardBanner{
-    display: none;
+    align-self: center;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 20rem;
+    max-height: 20rem;
 }
 
 .aboutUsStatisticsList{
@@ -334,6 +404,22 @@
     gap: 1rem;
     border-bottom: 2px solid rgb(216, 216, 216);
 }
+
+.aboutUsHistoryMarkCard{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.markCardLogo{
+    display: none;
+}
+
+.bulletPoint{
+    display: initial;
+    font-size: 2.4rem;
+}
+
 }
 /* -----------  Intermediate --------------*/
 
