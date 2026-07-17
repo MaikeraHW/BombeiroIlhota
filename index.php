@@ -24,10 +24,10 @@ $result = mysqli_query($conn, $sql);
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/styles/globalStyles.css">
-    <link rel="stylesheet" href="/styles/headerStyles.css">
-    <link rel="stylesheet" href="/styles/footerStyles.css">
-    <link rel="stylesheet" href="/homeStyles.css">
+    <link rel="stylesheet" href="/styles/globalStyles.css?v=1.0.1">
+    <link rel="stylesheet" href="/styles/headerStyles.css?v=1.0.1">
+    <link rel="stylesheet" href="/styles/footerStyles.css?v=1.0.1">
+    <link rel="stylesheet" href="/homeStyles.css?v=1.0.1">
 
     <link rel="icon" type="image/png" href="/src/icons/brasaoCBVI.png">
 

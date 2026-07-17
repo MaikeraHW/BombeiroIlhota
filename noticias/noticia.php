@@ -48,10 +48,10 @@ $resultLeiaTambem = mysqli_stmt_get_result($stmtLeiaTambem);
 
     <link rel="icon" href="/src/icons/brasaoCBVI.png">
 
-    <link rel="stylesheet" href="/styles/globalStyles.css">
-    <link rel="stylesheet" href="/styles/headerStyles.css">
-    <link rel="stylesheet" href="/styles/footerStyles.css">
-    <link rel="stylesheet" href="noticiaStyles.css">
+    <link rel="stylesheet" href="/styles/globalStyles.css?v=1.0.1">
+    <link rel="stylesheet" href="/styles/headerStyles.css?v=1.0.1">
+    <link rel="stylesheet" href="/styles/footerStyles.css?v=1.0.1">
+    <link rel="stylesheet" href="noticiaStyles.css?v=1.0.1">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 

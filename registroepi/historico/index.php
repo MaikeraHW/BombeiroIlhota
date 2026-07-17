@@ -47,7 +47,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de Registros EPI</title>
-    <link rel="stylesheet" href="listar_epi.css">
+    <link rel="stylesheet" href="listar_epi.css?v=1.0.1">
 </head>
 <body>
 
