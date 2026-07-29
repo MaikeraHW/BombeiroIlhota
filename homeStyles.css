@@ -18,7 +18,6 @@
 
 .evento-modal-content {
     position: relative;
-
     width: 100%;
     max-width: 700px;
     background: #fff;
@@ -26,6 +25,10 @@
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     text-align: center;
+}
+
+.evento-modal-content img{
+    width: 100%;
 }
 
 .evento-banner {
