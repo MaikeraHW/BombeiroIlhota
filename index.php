@@ -172,6 +172,35 @@ $result = mysqli_query($conn, $sql);
     <!-- FOOTER -->
     <div data-component="footer"></div>
 
+    <!-- Modal do evento -->
+        <div id="eventoModal" class="evento-modal">
+            <div class="evento-modal-content">
+
+                <!-- Botão fechar -->
+                <button class="evento-modal-fechar" id="fecharEvento" aria-label="Fechar">
+                    &times;
+                </button>
+
+                <!-- Banner -->
+                <img 
+                    src="/uploads/noticias/corrida.jpg" 
+                    alt="Banner do evento"
+                    class="evento-banner"
+                >
+
+                <!-- Botão de inscrição -->
+                <a 
+                    href="https://www.catarinarun.com.br/evento/2a-corrida-dos-bombeiros-de-ilhota-2026"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="evento-btn"
+                >
+                    INSCREVA-SE
+                </a>
+
+            </div>
+        </div>
+
     <script src="scripts/fetch.js"></script>
     <script src="scripts/home.js"></script>
 
