@@ -27,7 +27,7 @@ $result = mysqli_query($conn, $sql);
     <link rel="stylesheet" href="/styles/globalStyles.css?v=1.0.1">
     <link rel="stylesheet" href="/styles/headerStyles.css?v=1.0.1">
     <link rel="stylesheet" href="/styles/footerStyles.css?v=1.0.1">
-    <link rel="stylesheet" href="/homeStyles.css?v=1.0.2">
+    <link rel="stylesheet" href="/homeStyles.css?v=1.0.3">
 
     <link rel="icon" type="image/png" href="/src/icons/brasaoCBVI.png">
 
