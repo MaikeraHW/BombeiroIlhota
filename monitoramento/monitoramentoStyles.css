@@ -1,0 +1,588 @@
+.contactHeroBanner{
+    position: relative;
+    height: 30rem;
+    overflow: hidden;
+}
+
+.contactHeroBannerContent{
+    color: var(--patternWhite);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    z-index: 1;
+}
+
+.contactHeroBannerTitle{
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 0.95;
+    margin-bottom: 2rem;
+}
+
+.contactHeroBannerMarker{
+    border: 3px solid var(--detailYellow);
+    width: 5rem;
+    margin-bottom: 2rem;
+}
+
+.contactHeroBannerText{
+    margin-right: 0.5rem;
+}
+
+.heroBannerImg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroBannerImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contactHeroBannerPelicula{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.contactContent{
+    background-color: #F5F5F5;
+    padding: 2rem 0;
+}
+
+.contactTitle{
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.contactTitle span{
+    color: var(--mainRed)
+}
+
+.contactMainMarker{
+    width: 30%;
+    max-width: 5rem;
+    margin: 2rem auto;
+    border: 3px solid var(--detailYellow)
+}
+
+.contactCards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.contactCard{
+    flex: 1 0 auto;
+    width: calc(100% / 8);
+    max-width: 18rem;
+    border: 1px solid #E5E7EB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.cardIconHolder{
+    width: 50%;
+    padding: 1.3rem;
+    background-color: #F3F4F6;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+
+.cardIcon{
+    width: 100%;
+    display: block;
+}
+
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardTitle{
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: var(--mainRed);
+}
+
+.cardText{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.cardFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.cardFooterText{
+    font-size: 0.9rem;
+    text-align: center;
+    color:#6B7280;
+    line-height: 16px;
+}
+
+.cardMidiasHolder{
+    margin: 0.7rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cardMidiasHolder a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    aspect-ratio: 1 / 1;
+    border: 2px solid var(--mainRed);
+    border-radius: 50%;
+    padding: 0.4rem;
+}
+
+.cardMidiasHolder a img{
+    display: block;
+    width: 100%;
+}
+
+.contactFormSection{
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formMarker{
+    width: 8rem;
+    margin: 2rem auto;
+    border: 3px solid var(--detailYellow);
+}
+
+.formTitle, .formSubtitle{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 100%;
+}
+
+.formSubtitle{
+    color: var(--mainRed);
+}
+
+.contactForm{
+    background-color: #e8e9eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    border-radius: 12px;
+    width: 96%;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.formLabel{
+    font-weight: 600;
+}
+
+.formLabel span{
+    color: var(--mainRed);
+}
+
+.formInput{
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.formInput:focus, .formTextArea:focus{
+    outline: 2px solid var(--hoverRed);
+}
+
+.formTextArea{
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    height: 10rem;
+}
+
+.formButton{
+    background-color: var(--mainRed);
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    color: var(--patternWhite);
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem;
+    cursor: pointer;
+}
+
+.formButton:hover{
+    background-color: var(--hoverRed);
+}
+
+.formButtonIcon{
+    width: 4%;
+    min-width: 1.5rem;
+}
+
+.formButtonIcon img{
+    display: block;
+    width: 100%;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 15;
+}
+
+.modalContent {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.hidden {
+    display: none;
+}
+
+.modalButton{
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--mainRed);
+    color: var(--patternWhite);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.success{
+    color: green;
+}
+
+.error{
+    color: red;
+}
+
+/* ----------------- Medium Screens ---------------------- */
+
+@media (max-width: 1086px) {
+
+.contactCards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.contactCard{
+    width: 100%;
+    max-width: 26rem;
+    min-height: 27rem;
+    justify-self: center;
+}
+
+.cardMidiasHolder a img{
+    display: block;
+    width: 80%;
+}
+
+}
+
+
+/* ----------------- Small Screens ---------------------- */
+
+
+@media (max-width: 768px) {
+
+.contactCards{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+.contactCard{
+    width: 100%;
+    justify-self: center;
+}
+
+.formTitle, .formSubtitle{
+    font-size: clamp(1rem, 8dvw, 2rem);
+}
+
+}
+
+/* ================================
+   PÁGINA DE MONITORAMENTO
+================================ */
+
+.riverPage {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ================================
+   NÍVEIS ATUAIS
+================================ */
+
+.riverCurrent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem auto 3rem;
+}
+
+
+.riverCard {
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+.riverCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.riverLabel {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 0.2rem;
+}
+
+
+.riverCard h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+
+/* ================================
+   STATUS
+================================ */
+
+.riverStatus {
+    padding: 0.45rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.statusProntidao {
+    background: #ffe9c2;
+    color: #b66a00;
+}
+
+
+.statusNormal {
+    background: #e7f6ec;
+    color: #218739;
+}
+
+
+.statusConcern {
+    background: #fff4d6;
+    color: #9a6b00;
+}
+
+
+.statusAlert {
+    background: #fde5e5;
+    color: #c62828;
+}
+
+
+/* ================================
+   NÍVEL
+================================ */
+
+.riverLevel {
+    display: flex;
+    align-items: baseline;
+    margin: 1.5rem 0 0.3rem;
+}
+
+
+.riverLevel span {
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--mainRed);
+}
+
+
+.riverLevel small {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 0.4rem;
+    color: #555;
+}
+
+
+.riverUpdate {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+
+/* ================================
+   TABELA
+================================ */
+
+.floodTableSection {
+    margin-top: 2rem;
+}
+
+
+.sectionHeader {
+    margin-bottom: 1rem;
+}
+
+
+.sectionHeader h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+
+.sectionHeader p {
+    margin: 0.3rem 0 0;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 12px;
+}
+
+
+.floodTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+
+.floodTable th {
+    background: #f5f5f5;
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+
+.floodTable td {
+    padding: 1rem;
+    border-top: 1px solid rgb(230, 230, 230);
+    font-size: 0.9rem;
+}
+
+
+.floodTable tbody tr:hover {
+    background: #fafafa;
+}
+
+
+/* ================================
+   RESPONSIVO
+================================ */
+
+@media (max-width: 768px) {
+
+    .riverCurrent {
+        grid-template-columns: 1fr;
+        margin-top: 1rem;
+    }
+
+
+    .riverCard {
+        padding: 1.2rem;
+    }
+
+
+    .riverCardHeader {
+        align-items: flex-start;
+    }
+
+
+    .riverCard h2 {
+        font-size: 1.1rem;
+    }
+
+
+    .riverLevel span {
+        font-size: 3.5rem;
+    }
+
+
+    .sectionHeader h2 {
+        font-size: 1.1rem;
+    }
+
+}

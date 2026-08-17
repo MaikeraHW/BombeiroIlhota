@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="/styles/globalStyles.css?v=1.0.1">
+    <link rel="stylesheet" href="/styles/headerStyles.css?v=1.0.1">
+    <link rel="stylesheet" href="/styles/footerStyles.css?v=1.0.1">
+    <link rel="stylesheet" href="monitoramentoStyles.css?v=1.0.1">
+    <link rel="icon" type="image/png" href="/src/icons/brasaoCBVI.png">
+    <title>Monitore - Bombeiros Voluntários de Ilhota</title>
+</head>
+<body class="body">
+
+    <!----Header insert ----->
+    <div data-component="header" class="header"></div>
+
+    <section class="contactHeroBanner">
+            <div class="contactHeroBannerPelicula"></div>
+            <div class="contactHeroBannerContent">
+                <h1 class="contactHeroBannerTitle">Monitore o nível dos rios</h1>
+                <div class="contactHeroBannerMarker"></div>
+                <p class="contactHeroBannerText">Monitore o nível dos nossos rios e se prepare para eventuais emergências</p>
+            </div>
+            <div class="heroBannerImg">
+                <img src="/src/pic2.jpeg" alt="">
+            </div>
+    </section>
+
+    <main class="riverPage">
+
+    <section class="riverCurrent">
+
+        <!-- RIO ITAJAÍ-AÇU -->
+        <div class="riverCard" data-rio="DCSC-00030">
+
+            <div class="riverCardHeader">
+
+                <div>
+                    <span class="riverLabel">Rio</span>
+                    <h2 id="nome-00030">Rio Itajaí-Açu</h2>
+                </div>
+
+                <span class="riverStatus statusNormal">
+                    NORMAL
+                </span>
+
+            </div>
+
+            <div class="riverLevel">
+
+                <span id="nivel-00030">0,00</span>
+
+                <small>m</small>
+
+            </div>
+
+            <div class="riverUpdate">
+                Atualizado agora
+            </div>
+
+        </div>
+
+
+        <!-- RIO ITAJAÍ-MIRIM -->
+        <div class="riverCard" data-rio="DCSC-00163">
+
+            <div class="riverCardHeader">
+
+                <div>
+                    <span class="riverLabel">Rio</span>
+                    <h2 id="nome-00163">Rio Itajaí-Mirim</h2>
+                </div>
+
+                <span class="riverStatus statusNormal">
+                    NORMAL
+                </span>
+
+            </div>
+
+            <div class="riverLevel">
+
+                <span id="nivel-00163">0,00</span>
+
+                <small>m</small>
+
+            </div>
+
+            <div class="riverUpdate">
+                Atualizado agora
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TABELA DE ALAGAMENTO -->
+
+    <section class="floodTableSection">
+
+        <div class="sectionHeader">
+
+            <h2>Ruas e níveis de alagamento</h2>
+
+            <p>
+                Nível aproximado do rio em que cada local começa a apresentar alagamento.
+            </p>
+
+        </div>
+
+
+        <div class="tableWrapper">
+
+            <table class="floodTable">
+
+                <thead>
+
+                    <tr>
+                        <th>Rua / Local</th>
+                        <th>Nível para alagar</th>
+                        <th>Rio</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    
+                    <!-- <tr>
+                        <td>Rua XV de Novembro</td>
+                        <td>5,20 m</td>
+                        <td>Rio Itajaí-Açu</td>
+                    </tr>
+
+                    <tr>
+                        <td>Rua das Palmeiras</td>
+                        <td>5,60 m</td>
+                        <td>Rio Itajaí-Açu</td>
+                    </tr>
+
+                    <tr>
+                        <td>Avenida Central</td>
+                        <td>3,90 m</td>
+                        <td>Rio Itajaí-Mirim</td>
+                    </tr>
+
+                    <tr>
+                        <td>Rua São João</td>
+                        <td>4,20 m</td>
+                        <td>Rio Itajaí-Mirim</td>
+                    </tr> -->
+
+                </tbody>
+
+
+            </table>
+                <p>Em construção</p>
+        </div>
+
+    </section>
+
+</main>
+    
+
+    <!----Header insert ----->
+    <div data-component="footer"></div> 
+    
+<script src="/scripts/fetch.js"></script>
+<script src="/scripts/monitoramento.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+</script>
+</body>
+</html>
