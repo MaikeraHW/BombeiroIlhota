@@ -69,14 +69,14 @@
 }
 
 .contactTitle span{
-    color: var(--mainRed)
+    color: var(--mainRed);
 }
 
 .contactMainMarker{
     width: 30%;
     max-width: 5rem;
     margin: 2rem auto;
-    border: 3px solid var(--detailYellow)
+    border: 3px solid var(--detailYellow);
 }
 
 .contactCards{
@@ -144,7 +144,7 @@
 .cardFooterText{
     font-size: 0.9rem;
     text-align: center;
-    color:#6B7280;
+    color: #6B7280;
     line-height: 16px;
 }
 
@@ -189,7 +189,8 @@
     border: 3px solid var(--detailYellow);
 }
 
-.formTitle, .formSubtitle{
+.formTitle,
+.formSubtitle{
     text-align: center;
     font-size: 2rem;
     line-height: 100%;
@@ -227,7 +228,8 @@
     margin-bottom: 1rem;
 }
 
-.formInput:focus, .formTextArea:focus{
+.formInput:focus,
+.formTextArea:focus{
     outline: 2px solid var(--hoverRed);
 }
 
@@ -269,7 +271,7 @@
     width: 100%;
 }
 
-.modal {
+.modal{
     position: fixed;
     top: 0;
     left: 0;
@@ -282,7 +284,7 @@
     z-index: 15;
 }
 
-.modalContent {
+.modalContent{
     background: #fff;
     padding: 25px;
     border-radius: 10px;
@@ -290,7 +292,7 @@
     width: 300px;
 }
 
-.hidden {
+.hidden{
     display: none;
 }
 
@@ -312,77 +314,78 @@
     color: red;
 }
 
+
 /* ----------------- Medium Screens ---------------------- */
 
-@media (max-width: 1086px) {
+@media (max-width: 1086px){
 
-.contactCards{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
+    .contactCards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
 
-.contactCard{
-    width: 100%;
-    max-width: 26rem;
-    min-height: 27rem;
-    justify-self: center;
-}
+    .contactCard{
+        width: 100%;
+        max-width: 26rem;
+        min-height: 27rem;
+        justify-self: center;
+    }
 
-.cardMidiasHolder a img{
-    display: block;
-    width: 80%;
-}
+    .cardMidiasHolder a img{
+        display: block;
+        width: 80%;
+    }
 
 }
 
 
 /* ----------------- Small Screens ---------------------- */
 
+@media (max-width: 768px){
 
-@media (max-width: 768px) {
+    .contactCards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
 
-.contactCards{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
+    .contactCard{
+        width: 100%;
+        justify-self: center;
+    }
+
+    .formTitle,
+    .formSubtitle{
+        font-size: clamp(1rem, 8dvw, 2rem);
+    }
+
 }
 
-.contactCard{
-    width: 100%;
-    justify-self: center;
-}
 
-.formTitle, .formSubtitle{
-    font-size: clamp(1rem, 8dvw, 2rem);
-}
-
-}
-
-/* ================================
+/* =====================================================
    PÁGINA DE MONITORAMENTO
-================================ */
+===================================================== */
 
-.riverPage {
+.riverPage{
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 
-/* ================================
+/* =====================================================
    NÍVEIS ATUAIS
-================================ */
+===================================================== */
 
-.riverCurrent {
+.riverCurrent{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin: 2rem auto 3rem;
 }
 
-
-.riverCard {
+.riverCard{
     border: 1px solid rgb(223, 223, 223);
     border-radius: 12px;
     padding: 1.5rem;
@@ -390,16 +393,14 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-
-.riverCardHeader {
+.riverCardHeader{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
 
-
-.riverLabel {
+.riverLabel{
     display: block;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -408,19 +409,18 @@
     margin-bottom: 0.2rem;
 }
 
-
-.riverCard h2 {
+.riverCard h2{
     margin: 0;
     font-size: 1.3rem;
     text-transform: uppercase;
 }
 
 
-/* ================================
+/* =====================================================
    STATUS
-================================ */
+===================================================== */
 
-.riverStatus {
+.riverStatus{
     padding: 0.8rem 1.4rem;
     border-radius: 20px;
     font-size: 1.4rem;
@@ -428,146 +428,179 @@
     white-space: nowrap;
 }
 
-.statusProntidao {
+.statusProntidao{
     background: #ffe9c2;
     color: #b66a00;
 }
 
-
-.statusNormal {
+.statusNormal{
     background: #e7f6ec;
     color: #218739;
 }
 
-
-.statusConcern {
+.statusConcern{
     background: #fff4d6;
     color: #9a6b00;
 }
 
-
-.statusAlert {
+.statusAlert{
     background: #fde5e5;
     color: #c62828;
 }
 
 
-/* ================================
+/* =====================================================
    NÍVEL
-================================ */
+===================================================== */
 
-.riverLevel {
+.riverLevel{
     display: flex;
     align-items: baseline;
     margin: 1.5rem 0 0.3rem;
 }
 
-
-.riverLevel span {
+.riverLevel span{
     font-size: 4rem;
     line-height: 1;
     font-weight: 700;
     color: var(--mainRed);
 }
 
-
-.riverLevel small {
+.riverLevel small{
     font-size: 1.5rem;
     font-weight: 600;
     margin-left: 0.4rem;
     color: #555;
 }
 
-
-.riverUpdate {
+.riverUpdate{
     font-size: 0.8rem;
     color: #888;
 }
 
-/* ================================
-   RESPONSIVO
-================================ */
 
-@media (max-width: 768px) {
-
-    .riverCurrent {
-        grid-template-columns: 1fr;
-        margin-top: 1rem;
-    }
-
-
-    .riverCard {
-        padding: 1.2rem;
-    }
-
-
-    .riverCardHeader {
-        align-items: flex-start;
-    }
-
-
-    .riverCard h2 {
-        font-size: 1.1rem;
-    }
-
-
-    .riverLevel span {
-        font-size: 3.5rem;
-    }
-
-
-    .sectionHeader h2 {
-        font-size: 1.1rem;
-    }
-
-}
-
-/* ================================
+/* =====================================================
    NÍVEL DE NORMALIDADE
-================================ */
+===================================================== */
 
-.riverNormal {
+.riverNormal{
     font-size: 0.85rem;
     color: #777;
     margin-top: 0.4rem;
 }
 
-.riverNormal strong {
+.riverNormal strong{
     color: #555;
     font-weight: 700;
 }
+
 
 /* =====================================================
    TABELA DE ALAGAMENTO
 ===================================================== */
 
-.floodTableSection {
+.floodTableSection{
     margin-top: 2rem;
 }
 
-.sectionHeader {
+.sectionHeader{
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.sectionHeader h2 {
+.sectionHeader h2{
     margin: 0;
     text-transform: uppercase;
     font-size: 1.3rem;
 }
 
-.sectionHeader p {
+.sectionHeader p{
     margin: 0.3rem 0 0;
     color: #777;
     font-size: 0.9rem;
 }
 
 
-/* ================================
-   CONTAINER
-================================ */
+/* =====================================================
+   BUSCA
+===================================================== */
 
-.tableWrapper {
+.floodSearch{
+    position: relative;
+    width: 100%;
+    max-width: 50rem;
+    margin: 1.5rem auto 0;
+}
+
+.floodSearch input{
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 0.9rem 3rem 0.9rem 1rem;
+
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 10px;
+
+    background: white;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.floodSearch input:focus{
+    border-color: var(--mainRed);
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.floodSearchIcon{
+    position: absolute;
+
+    right: 1rem;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+
+    font-size: 1rem;
+}
+
+.floodSearchResult{
+    max-width: 50rem;
+    margin: 0.5rem auto;
+
+    min-height: 1.2rem;
+
+    color: #777;
+    font-size: 0.75rem;
+}
+
+.floodNoResults{
+    display: none;
+
+    text-align: center;
+
+    margin: 1rem 0;
+
+    color: #777;
+
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   CONTAINER DA TABELA
+===================================================== */
+
+.tableWrapper{
     width: 100%;
     max-width: 50rem;
     margin: auto;
@@ -579,50 +612,59 @@
 }
 
 
-/* ================================
+/* =====================================================
    TABELA
-================================ */
+===================================================== */
 
-.floodTable {
+.floodTable{
     width: 100%;
     border-collapse: collapse;
+
     background: white;
+
     table-layout: auto;
 }
 
 
-/* ================================
+/* =====================================================
    CÉLULAS
-================================ */
+===================================================== */
 
 .floodTable th,
-.floodTable td {
+.floodTable td{
     padding: 0.9rem 1rem;
+
     border-bottom: 1px solid #eee;
+
     vertical-align: middle;
 }
 
 
-/* ================================
+/* =====================================================
    CABEÇALHO
-================================ */
+===================================================== */
 
-.floodTable th {
+.floodTable th{
     text-align: left;
+
     font-weight: 600;
+
     background: #f5f5f5;
+
     font-size: 0.85rem;
+
     text-transform: uppercase;
 }
 
 
-/* ================================
-   PRIMEIRA COLUNA — RUA
-================================ */
+/* =====================================================
+   RUA / LOCAL
+===================================================== */
 
-.floodTable th:first-child,
-.floodTable td:first-child {
-    width: 100%;
+.floodTable th:nth-child(1),
+.floodTable td:nth-child(1){
+
+    width: 58%;
 
     white-space: normal;
 
@@ -635,13 +677,35 @@
 }
 
 
-/* ================================
-   SEGUNDA COLUNA — NÍVEL
-================================ */
+/* =====================================================
+   BAIRRO
+===================================================== */
 
-.floodTable th:last-child,
-.floodTable td:last-child {
+.floodTable th:nth-child(2),
+.floodTable td:nth-child(2){
+
+    width: 22%;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    word-break: normal;
+
+    min-width: 0;
+}
+
+
+/* =====================================================
+   NÍVEL
+===================================================== */
+
+.floodTable th:nth-child(3),
+.floodTable td:nth-child(3){
+
     width: 110px;
+
     min-width: 110px;
 
     text-align: center;
@@ -650,21 +714,55 @@
 }
 
 
-/* ================================
+/* =====================================================
    ÚLTIMA LINHA
-================================ */
+===================================================== */
 
-.floodTable tr:last-child td {
+.floodTable tr:last-child td{
     border-bottom: none;
 }
 
 
-/* ================================
+/* =====================================================
    HOVER
-================================ */
+===================================================== */
 
-.floodTable tbody tr:hover {
+.floodTable tbody tr:hover{
     background: #fafafa;
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 768px){
+
+    .riverCurrent{
+        grid-template-columns: 1fr;
+        margin-top: 1rem;
+    }
+
+    .riverCard{
+        padding: 1.2rem;
+    }
+
+    .riverCardHeader{
+        align-items: flex-start;
+    }
+
+    .riverCard h2{
+        font-size: 1.1rem;
+    }
+
+    .riverLevel span{
+        font-size: 3.5rem;
+    }
+
+    .sectionHeader h2{
+        font-size: 1.1rem;
+    }
+
 }
 
 
@@ -672,89 +770,95 @@
    CELULAR
 ===================================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 600px){
 
-    .floodTableSection {
+    .floodTableSection{
         padding: 0;
         margin-top: 2rem;
     }
 
-
-    .sectionHeader {
+    .sectionHeader{
         padding: 0 0.3rem;
     }
 
-
-    .sectionHeader h2 {
+    .sectionHeader h2{
         font-size: 1.1rem;
     }
 
-
-    .sectionHeader p {
+    .sectionHeader p{
         font-size: 0.85rem;
     }
 
-
-    .tableWrapper {
+    .floodSearch{
         width: 100%;
-        overflow: hidden;
+        margin-top: 1.2rem;
+    }
+
+    .floodSearch input{
+        font-size: 0.9rem;
+        padding: 0.85rem 2.8rem 0.85rem 0.9rem;
+    }
+
+    .tableWrapper{
+        width: 100%;
+
+        overflow-x: auto;
+
         border-radius: 10px;
     }
 
-
-    .floodTable {
+    .floodTable{
         width: 100%;
-        table-layout: auto;
-    }
 
+        /*
+         * Mantém as três colunas utilizáveis
+         * mesmo em telas pequenas.
+         */
+        min-width: 500px;
+    }
 
     .floodTable th,
-    .floodTable td {
+    .floodTable td{
         padding: 0.75rem 0.55rem;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
-
-    /* ================================
-       RUA
-    ================================= */
-
-    .floodTable th:first-child,
-    .floodTable td:first-child {
-
-        width: auto;
-
-        white-space: normal;
-
-        overflow-wrap: anywhere;
-        word-wrap: break-word;
-        word-break: normal;
-
-        line-height: 1.35;
-
-        min-width: 0;
+    .floodTable th:nth-child(1),
+    .floodTable td:nth-child(1){
+        width: 55%;
     }
 
+    .floodTable th:nth-child(2),
+    .floodTable td:nth-child(2){
+        width: 25%;
+    }
 
-    /* ================================
-       NÍVEL
-    ================================= */
-
-    .floodTable th:last-child,
-    .floodTable td:last-child {
-
+    .floodTable th:nth-child(3),
+    .floodTable td:nth-child(3){
         width: 90px;
-        min-width: 90px;
 
-        text-align: center;
+        min-width: 90px;
 
         white-space: nowrap;
     }
 
 }
 
+
+/* =====================================================
+   DISCLAIMER
+===================================================== */
+
 .disclaimer{
     text-align: center;
+
     margin-top: 1rem;
+
     font-size: 0.6rem;
+
+    color: #777;
+}
+
+.disclaimer a{
+    color: inherit;
 }

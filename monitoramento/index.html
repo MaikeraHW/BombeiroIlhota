@@ -3,391 +3,1250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">   
-    <link rel="stylesheet" href="/styles/globalStyles.css?v=1.0.1">
-    <link rel="stylesheet" href="/styles/headerStyles.css?v=1.0.1">
-    <link rel="stylesheet" href="/styles/footerStyles.css?v=1.0.1">
-    <link rel="stylesheet" href="monitoramentoStyles.css?v=1.0.1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/globalStyles.css?v=1.0.5">
+    <link rel="stylesheet" href="/styles/headerStyles.css?v=1.0.5">
+    <link rel="stylesheet" href="/styles/footerStyles.css?v=1.0.5">
+    <link rel="stylesheet" href="monitoramentoStyles.css?v=1.0.5">
+
     <link rel="icon" type="image/png" href="/src/icons/brasaoCBVI.png">
+
     <title>Monitore - Bombeiros Voluntários de Ilhota</title>
 </head>
+
 <body class="body">
 
-    <!----Header insert ----->
+    <!---- Header ---->
     <div data-component="header" class="header"></div>
 
+
+    <!-- ================================
+         HERO
+    ================================= -->
+
     <section class="contactHeroBanner">
-            <div class="contactHeroBannerPelicula"></div>
-            <div class="contactHeroBannerContent">
-                <h1 class="contactHeroBannerTitle">Monitore o nível dos rios</h1>
-                <div class="contactHeroBannerMarker"></div>
-                <p class="contactHeroBannerText">Monitore o nível dos nossos rios e se prepare para eventuais emergências</p>
-            </div>
-            <div class="heroBannerImg">
-                <img src="/src/pic2.jpeg" alt="">
-            </div>
+
+        <div class="contactHeroBannerPelicula"></div>
+
+        <div class="contactHeroBannerContent">
+
+            <h1 class="contactHeroBannerTitle">
+                Monitore o nível dos rios
+            </h1>
+
+            <div class="contactHeroBannerMarker"></div>
+
+            <p class="contactHeroBannerText">
+                Monitore o nível dos nossos rios e se prepare para eventuais emergências
+            </p>
+
+        </div>
+
+        <div class="heroBannerImg">
+
+            <img src="/src/pic2.jpeg" alt="">
+
+        </div>
+
     </section>
+
 
     <main class="riverPage">
 
-    <section class="riverCurrent">
 
-    <!-- RIO ITAJAÍ-AÇU -->
-    <div class="riverCard" data-rio="DCSC-00030">
+        <!-- ================================
+             NÍVEIS ATUAIS
+        ================================= -->
 
-        <div class="riverCardHeader">
+        <section class="riverCurrent">
 
-            <div>
-                <span class="riverLabel">Rio</span>
-                <h2 id="nome-00030">Rio Itajaí-Açu</h2>
+
+            <!-- RIO ITAJAÍ-AÇU -->
+
+            <div class="riverCard" data-rio="DCSC-00030">
+
+                <div class="riverCardHeader">
+
+                    <div>
+
+                        <span class="riverLabel">
+                            Rio
+                        </span>
+
+                        <h2 id="nome-00030">
+                            Rio Itajaí-Açu
+                        </h2>
+
+                    </div>
+
+                    <span class="riverStatus statusNormal">
+                        NORMAL
+                    </span>
+
+                </div>
+
+
+                <div class="riverLevel">
+
+                    <span id="nivel-00030">
+                        0,00
+                    </span>
+
+                    <small>
+                        m
+                    </small>
+
+                </div>
+
+
+                <div class="riverNormal">
+
+                    Normal: até
+                    <strong>
+                        9,20 m
+                    </strong>
+
+                </div>
+
+
+                <div class="riverUpdate">
+                    Atualizado agora
+                </div>
+
             </div>
 
-            <span class="riverStatus statusNormal">
-                NORMAL
-            </span>
 
-        </div>
+            <!-- RIO ITAJAÍ-MIRIM -->
 
-        <div class="riverLevel">
+            <div class="riverCard" data-rio="DCSC-00163">
 
-            <span id="nivel-00030">0,00</span>
+                <div class="riverCardHeader">
 
-            <small>m</small>
+                    <div>
 
-        </div>
+                        <span class="riverLabel">
+                            Rio
+                        </span>
 
-        <div class="riverNormal">
-            Normal: até <strong>9,20 m</strong>
-        </div>
+                        <h2 id="nome-00163">
+                            Rio Itajaí-Mirim
+                        </h2>
 
-        <div class="riverUpdate">
-            Atualizado agora
-        </div>
+                    </div>
 
-    </div>
+                    <span class="riverStatus statusNormal">
+                        NORMAL
+                    </span>
+
+                </div>
 
 
-    <!-- RIO ITAJAÍ-MIRIM -->
-    <div class="riverCard" data-rio="DCSC-00163">
+                <div class="riverLevel">
 
-        <div class="riverCardHeader">
+                    <span id="nivel-00163">
+                        0,00
+                    </span>
 
-            <div>
-                <span class="riverLabel">Rio</span>
-                <h2 id="nome-00163">Rio Itajaí-Mirim</h2>
+                    <small>
+                        m
+                    </small>
+
+                </div>
+
+
+                <div class="riverNormal">
+
+                    Normal: até
+                    <strong>
+                        0,85 m
+                    </strong>
+
+                </div>
+
+
+                <div class="riverUpdate">
+                    Atualizado agora
+                </div>
+
             </div>
 
-            <span class="riverStatus statusNormal">
-                NORMAL
-            </span>
+        </section>
 
-        </div>
 
-        <div class="riverLevel">
 
-            <span id="nivel-00163">0,00</span>
+        <!-- ================================
+             TABELA DE ALAGAMENTO
+        ================================= -->
 
-            <small>m</small>
+        <section class="floodTableSection">
 
-        </div>
 
-        <div class="riverNormal">
-            Normal: até <strong>0,85 m</strong>
-        </div>
+            <div class="sectionHeader">
 
-        <div class="riverUpdate">
-            Atualizado agora
-        </div>
+                <h2>
+                    Ruas e níveis de alagamento
+                </h2>
 
-        </div>
+                <p>
+                    Consulte o nível do rio em que cada local começa a apresentar alagamento.
+                </p>
 
-    </section>
+            </div>
 
 
-    <!-- TABELA DE ALAGAMENTO -->
+            <!-- BUSCA -->
 
-    <section class="floodTableSection">
+            <div class="floodSearch">
 
-    <div class="sectionHeader">
-        <h2>Ruas e níveis de alagamento</h2>
+                <input
+                    type="search"
+                    id="floodSearchInput"
+                    placeholder="Buscar por rua ou bairro..."
+                    autocomplete="off"
+                >
 
-        <p>
-            Consulte o nível do rio em que cada local começa a apresentar alagamento.
-        </p>
-    </div>
+                <span class="floodSearchIcon">
+                    🔎
+                </span>
 
-    <div class="tableWrapper">
+            </div>
 
-        <table class="floodTable">
 
-            <thead>
-                <tr>
-                    <th>Rua / Local</th>
-                    <th>Nível para alagar</th>
-                </tr>
-            </thead>
+            <div class="floodSearchResult" id="floodSearchResult"></div>
 
-            <tbody>
 
-                <tr>
-                    <td>Estrada Geral Pocinho</td>
-                    <td>13,35 m</td>
-                </tr>
+            <!-- TABELA -->
 
-                <tr>
-                    <td>Rua Alexandrita (esquina com Rua Turquesa)</td>
-                    <td>12,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Alexandrita</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Antônio B. Pereira</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Antônio Köhler</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Arnaldo Berti</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Arthur Tamazia</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Bento Jacob de Oliveira</td>
-                    <td>3,00 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Berilo</td>
-                    <td>12,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Berilo</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua da Integração</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua das Caieiras</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua das Esmeraldas</td>
-                    <td>12,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua das Esmeraldas</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Dilma Silva Tomaz</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Donzila Francisco</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua dos Diamantes</td>
-                    <td>12,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua dos Diamantes</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Euclásio</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Felindo Furlani</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua José Domingos Filho, nas proximidades do Mercado Vila</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua José Geraldino Bitencourt, na altura da antiga Usati</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua José V. da Silva</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Laurindo Xavier</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Manoel Cordeiro Filho (Tabuleiro)</td>
-                    <td>12,20 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Maria C. Bittencourt</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Maria Oliveira Berti</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Milton Domingos Machado</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Modesto Vargas</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Padre Carlos Gesser</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Pedra da Lua (esquina com Rua Alexandrita)</td>
-                    <td>12,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Pedra da Lua</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Pedra do Sol (esquina com Rua Alexandrita)</td>
-                    <td>12,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Pedra do Sol</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Paulo Köhler</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Pedro Gonçalves</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Pedro Jorge dos Santos</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Ricardo Schmoegel Filho</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Safira</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Sebastião de Quadros</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Topázio</td>
-                    <td>12,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Topázio</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Turquesa</td>
-                    <td>12,20 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Turquesa</td>
-                    <td>12,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Turquesa</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Rua Ubaldo J. Bitencourt</td>
-                    <td>13,35 m</td>
-                </tr>
-
-                <tr>
-                    <td>Três vias sem denominação oficial</td>
-                    <td>13,35 m</td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
-    </div>
-
-    <p class="disclaimer">Dados extraídos de <a href="https://monitoramento.defesacivil.sc.gov.br">https://monitoramento.defesacivil.sc.gov.br</a>, qualquer dúvida, ligue  (47) 2080-0612, Defesa Civil de Ilhota.</p>
-    <p class="disclaimer">As cotas apresentadas são referenciais para o planejamento operacional da Coordenadoria Municipal de Proteção e Defesa Civil (COMPDEC) e poderão ser atualizadas conforme novos levantamentos topográficos, alterações na infraestrutura urbana ou registros de eventos hidrológicos futuros.</p>
-
-    </section>
-
-</main>
-    
-
-    <!----Header insert ----->
-    <div data-component="footer"></div> 
-    
-<script src="/scripts/fetch.js"></script>
-<script src="/scripts/monitoramento.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script>
-</script>
+            <div class="tableWrapper">
+
+                <table class="floodTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Rua / Local
+                            </th>
+
+                            <th>
+                                Bairro
+                            </th>
+
+                            <th>
+                                Nível para alagar
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- 12,20 m -->
+
+                        <tr>
+
+                            <td>
+                                Rua Manoel Cordeiro Filho (Tabuleiro)
+                            </td>
+
+                            <td>
+                                Centro
+                            </td>
+
+                            <td>
+                                12,20 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Turquesa
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                12,20 m
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- 12,35 m -->
+
+
+                        <tr>
+
+                            <td>
+                                Rua Pedra do Sol (esquina com Rua Alexandrita)
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                12,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Pedra da Lua (esquina com Rua Alexandrita)
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                12,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Alexandrita (esquina com Rua Turquesa)
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                12,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua das Esmeraldas
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                12,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Berilo
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                12,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Topázio
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                12,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua dos Diamantes
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                12,35 m
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- 13,35 m - Pedra de Amolar -->
+
+                        <tr>
+
+                            <td>
+                                Rua Turquesa
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Pedra do Sol
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Pedra da Lua
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Alexandrita
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua das Esmeraldas
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Berilo
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Topázio
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua dos Diamantes
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Euclásio
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Safira
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Donzila Francisco
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Antônio B. Pereira
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua José V. da Silva
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Ubaldo J. Bitencourt
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Sebastião de Quadros
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Laurindo Xavier
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Maria C. Bittencourt
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Paulo Köhler
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Antônio Köhler
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Três vias sem denominação oficial
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua das Caieiras
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua José Geraldino Bitencourt, na altura da antiga Usati
+                            </td>
+
+                            <td>
+                                Pedra de Amolar
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- 13,35 m - Centro -->
+
+                        <tr>
+
+                            <td>
+                                Rua Felindo Furlani
+                            </td>
+
+                            <td>
+                                Centro
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Milton Domingos Machado
+                            </td>
+
+                            <td>
+                                Centro
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Modesto Vargas
+                            </td>
+
+                            <td>
+                                Centro
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Estrada Geral Pocinho
+                            </td>
+
+                            <td>
+                                Centro
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Início de alagamento na Rua José Domingos Filho, nas proximidades do Mercado Vila
+                            </td>
+
+                            <td>
+                                Centro
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- 13,35 m - Loteamento Primavera -->
+
+                        <tr>
+
+                            <td>
+                                Rua Maria Oliveira Berti
+                            </td>
+
+                            <td>
+                                Loteamento Primavera
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Arthur Tamazia
+                            </td>
+
+                            <td>
+                                Loteamento Primavera
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Dilma Silva Tomaz
+                            </td>
+
+                            <td>
+                                Loteamento Primavera
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Pedro Gonçalves
+                            </td>
+
+                            <td>
+                                Loteamento Primavera
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Arnaldo Berti
+                            </td>
+
+                            <td>
+                                Loteamento Primavera
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- 13,35 m - Loteamento Ilha Bela -->
+
+                        <tr>
+
+                            <td>
+                                Rua Padre Carlos Gesser
+                            </td>
+
+                            <td>
+                                Loteamento Ilha Bela
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua da Integração
+                            </td>
+
+                            <td>
+                                Loteamento Ilha Bela
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Pedro Jorge dos Santos
+                            </td>
+
+                            <td>
+                                Loteamento Ilha Bela
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Ricardo Schmoegel Filho
+                            </td>
+
+                            <td>
+                                Loteamento Ilha Bela
+                            </td>
+
+                            <td>
+                                13,35 m
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Rua Bento Jacob de Oliveira
+                            </td>
+
+                            <td>
+                                Boa Vista
+                            </td>
+
+                            <td>
+                                3,00 m
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                Rua Virgílio Cadore
+                            </td>
+
+                            <td>
+                                Campeche
+                            </td>
+
+                            <td>
+                                1,50 m
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <p
+                class="floodNoResults"
+                id="floodNoResults"
+            >
+                Nenhum local encontrado.
+            </p>
+
+
+            <p class="disclaimer">
+
+                Dados extraídos de
+                <a
+                    href="https://monitoramento.defesacivil.sc.gov.br"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    monitoramento.defesacivil.sc.gov.br
+                </a>,
+
+                qualquer dúvida, ligue
+                (47) 2080-0612,
+                Defesa Civil de Ilhota.
+
+            </p>
+
+
+            <p class="disclaimer">
+
+                As cotas apresentadas são referenciais para o planejamento operacional
+                da Coordenadoria Municipal de Proteção e Defesa Civil (COMPDEC)
+                e poderão ser atualizadas conforme novos levantamentos topográficos,
+                alterações na infraestrutura urbana ou registros de eventos hidrológicos futuros.
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!---- Footer ---->
+    <div data-component="footer"></div>
+
+
+    <script src="/scripts/fetch.js?v=1.0.5"></script>
+    <script src="/scripts/monitoramento.js?v=1.0.5"></script>
+
+    <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+        // =====================================================
+        // BUSCA DE RUAS E BAIRROS
+        // =====================================================
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const searchInput =
+                document.getElementById("floodSearchInput");
+
+            const table =
+                document.querySelector(".floodTable");
+
+            const noResults =
+                document.getElementById("floodNoResults");
+
+            const searchResult =
+                document.getElementById("floodSearchResult");
+
+
+            if (!searchInput || !table) {
+                return;
+            }
+
+
+            const rows =
+                table.querySelectorAll("tbody tr");
+
+
+            function normalizarTexto(texto) {
+
+                return texto
+                    .toLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "")
+                    .trim();
+
+            }
+
+
+            searchInput.addEventListener("input", () => {
+
+                const busca =
+                    normalizarTexto(searchInput.value);
+
+                let encontrados = 0;
+
+
+                rows.forEach(row => {
+
+                    const rua =
+                        normalizarTexto(
+                            row.cells[0]?.textContent || ""
+                        );
+
+                    const bairro =
+                        normalizarTexto(
+                            row.cells[1]?.textContent || ""
+                        );
+
+
+                    const encontrou =
+                        rua.includes(busca) ||
+                        bairro.includes(busca);
+
+
+                    if (encontrou) {
+
+                        row.style.display = "";
+
+                        encontrados++;
+
+                    } else {
+
+                        row.style.display = "none";
+
+                    }
+
+                });
+
+
+                // -----------------------------
+                // Nenhum resultado
+                // -----------------------------
+
+                if (busca && encontrados === 0) {
+
+                    noResults.style.display = "block";
+
+                } else {
+
+                    noResults.style.display = "none";
+
+                }
+
+
+                // -----------------------------
+                // Contador
+                // -----------------------------
+
+                if (busca) {
+
+                    searchResult.textContent =
+                        encontrados === 1
+                            ? "1 local encontrado"
+                            : `${encontrados} locais encontrados`;
+
+                } else {
+
+                    searchResult.textContent = "";
+
+                }
+
+            });
+
+        });
+    </script>
+
 </body>
 </html>
