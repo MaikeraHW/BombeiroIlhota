@@ -46,9 +46,9 @@ const REGRA_RIO_00030 = {
 
 const REGRA_RIO_00163 = {
 
-    normal: 1.00,
+    normal: 0.85,
     atencao: 1.50,
-    prontidao: 2.00
+    prontidao: 2.99
 
 };
 
