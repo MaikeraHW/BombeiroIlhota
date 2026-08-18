@@ -41,7 +41,20 @@ const REGRA_RIO_00030 = {
 
 
 /* =====================================================
-   ATUALIZA STATUS DO RIO
+   REGRAS DO RIO DCSC-00163
+===================================================== */
+
+const REGRA_RIO_00163 = {
+
+    normal: 1.00,
+    atencao: 1.50,
+    prontidao: 2.00
+
+};
+
+
+/* =====================================================
+   ATUALIZA STATUS DO RIO 00030
 ===================================================== */
 
 function atualizarStatusRio00030(nivel) {
@@ -53,7 +66,6 @@ function atualizarStatusRio00030(nivel) {
     if (!status) return;
 
 
-    // Remove o status anterior
     status.classList.remove(
         "statusNormal",
         "statusConcern",
@@ -62,21 +74,12 @@ function atualizarStatusRio00030(nivel) {
     );
 
 
-    /* =========================
-       NORMAL
-    ========================= */
-
     if (nivel < REGRA_RIO_00030.normal) {
 
         status.textContent = "NORMAL";
         status.classList.add("statusNormal");
 
     }
-
-
-    /* =========================
-       ATENÇÃO
-    ========================= */
 
     else if (nivel < REGRA_RIO_00030.atencao) {
 
@@ -85,11 +88,6 @@ function atualizarStatusRio00030(nivel) {
 
     }
 
-
-    /* =========================
-       PRONTIDÃO
-    ========================= */
-
     else if (nivel <= REGRA_RIO_00030.prontidao) {
 
         status.textContent = "PRONTIDÃO";
@@ -97,10 +95,57 @@ function atualizarStatusRio00030(nivel) {
 
     }
 
+    else {
 
-    /* =========================
-       EMERGÊNCIA
-    ========================= */
+        status.textContent = "EMERGÊNCIA";
+        status.classList.add("statusAlert");
+
+    }
+
+}
+
+
+/* =====================================================
+   ATUALIZA STATUS DO RIO 00163
+===================================================== */
+
+function atualizarStatusRio00163(nivel) {
+
+    const status = document.querySelector(
+        '[data-rio="DCSC-00163"] .riverStatus'
+    );
+
+    if (!status) return;
+
+
+    status.classList.remove(
+        "statusNormal",
+        "statusConcern",
+        "statusProntidao",
+        "statusAlert"
+    );
+
+
+    if (nivel <= REGRA_RIO_00163.normal) {
+
+        status.textContent = "NORMAL";
+        status.classList.add("statusNormal");
+
+    }
+
+    else if (nivel <= REGRA_RIO_00163.atencao) {
+
+        status.textContent = "ATENÇÃO";
+        status.classList.add("statusConcern");
+
+    }
+
+    else if (nivel <= REGRA_RIO_00163.prontidao) {
+
+        status.textContent = "PRONTIDÃO";
+        status.classList.add("statusProntidao");
+
+    }
 
     else {
 
@@ -121,6 +166,7 @@ async function atualizarRios() {
     try {
 
         const resposta = await fetch(GRAPHQL_URL, {
+
             method: "POST",
 
             headers: {
@@ -130,6 +176,7 @@ async function atualizarRios() {
             body: JSON.stringify({
                 query: QUERY
             })
+
         });
 
 
@@ -141,13 +188,21 @@ async function atualizarRios() {
 
 
         /* =================================================
-           RIO DCSC-00030
+           LOCALIZA OS DOIS RIOS
         ================================================= */
 
         const rio00030 = estacoes.find(
             e => e.codigo === "DCSC-00030"
         );
 
+        const rio00163 = estacoes.find(
+            e => e.codigo === "DCSC-00163"
+        );
+
+
+        /* =================================================
+           VERIFICA RIO 00030
+        ================================================= */
 
         if (!rio00030) {
 
@@ -155,72 +210,144 @@ async function atualizarRios() {
                 "Estação DCSC-00030 não encontrada."
             );
 
-            return;
         }
 
 
-        const nivel00030 =
-            rio00030.data.rio.rio_nivel.value;
-
-
         /* =================================================
-           ATUALIZA NOME
+           VERIFICA RIO 00163
         ================================================= */
 
-        const nome = document.getElementById(
-            "nome-00030"
-        );
+        if (!rio00163) {
 
-        if (nome) {
-
-            nome.textContent =
-                "Itajaí-açu";
+            console.error(
+                "Estação DCSC-00163 não encontrada."
+            );
 
         }
 
 
         /* =================================================
-           ATUALIZA NÍVEL
+           RIO DCSC-00030
         ================================================= */
 
-        const nivel = document.getElementById(
-            "nivel-00030"
-        );
+        if (rio00030) {
 
-        if (nivel) {
+            const nivel00030 =
+                rio00030.data.rio.rio_nivel.value;
 
-            nivel.textContent =
-                nivel00030.toFixed(2).replace(".", ",");
+
+            /* Nome */
+
+            const nome00030 =
+                document.getElementById("nome-00030");
+
+            if (nome00030) {
+
+                nome00030.textContent =
+                    "Itajaí-açu";
+
+            }
+
+
+            /* Nível */
+
+            const nivelElemento00030 =
+                document.getElementById("nivel-00030");
+
+            if (nivelElemento00030) {
+
+                nivelElemento00030.textContent =
+                    nivel00030
+                        .toFixed(2)
+                        .replace(".", ",");
+
+            }
+
+
+            /* Status */
+
+            atualizarStatusRio00030(
+                nivel00030
+            );
+
+
+            console.log(
+                new Date().toLocaleString(),
+                "DCSC-00030:",
+                nivel00030,
+                "Status:",
+                nivel00030 < 9.20
+                    ? "NORMAL"
+                    : nivel00030 < 10.00
+                        ? "ATENÇÃO"
+                        : nivel00030 <= 10.50
+                            ? "PRONTIDÃO"
+                            : "EMERGÊNCIA"
+            );
 
         }
 
 
         /* =================================================
-           ATUALIZA STATUS
+           RIO DCSC-00163
         ================================================= */
 
-        atualizarStatusRio00030(
-            nivel00030
-        );
+        if (rio00163) {
+
+            const nivel00163 =
+                rio00163.data.rio.rio_nivel.value;
 
 
-        /* =================================================
-           CONSOLE
-        ================================================= */
+            /* Nome */
 
-        console.log(
-            new Date().toLocaleString(),
-            "DCSC-00030:",
-            nivel00030,
-            "Status:",
-            nivel00030 < 9.20
-                ? "NORMAL"
-                : nivel00030 < 10.00
-                    ? "ATENÇÃO"
-                    : nivel00030 <= 10.50
-                        ? "PRONTIDÃO"
-                        : "EMERGÊNCIA"
-        );
+            const nome00163 =
+                document.getElementById("nome-00163");
+
+            if (nome00163) {
+
+                nome00163.textContent =
+                    "Itajaí-Mirim";
+
+            }
+
+
+            /* Nível */
+
+            const nivelElemento00163 =
+                document.getElementById("nivel-00163");
+
+            if (nivelElemento00163) {
+
+                nivelElemento00163.textContent =
+                    nivel00163
+                        .toFixed(2)
+                        .replace(".", ",");
+
+            }
+
+
+            /* Status */
+
+            atualizarStatusRio00163(
+                nivel00163
+            );
+
+
+            console.log(
+                new Date().toLocaleString(),
+                "DCSC-00163:",
+                nivel00163,
+                "Status:",
+                nivel00163 <= 1.00
+                    ? "NORMAL"
+                    : nivel00163 <= 1.50
+                        ? "ATENÇÃO"
+                        : nivel00163 <= 2.00
+                            ? "PRONTIDÃO"
+                            : "EMERGÊNCIA"
+            );
+
+        }
 
 
     } catch (erro) {
