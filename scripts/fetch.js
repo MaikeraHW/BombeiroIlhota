@@ -1,76 +1,83 @@
-//fetch dos componentes
+// ==========================================
+// FETCH DOS COMPONENTES
+// ==========================================
 
 document.addEventListener("DOMContentLoaded", async () => {
-    
-    const components = document.querySelectorAll("[data-component]");
 
-    for (const component of components) {
-        const componentName = component.dataset.component;
+    await loadComponents();
 
-        try {
-            const response = await fetch(
-                `/componentes/${componentName}/index.html`
-            );
+    iniciarmenu();
+    initSlider();
+    initDropdown();
 
-            if (!response.ok) {
-                throw new Error(
-                    `Componente "${componentName}" não encontrado`
-                );
-            }
+});
 
-            component.innerHTML = await response.text();
-        } catch (error) {
-            console.error(error);
-        }
-    }
 
-        await loadComponents();
-
-        iniciarmenu();
-        initSlider();
-        initDropdown();
-})
+// ==========================================
+// CARREGA OS COMPONENTES
+// ==========================================
 
 async function loadComponents() {
+
     const components = document.querySelectorAll("[data-component]");
 
     for (const component of components) {
+
         const componentName = component.dataset.component;
 
         try {
+
             const response = await fetch(
-                `/componentes/${componentName}/index.html`
+                `/componentes/${componentName}/index.html?v=1.0.2`
             );
 
             if (!response.ok) {
+
                 throw new Error(
                     `Componente "${componentName}" não encontrado`
                 );
+
             }
 
             component.innerHTML = await response.text();
+
         } catch (error) {
+
             console.error(error);
+
         }
+
     }
+
 }
 
-//hamburger menu
+
+// ==========================================
+// HAMBURGER MENU
+// ==========================================
 
 function iniciarmenu() {
+
     const hamburger = document.getElementById("hamburger");
     const nav = document.querySelector(".headerNav");
 
     if (!hamburger || !nav) return;
 
     hamburger.addEventListener("click", () => {
+
         nav.classList.toggle("active");
+
     });
+
 }
 
-//slides banner
+
+// ==========================================
+// SLIDES BANNER
+// ==========================================
 
 function initSlider() {
+
     const slides = document.querySelector(".slides");
 
     if (!slides) return;
@@ -81,38 +88,63 @@ function initSlider() {
     let currentIndex = 0;
 
     function updateSlider() {
-        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-        dots.forEach(dot => dot.classList.remove("active"));
+        slides.style.transform =
+            `translateX(-${currentIndex * 100}%)`;
+
+        dots.forEach(dot =>
+            dot.classList.remove("active")
+        );
 
         if (dots[currentIndex]) {
             dots[currentIndex].classList.add("active");
         }
+
     }
 
     function goToSlide(index) {
+
         currentIndex = index;
         updateSlider();
+
     }
 
     window.goToSlide = goToSlide;
 
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
+
+        currentIndex =
+            (currentIndex + 1) % totalSlides;
+
         updateSlider();
+
     }
 
     setInterval(nextSlide, 5000);
+
 }
 
+
+// ==========================================
+// DROPDOWN
+// ==========================================
+
 function initDropdown() {
-    const contactItem = document.querySelector(".navItemDropdown");
-    const contactToggle = document.getElementById("contactToggle");
+
+    const contactItem =
+        document.querySelector(".navItemDropdown");
+
+    const contactToggle =
+        document.getElementById("contactToggle");
 
     if (!contactItem || !contactToggle) return;
 
     contactToggle.addEventListener("click", (e) => {
+
         e.preventDefault();
+
         contactItem.classList.toggle("open");
+
     });
+
 }
