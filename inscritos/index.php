@@ -67,7 +67,10 @@ try {
         $tel = "55" . $tel;
     }
 
-    $msg = urlencode("Olá $nome! Vimos sua inscrição no curso dos Bombeiros Voluntários.");
+    $msg = urlencode("Olá $nome! 🚒 *O edital da 21ª Escola de Formação está aberto!* 
+    Como você realizou o pré-cadastro, agora é hora de fazer sua inscrição oficial
+    🔗 Acesse o link (https://www.bombeiroilhota.com/uploads/edital.pdf), leia o edital e preencha o formulário com as informações solicitadas.
+    *Inscrições até 30/09/2026.*");
 ?>
 
 <div class="card">
